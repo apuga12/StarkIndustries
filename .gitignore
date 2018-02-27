@@ -1,0 +1,8 @@
+# Sincronizar archivos... ignorando los siguientes:
+
+.metadata
+.metadata/*
+Servers
+Servers/*
+RemoteSystemsTempFiles
+RemoteSystemsTempFiles/*

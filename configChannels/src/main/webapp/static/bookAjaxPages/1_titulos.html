@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+     <!-- Para que las páginas se muestren correctamente y el zoom funcione bien en los dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>:: Ajax en J2EE 1 = Info sobre libros ::</title>
+ 
+    <!-- CSS de Bootstrap -->    
+	<!--     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+	<!--     <link href="./css/main.css" rel="stylesheet"> -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- CSS Chema custom -->
+	<link rel="stylesheet" href="./../css/style.css" />
+	
+ 
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->  
+    <script type="text/javascript">
+    	var xhr;
+    	function buscarComentario1(){
+    		//alert("buscarComentario1()");
+    		// 1. Creación del Objeto XMLHttpRequest
+    		if(window.ActiveXObject){
+    			//navegador IE
+    			xhr = new ActiveXObject("Microsoft.XMLHttp")
+    		} else if((window.XMLHttpRequest) || (typeof XMLHttpRequest) != undefined){
+    			//navegadores Firefox, Opera, Safari...
+    			xhr = new XMLHttpRequest();
+    		} else{
+    			//navegadores sin soporte Ajax
+    			alert("Su navegador no tiene soporte para Ajax");
+    			return;
+    		}
+    		enviaPeticion();
+    	}
+    	function enviaPeticion(){
+    		//alert("Test");
+    		//2. Configuración de los parámetros del request y envío al server
+    		var lista = document.getElementById("titulo");
+    		var tit = lista.options[lista.selectedIndex].value;
+    		var url = "http://localhost:8080/configChannels/bookAjax/1_titulos/"+tit;
+    		xhr.open("GET", url, true );
+    		//3. Cuando esté lista la respuesta debe ser cachada y enviada a otra función que despache la respuesta (procesaDatos)
+    		xhr.onreadystatechange = procesaDatos;
+    		xhr.send(null);
+    	}
+    	function procesaDatos(){
+    		//4. Despachar Response y actualizar HTML dinámico
+    		if(xhr.readyState == 4){
+    			// IF Status de procesamiento 4 = OK
+    			document.getElementById("comentario").innerHTML = "<i>"+xhr.responseText+"</i>";
+    		}
+    	}
+    	
+    </script>
+  </head>
+  <body>
+	<!-- Aquí va el JUMBOTRON -->
+	<section class="jumbotron jumbotron-chema">	
+		<div class="container">
+			<h2 class="text-center color-primary mb-2 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+				View del cliente
+			</h2>
+			<p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4" style="visibility: visible; animation-name: fadeInDown;">
+				:: Información sobre libros. AJAX en J2EE ::
+			</p>
+		</div>
+	</section>
+
+    <br>
+ 
+		<div class="container-fluid show-top-margin separate-rows tall-rows">
+		  <div class="row ">
+				<div class="row"  align="center">
+				  <div class="col-md-4"><b>Elija el título del Libro:</b></div>
+				  <div class="col-md-4">
+				  		<select id="titulo" onchange="buscarComentario1();">
+				  			<option>- Seleccione título -</option>	
+				  			<option value="0">Programación con C#</option>
+				  			<option value="1">ASP.NET</option>
+				  			<option value="2">AJAX en J2EE</option>
+				  			<option value="3">JAVA EE</option>
+				  		</select>
+				  </div>
+				  <div class="row">
+				  	<div align="center" class="col-md-8" id="comentario">  Aquí se sobreescribirá el comentario del DIV</div>
+				  </div>
+				</div>
+<!-- 				<div class="row"> -->
+<!-- 				  <div class="col-md-4">.col-md-4</div> -->
+<!-- 				  <div class="col-md-4">.col-md-4</div> -->
+<!-- 				  <div class="col-md-4">.col-md-4</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="row"> -->
+<!-- 				  <div class="col-md-6">.col-md-6</div> -->
+<!-- 				  <div class="col-md-6">.col-md-6</div> -->
+<!-- 				</div> -->
+			</div>
+		</div>
+
+ 
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+<!--     <script src="http://code.jquery.com/jquery.js"></script> -->
+ 
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+         incluir archivos JavaScript individuales de los únicos
+         plugins que utilices) -->
+<!--     <script src="js/bootstrap.min.js"></script> -->
+	 <script src="js/jquery-3.2.1.min.js"></script> 
+	 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

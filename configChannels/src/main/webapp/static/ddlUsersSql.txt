@@ -1,0 +1,90 @@
+CREATE TABLE myuser (
+  id NUMBER  PRIMARY KEY ,
+  description varchar(255) DEFAULT NULL,
+  login varchar(255) DEFAULT NULL,
+  password varchar(255) DEFAULT NULL
+) ;
+
+INSERT INTO myuser(id,description,login,password) VALUES  (1,'Apple CEO','sjobs','stewie');
+INSERT INTO myuser(id,description,login,password)  VALUES (3,'Microsoft CEO','bgates','imrich');
+INSERT INTO myuser(id,description,login,password)  VALUES (4,'Facebook CEO','mzuckerberg','selfie');
+INSERT INTO myuser(id,description,login,password)  VALUES (8,'Stark Industries CEO','tonyStark','chema');
+
+CREATE TABLE task (
+  id NUMBER  PRIMARY KEY ,
+  description varchar(255) DEFAULT NULL,
+  name varchar(255) DEFAULT NULL,
+  iduser NUMBER DEFAULT NULL
+  );
+
+alter table TASK
+  add constraint FK_TASK_USER
+  foreign key (IDUSER)
+  references myuser (id);
+
+
+INSERT INTO task (id,description,name,iduser) VALUES (1,'Read a book','Read',8);
+INSERT INTO task (id,description,name,iduser) VALUES (2,'Plant a tree','Plant',1);
+INSERT INTO task (id,description,name,iduser) VALUES (3,'Learn noSQL and MongoVUE DB','Learn',2);
+INSERT INTO task (id,description,name,iduser) VALUES (4,'How to spend less...','Spend',2);
+INSERT INTO task (id,description,name,iduser) VALUES (5,'Learn how to deal with Java','Programming',3);
+INSERT INTO task (id,description,name,iduser) VALUES (6,'Buy another company','Invest',4);
+
+
+/** 
+ -- Para probar los CONSTRAINTS de PK y FK
+INSERT INTO task (id,description,name,iduser) VALUES (7,'Buy another company','Invest',20); 
+
+**/
+
+commit;
+
+
+CREATE SEQUENCE seq_user --nombre de la secuencia
+START WITH 10 --la secuencia empieza por 1
+INCREMENT BY 1 --se incrementa de uno en uno
+NOMAXVALUE; --no tiene valor maximo
+
+SELECT seq_user.nextval FROM dual;
+
+CREATE SEQUENCE seq_task --nombre de la secuencia
+START WITH 10 --la secuencia empieza por 1
+INCREMENT BY 1 --se incrementa de uno en uno
+NOMAXVALUE; --no tiene valor maximo
+
+SELECT seq_task.nextval FROM dual;
+
+
+
+/** ====> TABLA para probar servicios REST **/
+
+CREATE TABLE series (
+  id NUMBER  PRIMARY KEY ,
+  country varchar(255) DEFAULT NULL,
+  dateReleased date DEFAULT NULL,
+  numberOfEpisodes varchar(255) DEFAULT NULL,
+  title varchar(255) DEFAULT NULL
+) ;
+
+INSERT INTO series(id,country,dateReleased,numberOfEpisodes,title) VALUES  (1,'USA',TO_DATE('2013-03-05', 'YYYY-MM-DD'),'99','LOST');
+INSERT INTO series(id,country,dateReleased,numberOfEpisodes,title) VALUES  (2,'USA',TO_DATE('2014-07-10', 'YYYY-MM-DD'),'80','Game Of Thrones');
+INSERT INTO series(id,country,dateReleased,numberOfEpisodes,title) VALUES  (3,'USA',TO_DATE('2016-12-17', 'YYYY-MM-DD'),'100','The Walking Dead');
+INSERT INTO series(id,country,dateReleased,numberOfEpisodes,title) VALUES  (4,'USA',TO_DATE('2013-11-13', 'YYYY-MM-DD'),'50','Breaking Bad');
+INSERT INTO series(id,country,dateReleased,numberOfEpisodes,title) VALUES  (5,'USA',TO_DATE('1981-12-17', 'YYYY-MM-DD'),'13','Sense 8');
+INSERT INTO series(id,country,dateReleased,numberOfEpisodes,title) VALUES  (6,'USA',TO_DATE('2015-02-01', 'YYYY-MM-DD'),'15','Better call Saul');
+INSERT INTO series(id,country,dateReleased,numberOfEpisodes,title) VALUES  (7,'England',TO_DATE('2014-05-20', 'YYYY-MM-DD'),'20','Sherlock');
+INSERT INTO series(id,country,dateReleased,numberOfEpisodes,title) VALUES  (8,'USA',TO_DATE('2001-08-08', 'YYYY-MM-DD'),'3','Matrix');
+
+
+CREATE SEQUENCE seq_series --nombre de la secuencia
+START WITH 10 --la secuencia empieza por 1
+INCREMENT BY 1 --se incrementa de uno en uno
+NOMAXVALUE; --no tiene valor maximo
+commit; 
+
+SELECT seq_series.nextval FROM dual;
+
+
+
+
+

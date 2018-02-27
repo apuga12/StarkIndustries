@@ -1,0 +1,48 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from StarkWSServiceService WSDL service -->
+
+  <service name="StarkWSService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://webservice.springapp.starkindustries.com"/>
+      <parameter name="wsdlServiceElement" value="StarkWSServiceService"/>
+      <parameter name="schemaQualified" value="http://webservice.springapp.starkindustries.com"/>
+      <parameter name="wsdlServicePort" value="StarkWSService"/>
+      <parameter name="className" value="com.starkindustries.springapp.webservice.StarkWSServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="StarkWSService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="fetchPlants" qname="operNS:fetchPlants" xmlns:operNS="http://webservice.springapp.starkindustries.com" returnQName="retNS:fetchPlantsReturn" xmlns:retNS="http://webservice.springapp.starkindustries.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:plantName" xmlns:pns="http://webservice.springapp.starkindustries.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="starkWSServiceTest" qname="operNS:starkWSServiceTest" xmlns:operNS="http://webservice.springapp.starkindustries.com" returnQName="retNS:starkWSServiceTestReturn" xmlns:retNS="http://webservice.springapp.starkindustries.com" returnType="rtns:StarkWSServiceTestResponse" xmlns:rtns="http://webservice.springapp.starkindustries.com" soapAction="" >
+        <parameter qname="pns:starkWSServiceTestRequest" xmlns:pns="http://webservice.springapp.starkindustries.com" type="tns:StarkWSServiceTestRequest" xmlns:tns="http://webservice.springapp.starkindustries.com"/>
+      </operation>
+      <parameter name="allowedMethods" value="fetchPlants starkWSServiceTest"/>
+
+      <typeMapping
+        xmlns:ns="http://webservice.springapp.starkindustries.com"
+        qname="ns:StarkWSServiceTestResponse"
+        type="java:com.starkindustries.springapp.webservice.StarkWSServiceTestResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://webservice.springapp.starkindustries.com"
+        qname="ns:StarkWSServiceTestRequest"
+        type="java:com.starkindustries.springapp.webservice.StarkWSServiceTestRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

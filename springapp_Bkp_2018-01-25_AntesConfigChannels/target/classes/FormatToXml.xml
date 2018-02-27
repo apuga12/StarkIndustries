@@ -1,0 +1,24 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+	<S:Header />
+	<S:Body>
+		<ns4:ServiceReqInsert_Input xmlns:ns4="http://siebel.com/Service/ServiceReqs"
+			xmlns="http://www.siebel.com/xml/ServiceReqIO/Query" xmlns:ns2="http://www.siebel.com/xml/ServiceReqIO/Data"
+			xmlns:ns3="http://www.siebel.com/xml/ServiceReqIO/Id">
+			<ns2:ListOfServicereqio lastpage="false"
+				recordcount="100">
+				<ns2:ServiceRequest operation="Insert">
+					<ns2:Account>60537069</ns2:Account>
+					<ns2:Area>INFO GENERAL DEL SERV</ns2:Area>
+					<ns2:Description>Generado del caso de negocio original:
+						128132657565</ns2:Description>
+					<ns2:SRType>SERVICIOS</ns2:SRType>
+					<ns2:Sub-Area>CN CERRADO SIN SOLUCION</ns2:Sub-Area>
+					<ns2:RetentionTools>SE CANALIZA A BACKOFFICE</ns2:RetentionTools>
+				</ns2:ServiceRequest>
+			</ns2:ListOfServicereqio>
+			<ns4:ExecutionMode>ForwardOnly</ns4:ExecutionMode>
+			<ns4:LOVLanguageMode>LIC</ns4:LOVLanguageMode>
+			<ns4:ViewMode>All</ns4:ViewMode>
+		</ns4:ServiceReqInsert_Input>
+	</S:Body>
+</S:Envelope>

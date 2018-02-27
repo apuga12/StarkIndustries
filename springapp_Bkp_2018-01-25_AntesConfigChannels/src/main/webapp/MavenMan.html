@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="http://www.jarroba.com/wp-content/uploads/2012/02/favicon.png" />
+
+
+    <!-- Graficas de google -->
+    <!-- <script async type="text/javascript" src="https://www.google.com/jsapi"></script> -->
+    <!-- /Graficas de google -->
+
+
+
+    <!-- Carga de Bootstrap y JQuery-->
+    <script src="http://jarroba.com/wp-content/themes/jarrobav6/static/jQuery/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://jarroba.com/wp-content/themes/jarrobav6/static/bootstrap/css/bootstrap.min.css">
+    <script src="http://jarroba.com/wp-content/themes/jarrobav6/static/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script async src="http://jarroba.com/wp-content/themes/jarrobav6/static/bootstrap/js/jquery.lazyload.js" type="text/javascript"></script> -->
+    <!-- /Carga de Bootstrap y JQuery-->
+
+    
+
+
+    <!-- Carga de las fuentes de google y las nuestras -->
+    <link href='http://fonts.googleapis.com/css?family=Macondo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://jarroba.com/wp-content/themes/jarrobav6/static/font-awesome/css/font-awesome.min.css">
+    <!-- /Carga de las fuentes de google y las nuestras -->
+
+
+    <!-- Carga del formateo del codigo fuente que ponemos en la web  -->
+<!--    <script async src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>-->
+<!--    <script async src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>-->
+<!--    <script async src="https://www.google.com/jsapi"></script>-->
+    <script src="http://jarroba.com/wp-content/themes/jarrobav6/static/code-prettify-master/loader/run_prettify.js"></script>
+    <script src="http://jarroba.com/wp-content/themes/jarrobav6/static/code-prettify-master/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+    <script async src="https://www.google.com/jsapi"></script>
+        <!-- / Carga del formateo del codigo fuente que ponemos en la web  -->
+
+
+    <!-- Carga Google Analitics -->
+    <script async type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-29307293-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <!-- /Carga Google Analitics -->
+
+    <!-- Anuncios para móviles de tipo Viñeta-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8473876812850116",
+            enable_page_level_ads: true
+        });
+    </script>
+    <!-- /Anuncios para móviles de tipo Viñeta-->
+
+	<!-- Google WebMaster -->
+	<meta name="google-site-verification" content="TSvoXZJ9MNq_GsXG1gh7WjYvr5zC9m-_5iPE4TFHW9w" />
+	<!-- /Google WebMaster -->
+
+	<!-- Alexa WebMaster -->
+	<meta name="alexaVerifyID" content="JPKatoutc1cJ8Edyvd2Y9lCg5_A"/>
+	<!-- /Alexa WebMaster -->
+
+	<!-- Bing webmaster -->
+	<meta name="msvalidate.01" content="E3929CE5180F4C2B8B2BEECBB77FF72D" />
+	<!-- Bing webmaster -->
+
+	<!-- Pinterest webmaster -->
+	<meta name="p:domain_verify" content="1156fb287859647f902e3b58d17ea2a2"/>
+	<!-- Pinterest webmaster -->
+
+    <title>Maven - Jarroba</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v3.3.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Tutorial completo de Android. Te contamos todo lo que se necesita saber para ser un maestro con Maven"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://jarroba.com/maven/" />
+<link rel="publisher" href="https://plus.google.com/+JarrobaWebSite"/>
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Maven - Jarroba" />
+<meta property="og:description" content="Tutorial completo de Android. Te contamos todo lo que se necesita saber para ser un maestro con Maven" />
+<meta property="og:url" content="http://jarroba.com/maven/" />
+<meta property="og:site_name" content="Jarroba" />
+<meta property="article:publisher" content="https://www.facebook.com/jarrobaWeb" />
+<meta property="article:tag" content="Maven" />
+<meta property="article:section" content="Tecnologias Web" />
+<meta property="article:published_time" content="2015-01-12T16:25:45+00:00" />
+<meta property="article:modified_time" content="2016-02-17T11:46:29+00:00" />
+<meta property="og:updated_time" content="2016-02-17T11:46:29+00:00" />
+<meta property="fb:app_id" content="1566603810239859" />
+<meta property="og:image" content="http://jarroba.com/wp-content/uploads/2015/03/Maven-Icono-www.Jarroba.com_.png" />
+<meta property="og:image:width" content="1751" />
+<meta property="og:image:height" content="1751" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Tutorial completo de Android. Te contamos todo lo que se necesita saber para ser un maestro con Maven" />
+<meta name="twitter:title" content="Maven - Jarroba" />
+<meta name="twitter:site" content="@jarrobaweb" />
+<meta name="twitter:image" content="http://jarroba.com/wp-content/uploads/2015/03/Maven-Icono-www.Jarroba.com_.png" />
+<meta name="twitter:creator" content="@jarrobaweb" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Jarroba &raquo; Feed" href="http://jarroba.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Jarroba &raquo; RSS de los comentarios" href="http://jarroba.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Jarroba &raquo; Maven RSS de los comentarios" href="http://jarroba.com/maven/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/jarroba.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.3"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='front-estilos-css'  href='http://jarroba.com/wp-content/plugins/asesor-cookies-para-la-ley-en-espana/html/front/estilos.css?ver=4.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfifteen-fonts-css'  href='//fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://jarroba.com/wp-content/themes/jarrobav6/genericons/genericons.css?ver=3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfifteen-style-css'  href='http://jarroba.com/wp-content/themes/jarrobav6/style.css?ver=4.5.3' type='text/css' media='all' />
+<style id='twentyfifteen-style-inline-css' type='text/css'>
+
+			.post-navigation .nav-previous { background-image: url(http://jarroba.com/wp-content/uploads/2015/03/Java-Icono-www.Jarroba.com_.png); }
+			.post-navigation .nav-previous .post-title, .post-navigation .nav-previous a:hover .post-title, .post-navigation .nav-previous .meta-nav { color: #fff; }
+			.post-navigation .nav-previous a:before { background-color: rgba(0, 0, 0, 0.4); }
+		
+			.post-navigation .nav-next { background-image: url(http://jarroba.com/wp-content/uploads/2015/03/Maven-Icono-www.Jarroba.com_.png); }
+			.post-navigation .nav-next .post-title, .post-navigation .nav-next a:hover .post-title, .post-navigation .nav-next .meta-nav { color: #fff; }
+			.post-navigation .nav-next a:before { background-color: rgba(0, 0, 0, 0.4); }
+		
+</style>
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfifteen-ie-css'  href='http://jarroba.com/wp-content/themes/jarrobav6/css/ie.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentyfifteen-ie7-css'  href='http://jarroba.com/wp-content/themes/jarrobav6/css/ie7.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='wpoa-style-css'  href='http://jarroba.com/wp-content/plugins/wp-oauth/wp-oauth.css?ver=4.5.3' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+window.CKEDITOR_BASEPATH = "http://jarroba.com/wp-content/plugins/ckeditor-for-wordpress/ckeditor/";
+var ckeditorSettings = { "textarea_id": "comment", "pluginPath": "http:\/\/jarroba.com\/wp-content\/plugins\/ckeditor-for-wordpress\/", "autostart": true, "excerpt_state": false, "qtransEnabled": false, "outputFormat": { "indent": true, "breakBeforeOpen": true, "breakAfterOpen": true, "breakBeforeClose": true, "breakAfterClose": true }, "configuration": { "height": "160px", "skin": "moono", "scayt_autoStartup": false, "entities": true, "entities_greek": true, "entities_latin": true, "toolbar": "WordpressBasic", "templates_files": [ "http:\/\/jarroba.com\/wp-content\/plugins\/ckeditor-for-wordpress\/ckeditor.templates.js" ], "stylesCombo_stylesSet": "wordpress:http:\/\/jarroba.com\/wp-content\/plugins\/ckeditor-for-wordpress\/ckeditor.styles.js", "allowedContent": true, "customConfig": "http:\/\/jarroba.com\/wp-content\/plugins\/ckeditor-for-wordpress\/ckeditor.config.js" }, "externalPlugins": [  ], "additionalButtons": [  ] }
+/* ]]> */
+</script><style type="text/css">
+			#content table.cke_editor { margin:0; }
+			#content table.cke_editor tr td { padding:0;border:0; }
+		</style><script type='text/javascript' src='http://jarroba.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://jarroba.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cdp_cookies_info = {"url_plugin":"http:\/\/jarroba.com\/wp-content\/plugins\/asesor-cookies-para-la-ley-en-espana\/plugin.php","url_admin_ajax":"http:\/\/jarroba.com\/wp-admin\/admin-ajax.php","comportamiento":"aceptar","posicion":"inferior","layout":"ventana"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://jarroba.com/wp-content/plugins/asesor-cookies-para-la-ley-en-espana/html/front/principal.js?ver=4.5.3'></script>
+<script type='text/javascript' src='http://jarroba.com/wp-content/plugins/ckeditor-for-wordpress/ckeditor/ckeditor.js?t=F7J8&#038;ver=4.5.3.3'></script>
+<script type='text/javascript' src='http://jarroba.com/wp-content/plugins/ckeditor-for-wordpress/includes/ckeditor.utils.js?t=F7J8&#038;ver=4.5.3.3'></script>
+<script type='text/javascript' src='http://jarroba.com/wp-content/plugins/ckeditor-for-wordpress/includes/ckeditor.comment-reply.js?ver=20100901'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpoa_cvars = {"ajaxurl":"http:\/\/jarroba.com\/wp-admin\/admin-ajax.php","template_directory":"http:\/\/jarroba.com\/wp-content\/themes\/jarrobav6","stylesheet_directory":"http:\/\/jarroba.com\/wp-content\/themes\/jarrobav6","plugins_url":"http:\/\/jarroba.com\/wp-content\/plugins","plugin_dir_url":"http:\/\/jarroba.com\/wp-content\/plugins\/wp-oauth\/","url":"http:\/\/jarroba.com","logout_url":"http:\/\/jarroba.com\/wp-login.php?action=logout&_wpnonce=2c9e3590ee","show_login_messages":"","logout_inactive_users":"30","logged_in":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://jarroba.com/wp-content/plugins/wp-oauth/cvars.js?ver=4.5.3'></script>
+<script type='text/javascript' src='http://jarroba.com/wp-content/plugins/wp-oauth/wp-oauth.js?ver=4.5.3'></script>
+<link rel='https://api.w.org/' href='http://jarroba.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://jarroba.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://jarroba.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.5.3" />
+<link rel='shortlink' href='http://jarroba.com/?p=42250' />
+<link rel="alternate" type="application/json+oembed" href="http://jarroba.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fjarroba.com%2Fmaven%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://jarroba.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fjarroba.com%2Fmaven%2F&#038;format=xml" />
+<script type="text/javascript">
+	window._zem_rp_post_id = '42250';
+	window._zem_rp_thumbnails = true;
+	window._zem_rp_post_title = 'Maven';
+	window._zem_rp_post_tags = ['maven', 'tecnologias+web', 'eclips', 'cinco', 'la', 'como', 'del', 'de', 'es', 'maven', 'tien', 'solo', 'tan', 'lo', 'el', 'en', 'java'];
+	window._zem_rp_static_base_url = 'https://content.zemanta.com/static/';
+	window._zem_rp_wp_ajax_url = 'http://jarroba.com/wp-admin/admin-ajax.php';
+	window._zem_rp_plugin_version = '1.13';
+	window._zem_rp_num_rel_posts = '4';
+</script>
+<link rel="stylesheet" href="http://jarroba.com/wp-content/plugins/related-posts-by-zemanta/static/themes/pinterest.css?version=1.13" />
+<style type="text/css">
+.zem_rp_wrap {
+text-align: center;
+}
+.related_post_title {
+}
+ul.related_post {
+}
+ul.related_post li {
+}
+ul.related_post li a {
+}
+ul.related_post li img {
+}</style>
+<meta name="google-site-verification" content="TSvoXZJ9MNq_GsXG1gh7WjYvr5zC9m-_5iPE4TFHW9w" /><meta name="google-site-verification" content="TSvoXZJ9MNq_GsXG1gh7WjYvr5zC9m-_5iPE4TFHW9w" />		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<meta data-pso-pv="1.2.1" data-pso-pt="singlePost" data-pso-th="25796b3aa264e932be4930088aa8bf22"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script pagespeed_no_defer="" data-pso-version="20160717_223151">window.dynamicgoogletags={config:[]};dynamicgoogletags.config=["ca-pub-8473876812850116",[[]],[[[[,[[120,139]],,19,1,1],[,[[280,299]],,30,1,1],[,[[360,399],[460,519]],,33,1,1]],[[["DIV",,"idAdsense",[]],["10px","10px",1],0,[4],,0,,,7],[["DIV",,"comments",[]],["10px","10px",0],0,[1],,0,,,7],[["DIV",,"respond",[]],["10px","10px",0],0,[1],,0,,,8],[["DIV",,"respond",[]],["10px","10px",0],3,[1],,0,,,8],[["DIV",,,["footer-info"]],["10px","10px",0],0,[3],,0,,,4],[["DIV",,,["footer-info"]],["10px","10px",0],1,[3],,0,,,4],[["LI",0,,["undefined"],0],["10px","10px",0],0,[0],,0],[["LI",0,,["undefined"],1],["10px","10px",0],0,[0],,0],[["LI",0,,["undefined"],2],["10px","10px",0],0,[0],,0],[["LI",0,,["undefined"],-1],["10px","10px",0],3,[0],,0],[["LI",1,,["undefined"],0],["10px","10px",0],0,[0],,0],[["LI",1,,["undefined"],1],["10px","10px",0],0,[0],,0],[["LI",1,,["undefined"],2],["10px","10px",0],0,[0],,0],[["LI",1,,["undefined"],-1],["10px","10px",0],3,[0],,0],[["LI",2,,["undefined"],0],["10px","10px",0],0,[0],,0],[["LI",2,,["undefined"],1],["10px","10px",0],0,[0],,0],[["LI",2,,["undefined"],2],["10px","10px",0],0,[0],,0],[["LI",2,,["undefined"],-1],["10px","10px",0],3,[0],,0]],["5338641588","6815374782","8292107983","9768841180","2245574385"],["LI",,,["undefined"]],"20160714_041402",2]],"WordPressSinglePost","9637648785",,0.01,,[,1470002971173],0.01,1,,,"http://jarroba.com"];(function(){var h,q=this,aa=function(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";
+else if("function"==b&&"undefined"==typeof a.call)return"object";return b},r=function(a){return"number"==typeof a},ba=function(a,b){var c=Array.prototype.slice.call(arguments,1);return function(){var b=c.slice();b.push.apply(b,arguments);return a.apply(this,b)}},t=function(a,b){function c(){}c.prototype=b.prototype;a.Na=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.Pa=function(a,c,f){for(var g=Array(arguments.length-2),k=2;k<arguments.length;k++)g[k-2]=arguments[k];return b.prototype[c].apply(a,
+g)}};var ca=String.prototype.trim?function(a){return a.trim()}:function(a){return a.replace(/^[\s\xa0]+|[\s\xa0]+$/g,"")},da=function(a,b){return a<b?-1:a>b?1:0},ea=function(a){return String(a).replace(/\-([a-z])/g,function(a,c){return c.toUpperCase()})};var fa=Array.prototype.filter?function(a,b,c){return Array.prototype.filter.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=[],f=0,g="string"==typeof a?a.split(""):a,k=0;k<d;k++)if(k in g){var l=g[k];b.call(c,l,k,a)&&(e[f++]=l)}return e},ga=Array.prototype.map?function(a,b,c){return Array.prototype.map.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=Array(d),f="string"==typeof a?a.split(""):a,g=0;g<d;g++)g in f&&(e[g]=b.call(c,f[g],g,a));return e};var u;a:{var ha=q.navigator;if(ha){var ia=ha.userAgent;if(ia){u=ia;break a}}u=""}var v=function(a){return-1!=u.indexOf(a)};var ja=function(a,b){for(var c in a)Object.prototype.hasOwnProperty.call(a,c)&&b.call(void 0,a[c],c,a)};var ka=function(a,b,c,d,e){this.ga=c||4E3;this.I=a||"&";this.ta=b||",$";this.S=void 0!==d?d:"trn";this.Oa=e||null;this.sa=!1;this.U={};this.Fa=0;this.M=[]},na=function(a,b,c,d){b=b+"//"+c+d;var e=la(a)-d.length-0;if(0>e)return"";a.M.sort(function(a,b){return a-b});d=null;c="";for(var f=0;f<a.M.length;f++)for(var g=a.M[f],k=a.U[g],l=0;l<k.length;l++){if(!e){d=null==d?g:d;break}var m=ma(k[l],a.I,a.ta);if(m){m=c+m;if(e>=m.length){e-=m.length;b+=m;c=a.I;break}else a.sa&&(c=e,m[c-1]==a.I&&--c,b+=m.substr(0,
+c),c=a.I,e=0);d=null==d?g:d}}f="";a.S&&null!=d&&(f=c+a.S+"="+(a.Oa||d));return b+f+""},la=function(a){if(!a.S)return a.ga;var b=1,c;for(c in a.U)b=c.length>b?c.length:b;return a.ga-a.S.length-b-a.I.length-1},ma=function(a,b,c,d,e){var f=[];ja(a,function(a,k){var l=oa(a,b,c,d,e);l&&f.push(k+"="+l)});return f.join(b)},oa=function(a,b,c,d,e){if(null==a)return"";b=b||"&";c=c||",$";"string"==typeof c&&(c=c.split(""));if(a instanceof Array){if(d=d||0,d<c.length){for(var f=[],g=0;g<a.length;g++)f.push(oa(a[g],
+b,c,d+1,e));return f.join(c[d])}}else if("object"==typeof a)return e=e||0,2>e?encodeURIComponent(ma(a,b,c,d,e+1)):"...";return encodeURIComponent(String(a))};var ra=function(a,b,c,d){var e=pa;try{var f;b instanceof ka?f=b:(f=new ka,ja(b,function(a,b){var c=f,d=c.Fa++,e={};e[b]=a;e=[e];c.M.push(d);c.U[d]=e}));if((c?e.La:Math.random())<(d||e.va)){var g=na(f,e.Ia,e.xa,e.Ha+a+"&");qa(g)}}catch(k){}},qa=function(a){q.google_image_requests||(q.google_image_requests=[]);var b=q.document.createElement("img");b.src=a;q.google_image_requests.push(b)};var sa=v("Opera"),x=v("Trident")||v("MSIE"),ta=v("Edge"),ua=v("Gecko")&&!(-1!=u.toLowerCase().indexOf("webkit")&&!v("Edge"))&&!(v("Trident")||v("MSIE"))&&!v("Edge"),va=-1!=u.toLowerCase().indexOf("webkit")&&!v("Edge"),wa=function(){var a=q.document;return a?a.documentMode:void 0},xa;
+a:{var ya="",za=function(){var a=u;if(ua)return/rv\:([^\);]+)(\)|;)/.exec(a);if(ta)return/Edge\/([\d\.]+)/.exec(a);if(x)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(va)return/WebKit\/(\S+)/.exec(a);if(sa)return/(?:Version)[ \/]?(\S+)/.exec(a)}();za&&(ya=za?za[1]:"");if(x){var Aa=wa();if(null!=Aa&&Aa>parseFloat(ya)){xa=String(Aa);break a}}xa=ya}
+var Ba=xa,Ca={},Da=function(a){if(!Ca[a]){for(var b=0,c=ca(String(Ba)).split("."),d=ca(String(a)).split("."),e=Math.max(c.length,d.length),f=0;0==b&&f<e;f++){var g=c[f]||"",k=d[f]||"",l=RegExp("(\\d*)(\\D*)","g"),m=RegExp("(\\d*)(\\D*)","g");do{var p=l.exec(g)||["","",""],n=m.exec(k)||["","",""];if(0==p[0].length&&0==n[0].length)break;b=da(0==p[1].length?0:parseInt(p[1],10),0==n[1].length?0:parseInt(n[1],10))||da(0==p[2].length,0==n[2].length)||da(p[2],n[2])}while(0==b)}Ca[a]=0<=b}},Ea=q.document,
+Fa=Ea&&x?wa()||("CSS1Compat"==Ea.compatMode?parseInt(Ba,10):5):void 0;var Ga;if(!(Ga=!ua&&!x)){var Ha;if(Ha=x)Ha=9<=Number(Fa);Ga=Ha}Ga||ua&&Da("1.9.1");x&&Da("9");var Ia=function(a,b,c,d){this.top=a;this.right=b;this.bottom=c;this.left=d};Ia.prototype.floor=function(){this.top=Math.floor(this.top);this.right=Math.floor(this.right);this.bottom=Math.floor(this.bottom);this.left=Math.floor(this.left);return this};var Ja=window;var pa;pa=new function(){this.Ia="http:"===Ja.location.protocol?"http:":"https:";this.xa="pagead2.googlesyndication.com";this.Ha="/pagead/gen_204?id=";this.va=.01;this.La=Math.random()};var y=function(){},Ka="function"==typeof Uint8Array,A=function(a,b,c){a.a=null;b||(b=[]);a.Ra=void 0;a.N=-1;a.l=b;a:{if(a.l.length){b=a.l.length-1;var d=a.l[b];if(d&&"object"==typeof d&&"array"!=aa(d)&&!(Ka&&d instanceof Uint8Array)){a.R=b-a.N;a.H=d;break a}}a.R=Number.MAX_VALUE}a.Qa={};if(c)for(b=0;b<c.length;b++)d=c[b],d<a.R?(d+=a.N,a.l[d]=a.l[d]||z):a.H[d]=a.H[d]||z},z=[],B=function(a,b){if(b<a.R){var c=b+a.N,d=a.l[c];return d===z?a.l[c]=[]:d}d=a.H[b];return d===z?a.H[b]=[]:d},Ma=function(a){a=
+B(La,a);return null==a?a:+a},C=function(a,b,c){b<a.R?a.l[b+a.N]=c:a.H[b]=c},D=function(a,b,c){a.a||(a.a={});if(!a.a[c]){var d=B(a,c);d&&(a.a[c]=new b(d))}return a.a[c]},E=function(a,b,c){a.a||(a.a={});if(!a.a[c]){for(var d=B(a,c),e=[],f=0;f<d.length;f++)e[f]=new b(d[f]);a.a[c]=e}b=a.a[c];b==z&&(b=a.a[c]=[]);return b},Na=function(a,b,c){a.a||(a.a={});c=c||[];for(var d=[],e=0;e<c.length;e++)d[e]=F(c[e]);a.a[b]=c;C(a,b,d)},Oa=function(a){if(a.a)for(var b in a.a){var c=a.a[b];if("array"==aa(c))for(var d=
+0;d<c.length;d++)c[d]&&F(c[d]);else c&&F(c)}},F=function(a){Oa(a);return a.l};y.prototype.toString=function(){Oa(this);return this.l.toString()};var G=function(a){return new a.constructor(Pa(F(a)))},Pa=function(a){var b;if("array"==aa(a)){for(var c=Array(a.length),d=0;d<a.length;d++)null!=(b=a[d])&&(c[d]="object"==typeof b?Pa(b):b);return c}if(Ka&&a instanceof Uint8Array)return new Uint8Array(a);c={};for(d in a)null!=(b=a[d])&&(c[d]="object"==typeof b?Pa(b):b);return c};var H=function(a){this.ja={};this.ja.c=a;this.o=[];this.u=null;this.A=[];this.ca=0};H.prototype.g=function(a){for(var b=0;b<this.o.length;b++)if(this.o[b]==a)return this;this.o.push(a);return this};var Qa=function(a,b){a.u=a.u?a.u:b;return a};H.prototype.D=function(a){for(var b=0;b<this.A.length;b++)if(this.A[b]==a)return this;this.A.push(a);return this};
+H.prototype.getData=function(a){var b=this.ja,c={},d;for(d in b)c[d]=b[d];0<this.ca&&(c.t=this.ca);c.err=this.o.join();c.warn=this.A.join();if(this.u){c.excp_n=this.u.name;c.excp_m=this.u.message&&this.u.message.substring(0,512);if(b=this.u.stack){d=this.u.stack;try{-1==d.indexOf("")&&(d="\n"+d);for(var e;d!=e;)e=d,d=d.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/,"$1");b=d.replace(/\n */g,"\n")}catch(f){b=""}}c.excp_s=b}c.w=0<a.innerWidth?a.innerWidth:null;c.h=0<a.innerHeight?a.innerHeight:
+null;return c};var Sa=function(a,b){Ra(a,a.Aa,a.W,b)},Ra=function(a,b,c,d){var e=d.u;d=d.getData(a.L);a.Ca?(d.type=b,a.L.console.log(d),e&&a.L.console.error(e)):0<c&&ra(b,d,"jserror"!=b,c)};var I=function(a){return a.dynamicgoogletags=a.dynamicgoogletags||{}};var J=function(a){A(this,a,Ta)};t(J,y);var Ta=[4];J.prototype.v=function(){return G(this)};J.prototype.getId=function(){return B(this,3)};var K=function(a){A(this,a,null)};t(K,y);K.prototype.v=function(){return G(this)};var Ua=function(a){A(this,a,null)};t(Ua,y);Ua.prototype.v=function(){return G(this)};var L=function(a){return D(a,J,1)},M=function(a){A(this,a,Va)};t(M,y);var Va=[1];M.prototype.v=function(){return G(this)};M.prototype.i=function(){return E(this,Ua,1)};M.prototype.la=function(a){Na(this,1,a)};var N=function(a){A(this,a,Wa)};t(N,y);var Wa=[2];N.prototype.v=function(){return G(this)};N.prototype.fa=function(){return B(this,3)};N.prototype.ma=function(a){C(this,3,a)};var Xa=function(a){A(this,a,null)};
+t(Xa,y);Xa.prototype.v=function(){return G(this)};var O=function(a){A(this,a,Ya)};t(O,y);var Ya=[1,2,3];O.prototype.v=function(){return G(this)};O.prototype.i=function(){return E(this,Ua,2)};O.prototype.la=function(a){Na(this,2,a)};var $a=function(a){A(this,a,Za)};t($a,y);var Za=[3];h=$a.prototype;h.v=function(){return G(this)};h.B=function(){return B(this,1)};h.F=function(){return D(this,M,2)};h.P=function(){return B(this,4)};h.fa=function(){return B(this,5)};h.ma=function(a){C(this,5,a)};
+h.O=function(){return D(this,ab,9)};var ab=function(a){A(this,a,null)};t(ab,y);ab.prototype.v=function(){return G(this)};var bb=function(a){this.m=a;this.oa=[]};bb.prototype.f=function(){return 0<E(this.m,O,3).length?E(this.m,O,3)[0]:null};var cb=function(a){var b=["adsbygoogle-placeholder"];a=a.className?a.className.split(/\s+/):[];for(var c={},d=0;d<a.length;++d)c[a[d]]=!0;for(d=0;d<b.length;++d)if(!c[b[d]])return!1;return!0};var db=function(a,b){for(var c=0;c<b.length;c++){var d=b[c],e=ea(d.Sa);a[e]=d.value}},eb=function(a){return a.adsbygoogle=a.adsbygoogle||[]};var fb=function(a,b){if(!a)return!1;var c;c=b.getComputedStyle?b.getComputedStyle(a,null):a.currentStyle;if(!c)return!1;c=c.cssFloat||c.styleFloat;return"left"==c||"right"==c},gb=function(a){for(a=a.previousSibling;a&&1!=a.nodeType;)a=a.previousSibling;return a?a:null},hb=function(a){return!!a.nextSibling||!!a.parentNode&&hb(a.parentNode)};var ib=function(a,b){var c=a.length;if(null!=c)for(var d=0;d<c;d++)b.call(void 0,a[d],d)};var jb=function(a,b,c,d){this.Ea=a;this.ha=b;this.ia=c;this.Y=d};jb.prototype.query=function(a){var b=[];try{b=a.querySelectorAll(this.Ea)}catch(f){}if(!b.length)return[];a=b;b=a.length;if(0<b){for(var c=Array(b),d=0;d<b;d++)c[d]=a[d];a=c}else a=[];r(this.ha)&&(b=this.ha,0>b&&(b+=a.length),a=0<=b&&b<a.length?[a[b]]:[]);if(r(this.ia)){b=[];for(c=0;c<a.length;c++){var d=kb(a[c]),e=this.ia;0>e&&(e+=d.length);0<=e&&e<d.length&&b.push(d[e])}a=b}return a=lb(this,a)};
+var lb=function(a,b){if(null==a.Y)return b;switch(a.Y){case 1:return b.slice(1);case 2:return b.slice(0,b.length-1);case 3:return b.slice(1,b.length-1);case 0:return b;default:throw Error("Unknown ignore mode: "+a.Y);}},kb=function(a){var b=[];ib(a.getElementsByTagName("p"),function(a){100<=mb(a)&&b.push(a)});return b},mb=function(a){if(3==a.nodeType)return a.length;if(1!=a.nodeType||"SCRIPT"==a.tagName)return 0;var b=0;ib(a.childNodes,function(a){b+=mb(a)});return b},nb=function(a){return 0==a.length||
+isNaN(a[0])?a:"\\"+(30+parseInt(a[0],10))+" "+a.substring(1)};var ob=function(a,b){var c=0,d=B(a,6);if(void 0!==d)switch(d){case 0:c=1;break;case 1:c=2;break;case 2:c=3}var d=null,e=B(a,7);if(B(a,1)||a.getId()||0<B(a,4).length){var f=a.getId(),g=B(a,1),k=B(a,4),d=B(a,2),e=B(a,5),l="";g&&(l+=g);f&&(l+="#"+nb(f));if(k)for(f=0;f<k.length;f++)l+="."+nb(k[f]);d=(k=l)?new jb(k,d,e,c):null}else e&&(d=new jb(e,B(a,2),B(a,5),c));return d?d.query(b||document):[]},pb=function(a,b){if(a==b)return!0;if(!a||!b||B(a,1)!=B(b,1)||B(a,2)!=B(b,2)||a.getId()!=b.getId()||B(a,7)!=
+B(b,7)||B(a,5)!=B(b,5)||B(a,6)!=B(b,6))return!1;var c=B(a,4),d=B(b,4);if(c||d)if(c&&d&&c.length==d.length)for(var e=0;e<c.length;e++){if(c[e]!=d[e])return!1}else return!1;return!0};var qb=function(a){a=a.document;return("CSS1Compat"==a.compatMode?a.documentElement:a.body)||{}},rb=function(a){return void 0===a.pageYOffset?(a.document.documentElement||a.document.body.parentNode||a.document.body).scrollTop:a.pageYOffset};var sb=function(a,b){var c=L(b);if(!c)return null;c=ob(c,a);return 0<c.length?c[0]:null},ub=function(a,b){var c=tb(a,b,!0);return r(c)&&!(c<=qb(a).clientHeight)},wb=function(a,b){return a.body?b-a.body.getBoundingClientRect().top:b},tb=function(a,b,c){if(!c||!r(B(b,8))){var d=sb(a.document,b);if(d){var e=null!=D(b,K,2)?B(D(b,K,2),3):void 0;c=window.document.createElement("div");c.className="googlepublisherpluginad";var f=c.style;f.textAlign="center";f.width="100%";f.height="0px";f.clear=e?"both":
+"none";xb(c,d,B(b,3));d=c.getBoundingClientRect().top+rb(a);c.parentNode.removeChild(c);C(b,8,d)}}b=B(b,8);return r(b)?b-rb(a):null},yb={0:0,1:1,2:2,3:3},zb={0:"auto",1:"horizontal",2:"vertical",3:"rectangle"},Ab=function(a,b){a.sort(function(a,d){var e=tb(b,a,!0),e=r(e)?e:Number.POSITIVE_INFINITY,f=tb(b,d,!0),f=r(f)?f:Number.POSITIVE_INFINITY;return e-f})},xb=function(a,b,c){switch(yb[c]){case 0:b.parentNode&&b.parentNode.insertBefore(a,b);break;case 3:if(c=b.parentNode){var d=b.nextSibling;if(d&&
+d.parentNode!=c)for(;d&&8==d.nodeType;)d=d.nextSibling;c.insertBefore(a,d)}break;case 1:b.insertBefore(a,b.firstChild);break;case 2:b.appendChild(a)}"INS"==b.tagName&&cb(b)&&(b.style.display="block")};var P=function(a){this.b=a;this.j=[];this.ba=0;this.o=[];this.A=[];this.X=null;this.ka=!1},Bb=function(a,b){var c=D(a.f(),J,4);if(!(c&&b&&B(b,1)==B(c,1)&&b.getId()==c.getId()&&r(B(b,2))&&r(B(b,5))))return!1;var c=B(c,4),d=B(b,4);if(c.length!=d.length)return!1;for(var e=0;e<c.length;++e)if(d[e]!=c[e])return!1;return!0},Cb=function(a){var b=r(void 0)?void 0:20,c=a.f(),d=c.i(),e=D(c,J,4);if(!(a.ka||0>=b)&&e&&0!=ob(e,a.b.document).length){a.ka=!0;for(var c=[],f=0;f<d.length;++f){var g=d[f],k=L(g);if(Bb(a,
+k)){var l=B(k,2),k=B(k,5);null!=l&&null!=k&&0<=l&&0<=k&&(!c[l]||B(L(c[l]),5)<k)&&(c[l]=g)}}k=0;d=ob(e,a.b.document);for(l=0;l<c.length&&k<b;++l){var e=k,f=a,m=d[l],g=c[l],k=b-k,p=f.f().i(),n=0;if(m&&g){m=kb(m).length;switch(B(L(g),6)){case 0:case 1:--m;break;case 2:m-=2}for(var w=B(L(g),5)+1;w<m&&n<k;++w){var vb=g.v(),xc=L(vb);C(xc,5,w);p.push(vb);n++}}n&&f.f().la(p);k=e+n}}};P.prototype.g=function(a){for(var b=0;b<this.o.length;++b)if(this.o[b]==a)return;this.o.push(a)};
+P.prototype.D=function(a){for(var b=0;b<this.A.length;++b)if(this.A[b]==a)return;this.A.push(a)};
+var Db=function(a,b,c){var d=yb[B(b,3)],e=sb(a.b.document,b);if(e){var f=L(b)?B(L(b),2):void 0,g;a:{g=a.b;if(null!=f)switch(d){case 0:g=fb(gb(e),g);break a;case 3:g=fb(e,g);break a;case 2:f=e.lastChild;g=fb(f?1==f.nodeType?f:gb(f):null,g);break a}g=!1}if(!g&&(c||2!=d||hb(e))&&(c=1==d||2==d?e:e.parentNode,!c||"INS"==c.tagName&&cb(c)||!(0>=c.offsetWidth)))a:if(B(b,7))a.D(8);else{b:if(B(b,5))c=B(b,5);else{if(c=Q(a).f())if(c=B(c,3),a.ba<c.length){c=c[a.ba++];break b}a.g(4);c=null}if(null!=c){C(b,7,!0);
+d=[];(g=a.P())&&d.push(g);g=Q(a).oa;for(f=0;f<g.length;++f)d.push(g[f]);r(B(b,9))&&d.push("pso-lv-"+B(b,9));var k=a.b.document;g=a.B();var f=B(b,6),f=null!=f?zb[f]:f,l=D(b,K,2),m={};l&&(m.na=B(l,1),m.da=B(l,2),m.ua=!!B(l,3));var l=c,p=k.createElement("div"),n=p.style;n.textAlign="center";n.width="100%";n.height="auto";n.clear=m.ua?"both":"none";m.Ga&&db(n,m.Ga);k=k.createElement("ins");n=k.style;n.display="block";n.margin="auto";n.backgroundColor="transparent";m.na&&(n.marginTop=m.na);m.da&&(n.marginBottom=
+m.da);m.pa&&db(n,m.pa);p.appendChild(k);p.className="googlepublisherpluginad";k.className="adsbygoogle";k.setAttribute("data-ad-client",g);k.setAttribute("data-ad-format",f?f:"auto");k.setAttribute("data-tag-origin","pso");l&&k.setAttribute("data-ad-slot",l);d.length&&k.setAttribute("data-ad-channel",d.join("+"));xb(p,e,B(b,3));try{eb(a.b).push({})}catch(w){B(b,5)!=c&&a.ba--;C(b,7,!1);a.D(6);p.parentNode&&p.parentNode.removeChild(p);break a}a.j.push(p)}}}},Eb=function(a,b){for(var c=Number.POSITIVE_INFINITY,
+d=0;d<a.j.length;++d)var e=a.j[d].getBoundingClientRect().top,f=a.j[d].getBoundingClientRect().bottom,c=Math.min(c,b<e?e-b:f<b?b-f:0);return c},Q=function(a){a=I(a.b).ps||null;if(!a)throw Error("No placementState");return a},Fb=function(a,b){var c=Q(a).m;if(!c||!c.B())return a.g(5),!1;c=E(c,O,3)[0];return c?B(c,3).length<b?(a.g(4),a.g(5),!1):!0:(a.g(5),!1)};P.prototype.B=function(){return Q(this).m.B()||""};P.prototype.P=function(){return Q(this).m.P()||void 0};
+P.prototype.F=function(){return Q(this).m.F()||new M};P.prototype.f=function(){var a=Q(this).f();if(!a)throw Error("No mConfig");return a};var Gb=function(a){a=B(a.f(),6);return null!=a&&0<a};var Hb=function(){this.J=this.K=this.$=null};var R=function(a){P.call(this,a)};t(R,P);R.prototype.apply=function(a){var b;(b=Q(this).m)&&b.B()&&b.F()?b=!0:(this.g(5),b=!1);if(b){b=this.F().i();for(var c=0;c<b.length;c++){var d=b[c];B(d,7)||Db(this,d,a)}}};R.prototype.C=function(){return(0==this.F().i().length||0<this.j.length)&&0==this.o.length};var Ib=function(a){P.call(this,a);if(Fb(this,0)){a=this.F().i();for(var b=this.f().i(),c=0;c<a.length;c++){var d=a[c],e;a:{e=d;var f=b;if(e&&L(e))for(var g=0;g<f.length;g++){var k=f[g];if(B(e,3)==B(k,3)&&pb(L(e),L(k))){e=k;break a}}e=null}e&&D(e,K,2)&&(e=D(e,K,2),d.a||(d.a={}),f=e?F(e):e,d.a[2]=e,C(d,2,f))}}};t(Ib,R);var Jb=function(a,b){var c=void 0===b.pageXOffset?(b.document.documentElement||b.document.body.parentNode||b.document.body).scrollLeft:b.pageXOffset,d=rb(b);if(a.getBoundingClientRect){var e=a.getBoundingClientRect();return new Ia(e.top+d,e.right+c,e.bottom+d,e.left+c)}e=b.document.createRange();e.selectNodeContents(a);if(e.collapsed)return new Ia(0,0,0,0);e=e.getBoundingClientRect();return new Ia(e.top+d,e.right+c,e.bottom+d,e.left+c)};var Kb={"120x90":!0,"160x90":!0,"180x90":!0,"200x90":!0,"468x15":!0,"728x15":!0};var Lb=function(a,b){var c=a.id;return!!c&&!!c.indexOf&&"function"===typeof c.indexOf&&0===c.indexOf(b)};var Mb=function(a){var b=a.googletag;if(!b||"function"!=typeof b.pubads)return S("div[id^=div-gpt-ad]",a);var c=[];try{for(var d=b.pubads().getSlots(),b=0;b<d.length;b++){var e=d[b].getSlotElementId(),f=a.document.getElementById(e);null!=f&&c.push(f)}}catch(g){ra("ladd_evt",{ok:0,err:g.toString()},!0,.1)}return c},Nb=function(a){var b=S("iframe[id^=aswift_],iframe[id^=google_ads_frame]",a);return fa(b,function(b){if("IFRAME"!=b.tagName&&"INS"!=b.tagName||!Lb(b,"google_ads_frame")&&!Lb(b,"aswift_"))b=
+!1;else{b=Jb(b,a);var d=b.bottom-b.top;b=!(Kb[b.right-b.left+"x"+d]&&50>d)}return b})},Ob=function(a){return S("iframe[id^=aswift_],iframe[id^=google_ads_frame]",a)},S=function(a,b){return ga(b.document.querySelectorAll(a),function(a){return a})},Rb=function(a){this.L=a;this.Ba=Mb(a);this.ra=S("ins.adsbygoogle",a);this.qa=Ob(a);this.Ja=Nb(a);this.Ka=S("[__lsu_res=reserved]",a);this.T=[];a=Pb(this);for(var b=0;b<a.length;b++)this.T.push(new Qb(a[b]))},Pb=function(a){return[].concat(a.Ba,a.ra,a.qa,
+a.Ka)},Qb=function(a){this.ya=a;this.V=null};var T=function(a){P.call(this,a)};t(T,P);T.prototype.apply=function(){};T.prototype.C=function(){var a;if(Gb(this)){var b=this.b;a=Mb(b);var c=S("ins.adsbygoogle",b),d=Ob(b),b=S("[__lsu_res=reserved]",b);a=0<[].concat(a,c,d,b).length}else a=!0;return a};var Sb=function(a){P.call(this,a);this.G=null};t(Sb,P);
+Sb.prototype.apply=function(a){if(a&&Fb(this,2)){Cb(this);a=qb(this.b).clientHeight||640;null==this.G&&(this.G=new Rb(this.b));var b=this.G.Ja.length;if(!(5<=b)){var b=Math.min(2,5-b),c=this.f().i();Ab(c,this.b);for(var d=0;d<c.length&&this.j.length<b;++d){var e=c[d];if(ub(this.b,e)){var f=tb(this.b,e,!0);if(void 0!==f){var g;a:{g=this.G;for(var k=a,l=f,m=0;m<g.T.length;m++){var p=l,n=k,w;w=g.T[m];w.V||(w.V=Jb(w.ya,g.L));w=w.V;if(w.top-n<p&&p<w.bottom+n){g=!0;break a}}g=!1}g||Eb(this,f)<a||Db(this,
+e,!0)}}}0==this.j.length&&this.D(1)}}};Sb.prototype.C=function(){return Gb(this)?0<Pb(this.G).length:!0};var Tb=function(a){P.call(this,a);this.Z=!1};t(Tb,T);
+Tb.prototype.apply=function(a){if(a&&!this.Z){var b;a:{var c=this.b.document;b=c.body;if(a&&b){a=this.B();var d=c.createElement("div");d.className="googlepublisherpluginad";d.style.display="block";c=c.createElement("ins");c.className="adsbygoogle";c.setAttribute("data-ad-client",a);c.setAttribute("data-reactive-ad-format","1");c.setAttribute("data-tag-origin","pso");c.style.display="none";d.appendChild(c);xb(d,b,2);try{eb(this.b).push({})}catch(e){this.D(6);d.parentNode&&d.parentNode.removeChild(d);
+b=5;break a}this.j.push(d);b=0}else b=4}this.Z=0==b}};Tb.prototype.C=function(){return this.Z&&T.prototype.C.call(this)};var Ub=function(a){P.call(this,a);a=qb(a).clientHeight;this.wa=.1*a;this.Da=.75*a};t(Ub,P);
+Ub.prototype.apply=function(a){if(Fb(this,3)&&!this.C()){Cb(this);var b=this.f().i();Ab(b,this.b);var c;c=this.wa;var d;d=document;d=d.querySelectorAll?d.querySelectorAll("header,#header,#masthead,.header,.site-header"):[];for(var e=d.length,f=0<e?d[0]:null,g=1;g<e;g++)d[g].getBoundingClientRect().top<f.getBoundingClientRect().top&&(f=d[g]);(d=f)&&(d=d.getBoundingClientRect())&&d.top!=d.bottom&&d.left!=d.right&&(c=Math.min(c,wb(document,d.bottom)));for(d=0;d<b.length&&3>this.j.length;d++){e=b[d];
+var f=c,g=this.b.document,k=tb(this.b,e,!1);!r(k)||wb(g,k)<f?f=!1:(f=Eb(this,k),f=this.Da<f);f&&(f=ub(this.b,e),g=B(e,6)||0,f&&0==g&&C(e,6,3),!f&&a||Db(this,e,a))}}};Ub.prototype.C=function(){return 3==this.j.length};var U={};U[16]=R;U[17]=R;U[19]=T;U[29]=Sb;U[33]=T;U[30]=Tb;U[28]=Ub;U[34]=Ub;U[32]=Ib;U[1]=R;U[8]=T;U[11]=R;var Vb=[19,29,33,30,16,32,17,34],Wb=[16,19,33,30,17,1,6,8,11];var Xb=function(a,b){var c=a.google_ad_modifications=a.google_ad_modifications||{};(c.ad_channels=c.ad_channels||[]).push(b)};var Yb=function(a){return 0>a||99<a?null:10>a?"0"+a:""+a};var Zb=function(a,b){for(var c=a.google_ad_modifications=a.google_ad_modifications||{},c=c.loeids=c.loeids||[],d=0;d<b.length;d++)c.push(b[d])};var $b=function(a,b,c){this.ea=a;this.za=c?c:new ab};$b.prototype.O=function(){return this.za||new ab};var ac=function(a){if(!r(a))return!1;for(var b=0;b<Vb.length;++b)if(a==Vb[b])return!1;return!0},fc=function(){var a=V,b=bc,c=cc,d=b.f();if(!d)return dc(16);var e=null,f;a:{f=E(d,N,1);for(var g=0;g<f.length;++g){for(var k=!0,l=0;l<Wb.length;++l)B(f[g],4)==Wb[l]&&(k=!1);if(k){f=[];0==d.i().length&&f.push("PsoInvalidVariant");0==B(d,3).length&&f.push("PsoNoAdSlotCodes");break a}}f=[]}if(0==f.length)a:{e=E(d,N,1);f=c.ea;if(r(f))for(g=0;g<e.length;g++)if(k=e[g],U[B(k,4)])for(var l=E(k,Xa,2),m=0;m<l.length;m++){var p=
+l[m],n=B(p,1),p=B(p,2);if(r(n)&&r(p)&&f>=n&&f<=p){e=k;break a}}e=null}else for(g=0;g<f.length;++g)b.oa.push(f[g]);if(!e){f=E(d,N,1);e={};for(g=0;g<f.length;g++)e[B(f[g],4)]=!0;f=null;e[19]||e[8]?f=19:e[16]||e[1]?f=16:0<d.i().length&&0<B(d,3).length&&e[34]&&(f=34);null!=f?(e=new N,C(e,6,3),C(e,4,f),16!=f&&19!=f&&e.ma("pso-ama-fallback")):e=null}if(!e)return dc(16);(f=e.fa())&&Xb(a,f);f=!0;B(c.O(),2)&&(Date.now?Date.now():+new Date)<B(c.O(),2)||(Xb(a,"pso-ama-exd"),f=!1);B(b.m,11)&&(Xb(a,"pso-ama-stl-tmp"),
+f=!1);f&&Xb(a,"pso-ama-elig");2==B(e,6)&&(b=B(e,1),null!=b&&Zb(a,[""+b]));if(f&&(2==B(e,6)||1==B(e,6))){d=E(d,N,1);if(null===c.ea)c=[];else{b={};c=[];for(f=0;f<d.length;f++)g=ec(d[f]),null==g||b[g]||(b[g]=!0,c.push(g));b=ec(e);if(null!=b){d=[];b=Yb(b);f=!1;if(b)for(g=0;g<c.length;g++)k=Yb(c[g]),b==k&&(f=!0),k&&d.push("950"+b+k);f||(d=[]);c=d}else c=[]}Zb(a,c)}a=new Hb;a.$=B(e,5);a.K=B(e,4);return a},dc=function(a){var b=new Hb;b.K=a;return b},gc=function(a){a=a.google_ad_modifications=a.google_ad_modifications||
+{};a.remove_ads_by_default=!0;a.ad_whitelist=[{ad_tag_origin:"pso"}];a.ad_blacklist=[];a.space_collapsing="slot"},ec=function(a){var b;switch(B(a,6)){case 1:b=B(a,4);break;case 2:b=B(a,7)}return null!=b?b:null};var hc=function(a){this.document=a};var W=function(a){H.call(this,a)};t(W,H);W.prototype.getData=function(a){var b=W.Na.getData.call(this,a),c;a:{c=(new hc(a.document)).document.getElementsByTagName("script");for(var d=0;d<c.length;++d)if(c[d].hasAttribute("data-pso-version")){c=c[d].getAttribute("data-pso-version");break a}c=null}b.sv=c;if(d=I(a).ps||null){c=d.m;var d=d.f(),e=b.wpc;b.wpc=null!=e?e:c.B();b.su=B(c,14);b.tn=c.P();b.ev=d&&B(d,5)}if(a=I(a).ss||null)b.s=a.K,b.st=a.$;return b};var ic=null,jc=!1,mc=function(a){var b=kc,c=lc;b.addEventListener?(a&&b.addEventListener("DOMContentLoaded",a,!1),c&&b.addEventListener("load",c,!1)):b.attachEvent&&c&&b.attachEvent("onload",c)},oc=function(a){r(ic)&&a.clearInterval&&(a.clearInterval(ic),ic=null);jc||nc(a,!1);nc(a,!0)},pc=function(a,b){try{oc(b);var c=I(b).ss||null;if(c&&c.J){var d=c.J,e=d.C(),f=d.o,g=d.A,k=d.X,l=d.j.length;e||0!=l||f.push(6);for(var m=new W(l),c=0;c<g.length;c++)m.D(g[c]);if(e&&0==f.length&&null===k)Ra(a,a.Ma,a.aa,
+m);else{for(e=0;e<f.length;e++)m.g(f[e]);Sa(a,Qa(m,k))}}else Sa(a,(new W(0)).g(2))}catch(p){Sa(a,Qa((new W(0)).g(1),p))}I(b).loaded=!0},nc=function(a,b){b||(jc=!0);var c=I(a).ss||null;if(c&&c.J){c=c.J;try{c.apply(b)}catch(d){c.g(1),null===c.X&&(c.X=d)}}},qc=function(){nc(window,!1)};var X=new function(a){this.Ma="pso_success";this.Aa="pso_failure";this.W=this.aa=.01;this.Ca=!1;this.L=a}(window);
+try{var V=window,La,rc=I(V).config;La=rc?new $a(rc):null;if(!La)throw Error("No config");var sc=Ma(10),tc=Ma(7);X.aa=null!=sc?sc:X.aa;X.W=null!=tc?tc:X.W;var bc=new bb(La),uc=bc;I(V).ps=uc;var Y,cc;if(v("iPad")||v("Android")&&!v("Mobile")||v("Silk")||!(v("iPod")||v("iPhone")||v("Android")||v("IEMobile")))Y=dc(16);else{var vc,wc=/^#([^=]*)=(\d+)$/.exec(V.location.hash);if((vc=wc&&3==wc.length&&"pso_strategy"==wc[1]?+wc[2]:null)&&U[vc]){Y=dc(vc);var yc=V;ac(vc)&&gc(yc)}else{var zc=V,Ac=bc.m.O(),Z;try{var Bc=
+parseInt(zc.localStorage.getItem("PSO_EXP0"),10);Z=isNaN(Bc)?null:Bc}catch(a){Z=null}if(null==Z){Z=Math.floor(1024*Math.random());var Cc=Z;try{zc.localStorage.setItem("PSO_EXP0",Cc.toString())}catch(a){}}cc=new $b(Z,0,Ac);Y=fc()}if(1==Y.$){var Dc=V;ac(Y.K)&&gc(Dc)}}if(!Y)throw Error("No strategyState created!");var Ec=Y;I(V).ss=Ec;var Fc=V,Gc=Y,Hc=Gc.K;if(r(Hc)){var Ic=U[Hc];Hc&&Ic&&(Gc.J=new Ic(Fc))}var kc=V,lc=ba(pc,X,kc),Jc=ba(oc,kc);switch(kc.document.readyState){case "complete":lc();break;case "interactive":Jc();
+mc();break;default:var Kc=kc,Lc=eb(Kc);Lc.loaded||(Lc.onload=qc);ic=Kc.setInterval(qc,10);mc(Jc)}}catch(a){Sa(X,Qa(new W(0),a))};})();
+</script>
+
+</head>
+
+<body>
+
+    <!--class container -->
+    <div class="container">
+
+        <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="navbar-header">
+                    	<div class="navbar-jarroba-icon-smallscreen">
+	                    	<a href="/" class="puntero">
+	                             <img class="logo" src="http://jarroba.com/wp-content/themes/jarrobav6/static/img/logojarroba.png" width="75px">
+	                        </a>
+                        </div>
+                        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-buttons">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                                                <button id="idButtonShowEntryData" class="navbar-toggle btn-sm navbar-buttons" href="#"><i id="idButtonShowEntryData_Expand" class="fa fa-expand"></i><i id="idButtonShowEntryData_Compress" class="fa fa-compress" style="display: none;"></i> Info. Artículo</button>
+						
+                    </div>
+
+                    <div id="navbarCollapse" class="collapse navbar-collapse">
+                        <div id="menu">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="http://jarroba.com/entradas/" class="puntero">Entradas</a>
+                                </li>
+                                <li>
+                                    <a href="http://jarroba.com/foro/" class="puntero">¿Preguntas?</a>
+                                </li>
+                                <li class="navbar-jarroba-icon-bigscreen" style="margin-top: 0px">
+                                    <a href="/" class="puntero">
+                                        <img class="logo" src="http://jarroba.com/wp-content/themes/jarrobav6/static/img/logojarroba.png" width="100px">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://jarroba.com/videos/" class="puntero">Videos</a>
+                                </li>
+                                <li>
+                                    <a href="http://jarroba.com/libros/" class="puntero">Libros</a>
+                                </li>
+                                <li>
+                                    <a class="change-project" href="javascript:;">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                    <div class="hide" id="select-div">
+                                        <form method="get" id="searchform" action="/">
+                                            <div id="search">
+                                                <input type="text" value="" name="s" id="s"/>
+                                                <input type="submit" class="btn btn-success" id="searchsubmit" value="Buscar" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+<div class="container" name="jumpToEntryData" id="jumpToEntryData">
+
+    <div class="row rowPages">
+
+
+        
+            <!-- Barra lateral -->
+            <aside class="col-md-2 lateral-bar">
+
+                <!-- <a id="idButtonShowEntryData" class="btn btn-default btn-sm" href="#"><i class="fa fa-expand"></i> Datos</a> -->
+
+                <div class="row hide-on-smallscreen">
+
+                    <!-- Autor -->
+                    <div class="col-md-12 col-xs-6 row-fluid">
+                        <a href="http://jarroba.com/author/ramoninvarato/">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12 text-center">
+                                    <img alt='' src='http://2.gravatar.com/avatar/e2b307d7640cf7fbbaf2bf6ea565b22a?s=120&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e2b307d7640cf7fbbaf2bf6ea565b22a?s=240&amp;d=mm&amp;r=g 2x' class='avatar avatar-120 photo' height='120' width='120' />                                </div>
+                                <div class="col-md-12 col-xs-12 text-center" style="padding-top: 10px">
+							<span class="autorPost">
+								Ramón Invarato							</span>
+                                    </br>
+							<span class="fechaPost">
+								12 - Ene - 2015							</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- /Autor -->
+
+                    <!-- Redes sociales -->
+                    <div class="col-md-12 col-xs-6 entry-share-lateral text-center">
+                        <div style="padding-bottom: 5px">Compartir en:</div>
+                        <div class="groupShareButtons row-fluid">
+		
+					<span class="fa-stack fa-lg">
+						<a href="https://plus.google.com/share?url=http%3A%2F%2Fjarroba.com%2Fmaven%2F"
+                           target="_blank" title="Compartir en Google+">
+                            <i class="fa fa-circle fa-stack-2x" style="color: #DD4B38;"></i>
+                            <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                        </a>
+					</span>
+					
+					<span class="fa-stack fa-lg">
+						<a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fjarroba.com%2Fmaven%2F&title=Maven&source=jarroba.com"
+                           target="_blank" title="Compartir en Linkedin">
+                            <i class="fa fa-circle fa-stack-2x" style="color: #0077B5;"></i>
+                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                        </a>
+					</span>
+					
+					<span class="fa-stack fa-lg">
+						<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fjarroba.com%2Fmaven%2F&t=Maven "
+                           target="_blank" title="Compartir en Facebook">
+                            <i class="fa fa-circle fa-stack-2x" style="color: #3C5A98;"></i>
+                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                        </a>
+					</span>
+					
+					<span class="fa-stack fa-lg">
+						<a href="http://twitter.com/home?status=Maven - http%3A%2F%2Fjarroba.com%2Fmaven%2F"
+                           target="_blank" title="Compartir en Twitter">
+                            <i class="fa fa-circle fa-stack-2x" style="color: #00ABF0;"></i>
+
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </a>
+					</span>
+
+                        </div>
+                    </div>
+                    <!-- /Redes sociales -->
+
+                </div>
+
+                <div class="row hide-on-smallscreen">
+                    <!-- Categorias -->
+                                            <div class="col-md-12 col-xs-6 entry-categories">
+                            <i class="fa fa-th fa-2x" style=" vertical-align: middle;"></i> Categor&iacute;a:
+                            <div class="row">
+                                                                    <a class="col-md-12" href="http://jarroba.com/tecnologias-web/"
+                                       rel="category tag">
+                                        <div class="row">
+                                            <!-- <div class="col-md-4 col-xs-3" > -->
+                                                                                        <!-- </div> -->
+                                            <!-- <div class="col-md-8 col-xs-9"> -->
+
+                                            <img class="col-md-4 col-xs-3"
+                                                 src="http://jarroba.com/wp-content/themes/jarrobav6/static/img/categorias/TecnologiasWeb.png">
+                                            <!--    -->
+                                            <p class="col-md-8 col-xs-9">Tecnologias Web</p>
+                                            <!-- </div> -->
+                                        </div>
+                                    </a>
+                                                                </div>
+                        </div>
+                                            <!-- /Categorias -->
+
+                    <!-- tags -->
+                                            <div class="col-md-12 col-xs-6 entry-tags">
+                            <i class="fa fa-tags fa-2x" style="vertical-align: middle;"></i> Tags:
+                            </br>
+                                                            <a class="tags" href="http://jarroba.com/?tag=maven" rel="tag"
+                                   style="background-color: #F7977A">
+                                    Maven                                </a>
+                                
+                        </div>
+                                            <!-- /tags -->
+                </div>
+
+
+                <!-- publicidad móvil -->
+                <div id="idAdsense" class="row ads-mobile">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- SuperiorMovil1 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-8473876812850116"
+                         data-ad-slot="1209493180"
+                         data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div id="idAdsense" class="row ads-mobile">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- SuperiorMovil2 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-8473876812850116"
+                         data-ad-slot="1209493180"
+                         data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                                <!-- /publicidad móvil -->
+
+
+                <!-- publicidad resto -->
+                <div id="idAdsense" class="row ads-computer">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Lateral1 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-8473876812850116"
+                         data-ad-slot="8872360786"
+                         data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                
+                <div id="idAdsense" class="row ads-computer">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Lateral1 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-8473876812850116"
+                         data-ad-slot="8872360786"
+                         data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+
+                <div id="idAdsense" class="row ads-computer">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Lateral1 -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-8473876812850116"
+                         data-ad-slot="8872360786"
+                         data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <!-- <div id="idAdsense" class="row ads-mobile ads-computer" style="min-height: 1000px; margin: 10px; background-color: #857465"> -->
+                <!-- <div id="idAdsense" class="row ads-computer">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+                <!-- SuperiorMovil1 -->
+                <!-- <ins class="adsbygoogle ads"
+                     style="display:block"
+                     data-ad-client="ca-pub-8473876812850116"
+                     data-ad-slot="1209493180"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div> -->
+                <!-- /publicidad resto -->
+
+            </aside>
+            <!-- /Barra lateral -->
+
+
+            <!-- Contenido del artículo -->
+            <article class="col-md-10">
+                <h1 class="text-center" style=" margin-top: 0px; padding-bottom: 0px;">
+                    Maven                </h1>
+
+                <div class="spacer"></div>
+                <br>
+                                <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p style="text-align: justify;">
+	Maven se encarga de gestionar y construir proyectos Java (Parafraseando a la Wikipedia, donde tienes toda la historia e informaci&oacute;n ampliada en espa&ntilde;ol en <a href="http://es.wikipedia.org/wiki/Maven">http://es.wikipedia.org/wiki/Maven</a>). Aqu&iacute; no te lo voy a contar en formato enciclopedia (para eso est&aacute; el art&iacute;culo que te indiqu&eacute; en la Wikipedia), sino que te dar&eacute; toda una formaci&oacute;n completa acelerada sobre Maven y ejemplos de su uso para que no te tengas que creerte nada, sino que lo puedas probar en el tiempo que tardes en leerte &uacute;nicamente este art&iacute;culo (no mires la diminuta barra de scroll, que casi todo son im&aacute;genes y una vez que lo entiendas tardar&aacute;s cinco minutos en hacer esto &#128521; ).
+</p>
+<p style="text-align: justify;">
+	Hay qui&eacute;n llama a Maven como &ldquo;Gestor de dependencias&rdquo; (es decir, gestiona bibliotecas). No es del todo correcto, ya que es tan solo una de sus herramientas (es como decir que Eclipse es &ldquo;un editor de texto&rdquo;; lo es, pero tambi&eacute;n compila, ejecuta, tiene muchos botones que hacen cosas, etc). Maven hace mucho m&aacute;s que &uacute;nicamente actuar de &ldquo;Gestor de dependencias&rdquo;. Algunas son:
+</p>
+<ul style="text-align: justify;"><li>
+		<strong>Construye</strong> nuestro c&oacute;digo del proyecto (build)
+	</li>
+<li>
+		Ejecuta las pruebas (<strong>testing</strong>)
+	</li>
+<li>
+		Trabaja de <strong>gestor de dependencias</strong>: nos importa autom&aacute;ticamente las bibliotecas desde un repositorio remoto &iexcl;Se acab&oacute; el importarlas manualmente! Y almacena (cachea) estas bibliotecas en un repositorio local para agilizar las importaciones posteriores de las bibliotecas que ya tiene
+	</li>
+<li>
+		<strong>Sube nuestro propio artefacto</strong> (proyecto) para que otros se lo descarguen: no tiene por qu&eacute; ser a un sitio p&uacute;blico. Si trabajas en una empresa imagina las posibilidades de tener un repositorio con todas las bibliotecas o proyectos que hemos creado para toda la empresa. O para trabajar con los amigos y que se puedan descargar nuestra biblioteca que hemos creado y utilizarla.
+	</li>
+<li>
+		<strong>Despliega el artefacto</strong> (proyecto) en un servidor.
+	</li>
+<li>
+		<strong>Descarga arquetipos</strong> (artefactos/proyectos que son plantillas): nos descarga proyectos que son plantillas, como la estructura de un sitio web para Java EE, para tener ya la estructura de carpetas creada, con las clases m&aacute;s usadas ya escritas e importados las bibliotecas que siempre se necesitan; arrebat&aacute;ndonos la tediosa tarea de tener que crear lo mismo una y otra vez nosotros cuando alguien ya lo ha hecho antes
+	</li>
+<li>
+		Crea y despliega una <strong>web con la documentaci&oacute;n</strong> del artefacto (proyecto).
+	</li>
+<li>
+		Se integra perfectamente con JIRA, SVN, Git
+	</li>
+</ul><p>
+	Para que veas todo el poder de Maven, te pongo un ejemplo r&aacute;pido de lo que hace Maven: queremos hacer una web con Java EE. Primero desarrollar&iacute;amos en local la web. Y crear&iacute;amos unos test para probar nuestro c&oacute;digo. Estamos trabajando en local; sabemos que cuando subamos el proyecto al servidor real las cosas no funcionan siempre igual de bien. Para subir el proyecto al servidor real de producci&oacute;n (el que ver&aacute;n los clientes o usuarios) tenemos que realizar los siguientes pasos:
+</p>
+<ol><li>
+		Primero <strong>validar&iacute;amos</strong> y <strong>compilar&iacute;amos</strong> el proyecto (sino habr&aacute; que corregirlo en desarrollo)
+	</li>
+<li>
+		Luego pasar&iacute;amos las <strong>pruebas</strong> hasta que est&eacute;n todas correctas (si falla alguna prueba, a desarrollo otra vez)
+	</li>
+<li>
+		<strong>Empaquetar&iacute;amos</strong> el proyecto en un archivo WAR (WAR es como JAR que sirve para distribuir una web, normalmente en Java)
+	</li>
+<li>
+		A continuaci&oacute;n <strong>subir&iacute;amos al servidor</strong> <strong>real de pruebas</strong>/desarrollo el fichero WAR
+	</li>
+<li>
+		<strong>Desplegar&iacute;amos</strong> el fichero WAR
+	</li>
+<li>
+		Volveremos a pasar las<strong> pruebas de integraci&oacute;n</strong> en el servidor (si falla, ya sabes, a desarrollo)
+	</li>
+<li>
+		Entonces el fichero WAR lo tenemos que <strong>subir al servidor de producci&oacute;n</strong> (o pre-producci&oacute;n, dependiendo de la arquitectura que sigas)
+	</li>
+<li>
+		Para terminar con <strong>desplegar</strong> el proyecto, que est&aacute; en el fichero WAR, en el servidor de producci&oacute;n (o pre-producci&oacute;n, dependiendo de la arquitectura que sigas)
+	</li>
+<li>
+		Ya terminada la nueva versi&oacute;n del proyecto tambi&eacute;n nos interesar&aacute; crear la <strong>p&aacute;gina de documentaci&oacute;n</strong>.
+	</li>
+</ol><p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/Maven-trabaja-por-ti-www.jarroba.com_.png"><img alt="Maven trabaja por ti - www.jarroba.com" class="aligncenter wp-image-42363 size-large img-responsive lazy" height="180" src="http://jarroba.com/wp-content/uploads/2015/01/Maven-trabaja-por-ti-www.jarroba.com_-1024x180.png" width="1024" srcset="http://jarroba.com/wp-content/uploads/2015/01/Maven-trabaja-por-ti-www.jarroba.com_-1024x180.png 1024w, http://jarroba.com/wp-content/uploads/2015/01/Maven-trabaja-por-ti-www.jarroba.com_-300x53.png 300w" sizes="(max-width: 1024px) 100vw, 1024px"></a>
+</p>
+<p>
+	Son muchos pasos para hacerlos a mano uno a uno. &iexcl;Gracias Maven por hacernos todos estos pasos de manera autom&aacute;tica! &#128578; Salvo el c&oacute;digo del desarrollo y las pruebas, &iexcl;Maven todav&iacute;a no lee la mente, puede que en la siguiente versi&oacute;n&hellip;!
+</p>
+<p style="text-align: justify;">
+	Y todo esto escribiendo un par de palabras en la l&iacute;nea de comandos (y ya si usas Eclipse, pulsando un bot&oacute;n &#128512; Lo explicaremos tambi&eacute;n)
+</p>
+<p style="text-align: justify;">
+	La siguiente imagen te muestro la estructura t&iacute;pica de un artefacto en Maven. Si has trabajado con Java ver&aacute;s que no difiere mucho de un proyecto Java de los de toda la vida (podr&aacute;s comprobar que la captura es de un proyecto de Eclipse):
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/artefacto-y-pom-Maven-www.jarroba.com_.png"><img alt="artefacto y pom Maven - www.jarroba.com" class="aligncenter wp-image-42252 size-full img-responsive lazy" height="195" src="http://jarroba.com/wp-content/uploads/2015/01/artefacto-y-pom-Maven-www.jarroba.com_.png" width="419" srcset="http://jarroba.com/wp-content/uploads/2015/01/artefacto-y-pom-Maven-www.jarroba.com_.png 419w, http://jarroba.com/wp-content/uploads/2015/01/artefacto-y-pom-Maven-www.jarroba.com_-300x140.png 300w" sizes="(max-width: 419px) 100vw, 419px"></a>
+</p>
+<p style="text-align: justify;">
+	Ya que he introducido el termino <strong>Artefacto</strong> (Artifact): es simplemente un proyecto (un proyecto de Eclipse por ejemplo) gestionado por Maven, simplemente que en Maven llaman a un proyecto como &ldquo;artefacto&rdquo;. Otra diferencia con un simple proyecto Java, es que con Maven va a tener un archivo que se llama &ldquo;pom.xml&rdquo;.
+</p>
+<p style="text-align: justify;">
+	El fichero <strong>POM</strong> (Viene de &ldquo;Project Object Model&rdquo;, o como dir&iacute;amos en espa&ntilde;ol: &ldquo;Un modelo de objeto para un proyecto&rdquo;) o &ldquo;<strong>pom.xml</strong>&rdquo;: Es un fichero XML fundamental en Maven que contiene informaci&oacute;n sobre el proyecto y la configuraci&oacute;n (si eres un programador avanzado quiz&aacute; te sirva que te diga que es como un Manifesto, AndroidManifest.xml, etc). Lo describiremos en profundidad un poco m&aacute;s adelante.
+</p>
+<p style="text-align: justify;">
+	No nos adelantemos a la&nbsp;teor&iacute;a sin poder probar las cosas,&nbsp;y empecemos por lo necesario: instalemos Maven.
+</p>
+<p style="text-align: justify;">
+	<strong>Nota para los que no usen Windows:</strong> aunque aqu&iacute; muestro un ejemplo funcional de como trabajar con Maven sobre&nbsp;Windows. Los&nbsp;comandos de Maven funcionan igual en todos los sistemas operativos. Otra opci&oacute;n es que pases directamente de la l&iacute;nea de comandos, e <a href="http://jarroba.com/maven-en-eclipse/">instales directamente un IDE como Eclipse que te cuento en este otro art&iacute;culo</a>. De cualquier manera, lee la teor&iacute;a y obvia las ventanas de Windows si trabajas sobre cualquier otro sistema operativo (salvo los ejemplos con comandos Maven, que son iguales para todos los sistemas operativos). Este art&iacute;culo no deja de ser una muestra de como trabajar con Maven y la teor&iacute;a se entiende igual trabajes sobre&nbsp;Windows o no &#128521;
+</p>
+<h2 style="text-align: justify;">
+	<strong><span style="text-decoration: underline;">Instalar Maven</span></strong><br></h2>
+<p style="text-align: justify;">
+	Vamos a instalar Maven. Antes de nada tenemos que tener instalado es el JDK de Java. Si no lo tienes instalado puedes ver como se instala en otros tutoriales de esta web como en <a href="http://jarroba.com/instalar-bien-eclipse-un-ide-de-muchos/">este de Eclipse</a>.
+</p>
+<p style="text-align: justify;">
+	Tenemos que descargar Maven desde la p&aacute;gina oficial <a href="http://maven.apache.org/">http://maven.apache.org/</a> y vamos al apartado &ldquo;Download&rdquo; (o podemos ir directamente al apartado de descargas en <a href="http://maven.apache.org/download.cgi">http://maven.apache.org/download.cgi</a>). Ah&iacute; descargamos un archivo binario (da igual cual. Por ejemplo, si tienes Windows el que termina en &ldquo;zip&rdquo; y as&iacute; no tienes que instalar nada para descomprimirlo):
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/1-descargar-Maven-www.jarroba.com_.png"><img alt="1 descargar Maven - www.jarroba.com" class="aligncenter wp-image-42258 size-full img-responsive lazy" height="723" src="http://jarroba.com/wp-content/uploads/2015/01/1-descargar-Maven-www.jarroba.com_.png" width="688" srcset="http://jarroba.com/wp-content/uploads/2015/01/1-descargar-Maven-www.jarroba.com_.png 688w, http://jarroba.com/wp-content/uploads/2015/01/1-descargar-Maven-www.jarroba.com_-285x300.png 285w" sizes="(max-width: 688px) 100vw, 688px"></a>
+</p>
+<p style="text-align: justify;">
+	Descargado el archivo lo descomprimimos. Es recomendable descomprimirlo directamente en la unidad del sistema operativo (por ejemplo en la unidad C).
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/2-carpeta-Maven-www.jarroba.com_.png"><img alt="2 carpeta Maven - www.jarroba.com" class="aligncenter wp-image-42259 size-full img-responsive lazy" height="328" src="http://jarroba.com/wp-content/uploads/2015/01/2-carpeta-Maven-www.jarroba.com_.png" width="471" srcset="http://jarroba.com/wp-content/uploads/2015/01/2-carpeta-Maven-www.jarroba.com_.png 471w, http://jarroba.com/wp-content/uploads/2015/01/2-carpeta-Maven-www.jarroba.com_-300x209.png 300w" sizes="(max-width: 471px) 100vw, 471px"></a>
+</p>
+<p style="text-align: justify;">
+	Ahora solo queda que la consola de Windows reconozca los comandos de Maven. Est&aacute;n sencillo como ir a las &ldquo;variables de entorno del sistema&rdquo; (puedes buscar esto con el buscador de Windows).
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/3-buscar-variables-de-entorno-del-sistema-www.jarroba.com_.png"><img alt="3 buscar variables de entorno del sistema - www.jarroba.com" class="aligncenter wp-image-42260 size-full img-responsive lazy" height="289" src="http://jarroba.com/wp-content/uploads/2015/01/3-buscar-variables-de-entorno-del-sistema-www.jarroba.com_.png" width="358" srcset="http://jarroba.com/wp-content/uploads/2015/01/3-buscar-variables-de-entorno-del-sistema-www.jarroba.com_.png 358w, http://jarroba.com/wp-content/uploads/2015/01/3-buscar-variables-de-entorno-del-sistema-www.jarroba.com_-300x242.png 300w" sizes="(max-width: 358px) 100vw, 358px"></a>
+</p>
+<p style="text-align: justify;">
+	En la ventana que se nos abre vamos a la pesta&ntilde;a &ldquo;Opciones avanzadas&rdquo; y elegimos &ldquo;Variables de entorno&hellip;&rdquo;. Empezaremos creando una nueva variable de entorno pulsando &ldquo;Nueva&hellip;&rdquo;.
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/4-crear-variable-del-sistema-Maven-www.jarroba.com_.png"><img alt="4 crear variable del sistema Maven - www.jarroba.com" class="aligncenter wp-image-42261 size-full img-responsive lazy" height="493" src="http://jarroba.com/wp-content/uploads/2015/01/4-crear-variable-del-sistema-Maven-www.jarroba.com_.png" width="819" srcset="http://jarroba.com/wp-content/uploads/2015/01/4-crear-variable-del-sistema-Maven-www.jarroba.com_.png 819w, http://jarroba.com/wp-content/uploads/2015/01/4-crear-variable-del-sistema-Maven-www.jarroba.com_-300x181.png 300w" sizes="(max-width: 819px) 100vw, 819px"></a>
+</p>
+<p style="text-align: justify;">
+	La llamaremos en &ldquo;Nombre de la variable&rdquo; MAVEN_HOME por ejemplo. Y le pondremos de &ldquo;Valor de la variable&rdquo; la ruta exacta a donde est&eacute;n los ficheros de Maven descomprimidos (puedes entrar en la carpeta descomprimida de Maven, copiar la ruta y pegarla en este campo). Terminamos pulsando sobre &ldquo;Aceptar&rdquo;.
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/5-crear-variable-del-sistema-Maven-www.jarroba.com_.png"><img alt="5 crear variable del sistema Maven - www.jarroba.com" class="aligncenter wp-image-42262 size-full img-responsive lazy" height="572" src="http://jarroba.com/wp-content/uploads/2015/01/5-crear-variable-del-sistema-Maven-www.jarroba.com_.png" width="731" srcset="http://jarroba.com/wp-content/uploads/2015/01/5-crear-variable-del-sistema-Maven-www.jarroba.com_.png 731w, http://jarroba.com/wp-content/uploads/2015/01/5-crear-variable-del-sistema-Maven-www.jarroba.com_-300x235.png 300w" sizes="(max-width: 731px) 100vw, 731px"></a>
+</p>
+<p style="text-align: justify;">
+	Ahora seleccionamos la variable del sistema que se llama &ldquo;Path&rdquo; y pulsaremos sobre el bot&oacute;n &ldquo;Editar&hellip;&rdquo;. Se nos abrir&aacute; la ventana para editarla. En el campo &ldquo;Valor de la variable&rdquo;, al final del todo pondremos (Nota importante: las rutas de este campo tienen que estar separadas por un punto y coma &ldquo;;&rdquo;):
+</p>
+<pre class="prettyprint">
+;%MAVEN_HOME%/bin</pre>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/6-crear-variable-del-sistema-Maven-www.jarroba.com_.png"><img alt="6 crear variable del sistema Maven - www.jarroba.com" class="aligncenter wp-image-42263 size-full img-responsive lazy" height="434" src="http://jarroba.com/wp-content/uploads/2015/01/6-crear-variable-del-sistema-Maven-www.jarroba.com_.png" width="776" srcset="http://jarroba.com/wp-content/uploads/2015/01/6-crear-variable-del-sistema-Maven-www.jarroba.com_.png 776w, http://jarroba.com/wp-content/uploads/2015/01/6-crear-variable-del-sistema-Maven-www.jarroba.com_-300x168.png 300w" sizes="(max-width: 776px) 100vw, 776px"></a>
+</p>
+<p style="text-align: justify;">
+	Ya deber&iacute;a funcionar Maven. Vamos a probarlo realizando una prueba muy sencilla: veremos la versi&oacute;n de Maven que hemos instalado. Adem&aacute;s, lo siguiente ya nos servir&aacute; para probar el resto de comandos.
+</p>
+<p style="text-align: justify;">
+	Para ello abrimos la consola de comandos. En Windows la puedes encontrar buscando &ldquo;cmd&rdquo; en el buscador y abriendo el &ldquo;S&iacute;mbolo de sistema&rdquo;.
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/7-abir-la-consola-de-comandos-o-cmd-en-Windows-www.jarroba.com_.png"><img alt="7 abir la consola de comandos o cmd en Windows - www.jarroba.com" class="aligncenter wp-image-42264 size-full img-responsive lazy" height="242" src="http://jarroba.com/wp-content/uploads/2015/01/7-abir-la-consola-de-comandos-o-cmd-en-Windows-www.jarroba.com_.png" width="361" srcset="http://jarroba.com/wp-content/uploads/2015/01/7-abir-la-consola-de-comandos-o-cmd-en-Windows-www.jarroba.com_.png 361w, http://jarroba.com/wp-content/uploads/2015/01/7-abir-la-consola-de-comandos-o-cmd-en-Windows-www.jarroba.com_-300x201.png 300w" sizes="(max-width: 361px) 100vw, 361px"></a>
+</p>
+<p style="text-align: justify;">
+	En la consola probaremos el comando:
+</p>
+<pre class="prettyprint">
+mvn --version</pre>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/8-probar-Maven-desde-la-consola-de-comandos-www.jarroba.com_.png"><img alt="8 probar Maven desde la consola de comandos - www.jarroba.com" class="aligncenter wp-image-42265 size-full img-responsive lazy" height="177" src="http://jarroba.com/wp-content/uploads/2015/01/8-probar-Maven-desde-la-consola-de-comandos-www.jarroba.com_.png" width="677" srcset="http://jarroba.com/wp-content/uploads/2015/01/8-probar-Maven-desde-la-consola-de-comandos-www.jarroba.com_.png 677w, http://jarroba.com/wp-content/uploads/2015/01/8-probar-Maven-desde-la-consola-de-comandos-www.jarroba.com_-300x78.png 300w" sizes="(max-width: 677px) 100vw, 677px"></a>
+</p>
+<p style="text-align: justify;">
+	Este comando principalmente consta de dos partes:
+</p>
+<ul style="text-align: justify;"><li>
+		<strong>mvn</strong>: le decimos al sistema operativo que queremos utilizar Maven, que la busque en la variable de entorno que antes le indicamos. Esta primera palabra del comando la utilizaremos siempre que queramos hacer algo con Maven.
+	</li>
+<li>
+		<strong>&ndash;version</strong>: simplemente es la llamada a una funci&oacute;n llamada &ldquo;&ndash;version&rdquo; para que nos muestre la versi&oacute;n de Maven e informaci&oacute;n variada recopilada por Maven
+	</li>
+</ul><p style="text-align: justify;">
+	Si nos muestra la informaci&oacute;n: &iexcl;Enhorabuena! Ya tienes configurado Maven. Ahora crearemos nuestro primer proyecto.
+</p>
+<h2 style="text-align: justify;">
+	<strong><span style="text-decoration: underline;">Crear un proyecto con Maven desde la consola de comandos</span></strong><br></h2>
+<p style="text-align: justify;">
+	Vamos a crear un espacio de trabajo en alg&uacute;n lado. Por ejemplo, yo voy a crear una carpeta en el Escritorio llamada &ldquo;proyectosMaven&rdquo;, donde voy a tener todos mis proyectos Maven (t&uacute; cr&eacute;ala donde quieras, yo la hago en el Escritorio para el ejemplo).
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/1-carpeta-de-proyectos-Maven-www.jarroba.com_.png"><img alt="1 - carpeta de proyectos Maven - www.jarroba.com" class="aligncenter wp-image-42269 size-full img-responsive lazy" height="118" src="http://jarroba.com/wp-content/uploads/2015/01/1-carpeta-de-proyectos-Maven-www.jarroba.com_.png" width="143"></a>
+</p>
+<p style="text-align: justify;">
+	Ahora vamos a dirigirnos a este espacio de trabajo en la consola. Para ello tenemos que utilizar el comando &ldquo;cd&rdquo;. En mi caso bastar&aacute; con poner la siguiente ruta (tendr&aacute;s que poner la ruta hasta tu espacio de trabajo):
+</p>
+<pre class="prettyprint">
+cd C:\Users\&lt;mi usuario de Windows&gt;\Desktop\proyectosMaven</pre>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/2-ir-a-la-carpeta-de-proyectos-Maven-desde-la-consola-de-comandos-www.jarroba.com_.png"><img alt="2 ir a la carpeta de proyectos Maven desde la consola de comandos- www.jarroba.com" class="aligncenter wp-image-42270 size-large img-responsive lazy" height="205" src="http://jarroba.com/wp-content/uploads/2015/01/2-ir-a-la-carpeta-de-proyectos-Maven-desde-la-consola-de-comandos-www.jarroba.com_-1024x205.png" width="1024" srcset="http://jarroba.com/wp-content/uploads/2015/01/2-ir-a-la-carpeta-de-proyectos-Maven-desde-la-consola-de-comandos-www.jarroba.com_-1024x205.png 1024w, http://jarroba.com/wp-content/uploads/2015/01/2-ir-a-la-carpeta-de-proyectos-Maven-desde-la-consola-de-comandos-www.jarroba.com_-300x60.png 300w, http://jarroba.com/wp-content/uploads/2015/01/2-ir-a-la-carpeta-de-proyectos-Maven-desde-la-consola-de-comandos-www.jarroba.com_.png 1552w" sizes="(max-width: 1024px) 100vw, 1024px"></a>
+</p>
+<p style="text-align: justify;">
+	Para generar un proyecto simple de Maven tan solo tendremos que poner el siguiente comando:
+</p>
+<pre class="prettyprint">
+mvn archetype:generate</pre>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/3-generar-el-arquotipo-Maven-desde-la-consola-de-comandos-www.jarroba.com_.png"><img alt="3 generar el arquotipo Maven desde la consola de comandos - www.jarroba.com" class="aligncenter wp-image-42271 size-full img-responsive lazy" height="139" src="http://jarroba.com/wp-content/uploads/2015/01/3-generar-el-arquotipo-Maven-desde-la-consola-de-comandos-www.jarroba.com_.png" width="677" srcset="http://jarroba.com/wp-content/uploads/2015/01/3-generar-el-arquotipo-Maven-desde-la-consola-de-comandos-www.jarroba.com_.png 677w, http://jarroba.com/wp-content/uploads/2015/01/3-generar-el-arquotipo-Maven-desde-la-consola-de-comandos-www.jarroba.com_-300x62.png 300w" sizes="(max-width: 677px) 100vw, 677px"></a>
+</p>
+<p style="text-align: justify;">
+	Y se descargar el proyecto simple de Maven. A mitad nos har&aacute; una serie de preguntas.
+</p>
+<p style="padding-left: 30px; text-align: justify;">
+	1. La primera pregunta ser&aacute; si queremos filtrar por un tipo de artefacto u otro. Por defecto est&aacute; el 510 (lo que sea seguido de dos puntos significa por defecto). Nos gusta el que est&aacute; por defecto por lo que no introducimos nada y pulsamos la tecla &ldquo;Enter&rdquo;.
+</p>
+<p style="padding-left: 30px; text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/4-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png"><img alt="4 paso a paso para crear nuestro poryecto desde el arqueotipo Maven - www.jarroba.com" class="aligncenter wp-image-42272 size-full img-responsive lazy" height="25" src="http://jarroba.com/wp-content/uploads/2015/01/4-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png" width="639" srcset="http://jarroba.com/wp-content/uploads/2015/01/4-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png 639w, http://jarroba.com/wp-content/uploads/2015/01/4-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_-300x12.png 300w" sizes="(max-width: 639px) 100vw, 639px"></a>
+</p>
+<p style="padding-left: 30px; text-align: justify;">
+	2. Nos preguntar&aacute; por la versi&oacute;n que queremos. Por defecto ya est&aacute; seleccionada la &uacute;ltima, la 6. Pues no hacemos m&aacute;s que pulsar &ldquo;Enter&rdquo;.
+</p>
+<p style="padding-left: 30px; text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/5-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png"><img alt="5 paso a paso para crear nuestro poryecto desde el arqueotipo Maven - www.jarroba.com" class="aligncenter wp-image-42274 size-full img-responsive lazy" height="98" src="http://jarroba.com/wp-content/uploads/2015/01/5-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png" width="562" srcset="http://jarroba.com/wp-content/uploads/2015/01/5-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png 562w, http://jarroba.com/wp-content/uploads/2015/01/5-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_-300x52.png 300w" sizes="(max-width: 562px) 100vw, 562px"></a>
+</p>
+<p style="padding-left: 30px; text-align: justify;">
+	3. Nos pedir&aacute; el &ldquo;groupId&rdquo; que no es m&aacute;s que un identificador &uacute;nico para crear nuestro artefacto (proyecto). Se suele poner el mismo que el pondr&iacute;amos en un paquete de Java. En este ejemplo voy a escribir: com.jarroba.ejemplo
+</p>
+<p style="padding-left: 30px; text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/6-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png"><img alt="6 paso a paso para crear nuestro poryecto desde el arqueotipo Maven - www.jarroba.com" class="aligncenter wp-image-42275 size-full img-responsive lazy" height="20" src="http://jarroba.com/wp-content/uploads/2015/01/6-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png" width="475" srcset="http://jarroba.com/wp-content/uploads/2015/01/6-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png 475w, http://jarroba.com/wp-content/uploads/2015/01/6-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_-300x13.png 300w" sizes="(max-width: 475px) 100vw, 475px"></a>
+</p>
+<p style="padding-left: 30px; text-align: justify;">
+	4. El nombre del proyecto lo introducimos cuando nos pide &ldquo;artifactId&rdquo;. Para este ejemplo voy a escribir como nombre del proyecto: nombreDeMiProyecto
+</p>
+<p style="padding-left: 30px; text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/7-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png"><img alt="7 paso a paso para crear nuestro poryecto desde el arqueotipo Maven - www.jarroba.com" class="aligncenter wp-image-42276 size-full img-responsive lazy" height="20" src="http://jarroba.com/wp-content/uploads/2015/01/7-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png" width="488" srcset="http://jarroba.com/wp-content/uploads/2015/01/7-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png 488w, http://jarroba.com/wp-content/uploads/2015/01/7-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_-300x12.png 300w" sizes="(max-width: 488px) 100vw, 488px"></a>
+</p>
+<p style="padding-left: 30px; text-align: justify;">
+	5. En la &ldquo;version&rdquo; de momento no escribimos nada. Pulsamos directamente &ldquo;Enter&rdquo;
+</p>
+<p style="padding-left: 30px; text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/8-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png"><img alt="8 paso a paso para crear nuestro poryecto desde el arqueotipo Maven - www.jarroba.com" class="aligncenter wp-image-42277 size-full img-responsive lazy" height="21" src="http://jarroba.com/wp-content/uploads/2015/01/8-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png" width="447" srcset="http://jarroba.com/wp-content/uploads/2015/01/8-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png 447w, http://jarroba.com/wp-content/uploads/2015/01/8-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_-300x14.png 300w" sizes="(max-width: 447px) 100vw, 447px"></a>
+</p>
+<p style="padding-left: 30px; text-align: justify;">
+	6. Y en &ldquo;package&rdquo; nos sugerir&aacute; por defecto el mismo que pusimos en &ldquo;groupId&rdquo;. Como hemos dicho este es el nombre del paquete Java. Nos bastar&aacute; con pulsar &ldquo;Enter&rdquo;.
+</p>
+<p style="padding-left: 30px; text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/9-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png"><img alt="9 paso a paso para crear nuestro poryecto desde el arqueotipo Maven - www.jarroba.com" class="aligncenter wp-image-42278 size-full img-responsive lazy" height="23" src="http://jarroba.com/wp-content/uploads/2015/01/9-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png" width="505" srcset="http://jarroba.com/wp-content/uploads/2015/01/9-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png 505w, http://jarroba.com/wp-content/uploads/2015/01/9-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_-300x14.png 300w" sizes="(max-width: 505px) 100vw, 505px"></a>
+</p>
+<p style="padding-left: 30px; text-align: justify;">
+	7. Para terminar nos pedir&aacute; que confirmemos los datos. Pulsamos &ldquo;Enter&rdquo; si estamos contentos con los datos que introducimos.
+</p>
+<p style="padding-left: 30px; text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/10-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png"><img alt="10 paso a paso para crear nuestro poryecto desde el arqueotipo Maven - www.jarroba.com" class="aligncenter wp-image-42279 size-full img-responsive lazy" height="74" src="http://jarroba.com/wp-content/uploads/2015/01/10-paso-a-paso-para-crear-nuestro-poryecto-desde-el-arqueotipo-Maven-www.jarroba.com_.png" width="265"></a>
+</p>
+<p style="text-align: justify;">
+	Despu&eacute;s se nos generar&aacute; el proyecto. Es importante que nos ponga en grande las letras &ldquo;BUILD SUCCESS&rdquo;, que significar&aacute; que nos ha creado correctamente el proyecto Maven.
+</p>
+<p style="text-align: justify;">
+	Aqu&iacute; dejo la captura completa de todas las preguntas y las respuestas que yo le he dado. Y la creaci&oacute;n con &eacute;xito de mi proyecto Maven.
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/11-todos-los-pasos-para-crear-un-proyecto-Maven-www.jarroba.com_.png"><img alt="11 todos los pasos para crear un proyecto Maven - www.jarroba.com" class="aligncenter wp-image-42280 size-full img-responsive lazy" height="547" src="http://jarroba.com/wp-content/uploads/2015/01/11-todos-los-pasos-para-crear-un-proyecto-Maven-www.jarroba.com_.png" width="677" srcset="http://jarroba.com/wp-content/uploads/2015/01/11-todos-los-pasos-para-crear-un-proyecto-Maven-www.jarroba.com_.png 677w, http://jarroba.com/wp-content/uploads/2015/01/11-todos-los-pasos-para-crear-un-proyecto-Maven-www.jarroba.com_-300x242.png 300w" sizes="(max-width: 677px) 100vw, 677px"></a>
+</p>
+<p style="text-align: justify;">
+	Si miramos en nuestro Espacio de trabajo comprobaremos que efectivamente se ha creado nuestro proyecto Maven.
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/12-proyecto-Maven-creado-en-una-carpeta-www.jarroba.com_.png"><img alt="12 proyecto Maven creado en una carpeta - www.jarroba.com" class="aligncenter wp-image-42281 size-full img-responsive lazy" height="299" src="http://jarroba.com/wp-content/uploads/2015/01/12-proyecto-Maven-creado-en-una-carpeta-www.jarroba.com_.png" width="876" srcset="http://jarroba.com/wp-content/uploads/2015/01/12-proyecto-Maven-creado-en-una-carpeta-www.jarroba.com_.png 876w, http://jarroba.com/wp-content/uploads/2015/01/12-proyecto-Maven-creado-en-una-carpeta-www.jarroba.com_-300x102.png 300w" sizes="(max-width: 876px) 100vw, 876px"></a>
+</p>
+<p style="text-align: justify;">
+	Si entramos veremos la clara estructura Maven (y Java, porque es Java claro):
+</p>
+<ul style="text-align: justify;"><li>
+		Ficheros de c&oacute;digo en la carpeta &ldquo;src&rdquo; con la estructura del paquete que definimos antes. Donde tendremos dos carpetas la &ldquo;main&rdquo; de Java y la &ldquo;test&rdquo; de pruebas; cada una con &ldquo;Hello Word!&rdquo; de regalo.
+	</li>
+<li>
+		Fichero &ldquo;pom.xml&rdquo;
+	</li>
+</ul><p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/13-estructura-del-proyecto-Maven-una-vez-creado-desde-el-arqueotipo-www.jarroba.com_.png"><img alt="13 estructura del proyecto Maven una vez creado desde el arqueotipo - www.jarroba.com" class="aligncenter wp-image-42282 size-full img-responsive lazy" height="526" src="http://jarroba.com/wp-content/uploads/2015/01/13-estructura-del-proyecto-Maven-una-vez-creado-desde-el-arqueotipo-www.jarroba.com_.png" width="900" srcset="http://jarroba.com/wp-content/uploads/2015/01/13-estructura-del-proyecto-Maven-una-vez-creado-desde-el-arqueotipo-www.jarroba.com_.png 900w, http://jarroba.com/wp-content/uploads/2015/01/13-estructura-del-proyecto-Maven-una-vez-creado-desde-el-arqueotipo-www.jarroba.com_-300x175.png 300w" sizes="(max-width: 900px) 100vw, 900px"></a>
+</p>
+<p style="text-align: justify;">
+	Ya podremos empezar a trabajar con nuestro proyecto. Ahora solo hace falta conocer c&oacute;mo funciona Maven, sus m&aacute;s profundos secretos.
+</p>
+<h2 style="text-align: justify;">
+	<strong>Fases de construcci&oacute;n (Build phases):</strong><br></h2>
+<p style="text-align: justify;">
+	Una fase es un paso en el ciclo de vida de un proyecto Maven.
+</p>
+<p style="text-align: justify;">
+	A continuaci&oacute;n expongo las tablas con todas las fases y la descripci&oacute;n de cada una. Caprichoso soy de recomendarte que te las saltes y vayas directamente al siguiente punto &ldquo;Ciclo de vida de construcci&oacute;n (build)&rdquo;. Luego si eso ya vuelves a estas tablas; ser&aacute; mucho m&aacute;s revelador, y ya ver&aacute;s c&oacute;mo es tan f&aacute;cil que mosquea &iquest;ok?
+</p>
+<p style="text-align: justify;">
+	<strong>Fases del ciclo de vida por defecto (Default Lifecycle)</strong>
+</p>
+<div class="table-responsive"><table border="1" style="height: 826px;" width="1089" class="table table-striped"><tbody><tr><td width="167">
+				<strong>validate</strong>
+			</td>
+<td width="545">
+				Valida el proyecto si es correcto y si toda la informaci&oacute;n necesaria est&aacute; disponible
+			</td>
+</tr><tr><td width="167">
+				initialize
+			</td>
+<td width="545">
+				Inicializa el estado de construcci&oacute;n (build). Por ejemplo, establece las propiedades o crea directorios
+			</td>
+</tr><tr><td width="167">
+				generate-sources
+			</td>
+<td width="545">
+				Genera cualquier c&oacute;digo para incluirlo en la compilaci&oacute;n
+			</td>
+</tr><tr><td width="167">
+				process-sources
+			</td>
+<td width="545">
+				Procesa el c&oacute;digo. Por ejemplo, para filtrar cualquier valor
+			</td>
+</tr><tr><td width="167">
+				generate-resources
+			</td>
+<td width="545">
+				Genera los recursos para incluirlos en el paquete
+			</td>
+</tr><tr><td width="167">
+				process-resources
+			</td>
+<td width="545">
+				Copia y procesa los recursos del directorio de destino (los ficheros que est&aacute;n en la carpeta &ldquo;src&rdquo;), los prepara para el empaquetado
+			</td>
+</tr><tr><td width="167">
+				<strong>compile</strong>
+			</td>
+<td width="545">
+				Compila el c&oacute;digo del proyecto
+			</td>
+</tr><tr><td width="167">
+				process-classes
+			</td>
+<td width="545">
+				Post-procesa los ficheros generados por la compilaci&oacute;n. Por ejemplo: mejorar el bytecode de clases Java
+			</td>
+</tr><tr><td width="167">
+				generate-test-sources
+			</td>
+<td width="545">
+				Genera todas las pruebas (tests) del c&oacute;digo para incluirlo en la compilaci&oacute;n
+			</td>
+</tr><tr><td width="167">
+				process-test-sources
+			</td>
+<td width="545">
+				Procesa las pruebas (tests) del c&oacute;digo. Por ejemplo: filtrar cualquier valor
+			</td>
+</tr><tr><td width="167">
+				generate-test-resources
+			</td>
+<td width="545">
+				Crea los recursos para probar (testing)
+			</td>
+</tr><tr><td width="167">
+				process-test-resources
+			</td>
+<td width="545">
+				Copia y procesa los recursos que est&aacute;n dentro del directorio de destino de pruebas (los ficheros que est&aacute;n en la carpeta &ldquo;test&rdquo;)
+			</td>
+</tr><tr><td width="167">
+				test-compile
+			</td>
+<td width="545">
+				Compila el c&oacute;digo de prueba (test) del directorio de pruebas (carpeta &ldquo;test&rdquo;)
+			</td>
+</tr><tr><td width="167">
+				process-test-classes
+			</td>
+<td width="545">
+				Post-procesa los ficheros generados por la compilaci&oacute;n. Por ejemplo: mejorar el bytecode de clases Java
+			</td>
+</tr><tr><td width="167">
+				<strong>test</strong>
+			</td>
+<td width="545">
+				Ejecuta las pruebas utilizando un Framework apropiado para los test unitarios (por ejemplo &ldquo;JUnit&rdquo;). Estas pruebas no deben requerir que el c&oacute;digo est&eacute; empaquetado (packaged) o desplegado (deployed)
+			</td>
+</tr><tr><td width="167">
+				prepare-package
+			</td>
+<td width="545">
+				Realizar todas las operaciones necesarias para preparar un paquete antes del empaquetado (package) actual. Esto suele resultar en una no empaquetado (unpacked), versi&oacute;n procesada del paquete
+			</td>
+</tr><tr><td width="167">
+				<strong>package</strong>
+			</td>
+<td width="545">
+				Empaquetar el c&oacute;digo compilado en un formato distribuible, como en un JAR, WAR, EAR, EJB, POM, MAVEN-PLUGIN
+			</td>
+</tr><tr><td width="167">
+				pre-integration-test
+			</td>
+<td width="545">
+				Realizar acciones que requieran la ejecuci&oacute;n de pruebas de integraci&oacute;n. Esto deber&iacute;a implicar cosas como configurar el entorno necesario
+			</td>
+</tr><tr><td width="167">
+				<strong>integration-test</strong>
+			</td>
+<td width="545">
+				Procesar (process) y desplegar (deploy) el paquete si fuera necesario en un entorno donde se puedan ejecutar pruebas de integraci&oacute;n
+			</td>
+</tr><tr><td width="167">
+				post-integration-test
+			</td>
+<td width="545">
+				Realizar acciones requeridas despu&eacute;s de ejecutar las pruebas de integraci&oacute;n. Esto deber&iacute;a incluir limpiar el entorno.
+			</td>
+</tr><tr><td width="167">
+				<strong>verify</strong>
+			</td>
+<td width="545">
+				Ejecutar todas las comprobaciones para verificar la validez del paquete y que cumpla con los criterios de calidad
+			</td>
+</tr><tr><td width="167">
+				<strong>install</strong>
+			</td>
+<td width="545">
+				Instala el paquete en un repositorio local, para poder utilizarse como dependencia en otros proyectos locales
+			</td>
+</tr><tr><td width="167">
+				<strong>deploy</strong>
+			</td>
+<td width="545">
+				Realizar en un entorno de integraci&oacute;n o de producci&oacute;n (release), copia el proyecto final al repositorio remoto para compartirlo con otros desarrolladores y proyectos
+			</td>
+</tr></tbody></table></div><p style="text-align: justify;">
+	<strong>Fases del ciclo de vida de limpieza (Clean Lifecycle)</strong>
+</p>
+<div class="table-responsive"><table border="1" style="height: 103px;" width="712" class="table table-striped"><tbody><tr><td width="84">
+				pre-clean
+			</td>
+<td width="630">
+				Ejecuta los procesos necesarios antes de ejecutar el proyecto de limpieza
+			</td>
+</tr><tr><td width="84">
+				<strong>clean</strong>
+			</td>
+<td width="630">
+				Elimina todos los ficheros generados por construcciones (build) anteriores
+			</td>
+</tr><tr><td width="84">
+				post-clean
+			</td>
+<td width="630">
+				Ejecuta los procesos necesarios para finalizar el proyecto de limpieza
+			</td>
+</tr></tbody></table></div><p style="text-align: justify;">
+	<strong>Fases del ciclo de vida de documentaci&oacute;n (Site Lifecycle)</strong>
+</p>
+<div class="table-responsive"><table border="1" style="height: 146px;" width="1085" class="table table-striped"><tbody><tr><td width="93">
+				pre-site
+			</td>
+<td width="621">
+				Ejecuta los procesos necesarios antes de ejecutar de generaci&oacute;n de la p&aacute;gina (o sitio) web de documentaci&oacute;n
+			</td>
+</tr><tr><td width="93">
+				<strong>site</strong>
+			</td>
+<td width="621">
+				Genera la p&aacute;gina web de documentaci&oacute;n del proyecto
+			</td>
+</tr><tr><td width="93">
+				post-site
+			</td>
+<td width="621">
+				Ejecuta el proceso necesario para finalizar la generaci&oacute;n de la p&aacute;gina web de documentaci&oacute;n, y prepara para desplegar el sitio
+			</td>
+</tr><tr><td width="93">
+				<strong>site-deploy</strong>
+			</td>
+<td width="621">
+				Despliega la p&aacute;gina web de documentaci&oacute;n generado en el servidor web especificado
+			</td>
+</tr></tbody></table></div><p style="text-align: justify;">
+	Traducci&oacute;n de las tablas de <a href="http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference">http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference</a>, cortes&iacute;a de <a href="http://www.Jarroba.com">www.Jarroba.com</a>
+</p>
+<h2 style="text-align: justify;">
+	<strong>Ciclo de vida de construcci&oacute;n (build)</strong><br></h2>
+<p style="text-align: justify;">
+	El ciclo de vida es una secuencia de fases que Maven ejecutar&aacute; en orden. Se llama &ldquo;de construcci&oacute;n&rdquo; porque se encargan de construir nuestro proyecto.
+</p>
+<p style="text-align: justify;">
+	Existen tres ciclos de vida:
+</p>
+<ul style="text-align: justify;"><li>
+		Por defecto (default): Controla el despliegue del proyecto
+	</li>
+<li>
+		Limpieza (clean): Controla la limpieza del proyecto
+	</li>
+<li>
+		Documentaci&oacute;n (site): Controla la creaci&oacute;n del sitio de documentaci&oacute;n del proyecto
+	</li>
+</ul><p style="text-align: justify;">
+	<strong>El ciclo de vida por defecto (Default Lifecycle)</strong> completo del proyecto es (no hay que saberse todos, los destacados en azul son los m&aacute;s &uacute;tiles. Es m&aacute;s, no te tienes que saber ninguno, para eso est&aacute;n en esta web, para recordarlos siempre que se necesiten y explicados en las anteriores tablas :D. S&iacute; que te recomiendo que los entiendas y al menos eches un vistazo r&aacute;pido al ciclo de vida):
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/Maven-Default-Lifecicle-ciclo-de-vida-por-defecto-www.jarroba.com_.png"><img alt="Maven Default Lifecicle - ciclo de vida por defecto - www.jarroba.com" class="aligncenter wp-image-42299 size-large img-responsive lazy" height="490" src="http://jarroba.com/wp-content/uploads/2015/01/Maven-Default-Lifecicle-ciclo-de-vida-por-defecto-www.jarroba.com_-1024x490.png" width="1024" srcset="http://jarroba.com/wp-content/uploads/2015/01/Maven-Default-Lifecicle-ciclo-de-vida-por-defecto-www.jarroba.com_-1024x490.png 1024w, http://jarroba.com/wp-content/uploads/2015/01/Maven-Default-Lifecicle-ciclo-de-vida-por-defecto-www.jarroba.com_-300x144.png 300w, http://jarroba.com/wp-content/uploads/2015/01/Maven-Default-Lifecicle-ciclo-de-vida-por-defecto-www.jarroba.com_.png 1501w" sizes="(max-width: 1024px) 100vw, 1024px"></a>
+</p>
+<p style="text-align: justify;">
+	Cuando trabajemos con un proyecto Maven no tenemos que estar llamando todo el rato a todas las fases de un ciclo de vida.
+</p>
+<p style="text-align: justify;">
+	Imaginemos por un momento que hemos desarrollado un proyecto Java con pruebas (con &ldquo;test&rdquo;). Queremos ejecutar las pruebas. Basta con llamar a:
+</p>
+<pre class="prettyprint">
+mvn test</pre>
+<p style="text-align: justify;">
+	Nos ejecutar&aacute; hasta la fase indicada, incluida &eacute;sta:
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/Parte-del-ciclo-de-vida-Maven-al-ejecutar-Test-www.jarroba.com_.png"><img alt="Parte del ciclo de vida Maven al ejecutar Test - www.jarroba.com" class="aligncenter wp-image-42300 size-large img-responsive lazy" height="168" src="http://jarroba.com/wp-content/uploads/2015/01/Parte-del-ciclo-de-vida-Maven-al-ejecutar-Test-www.jarroba.com_-1024x168.png" width="1024" srcset="http://jarroba.com/wp-content/uploads/2015/01/Parte-del-ciclo-de-vida-Maven-al-ejecutar-Test-www.jarroba.com_-1024x168.png 1024w, http://jarroba.com/wp-content/uploads/2015/01/Parte-del-ciclo-de-vida-Maven-al-ejecutar-Test-www.jarroba.com_-300x49.png 300w, http://jarroba.com/wp-content/uploads/2015/01/Parte-del-ciclo-de-vida-Maven-al-ejecutar-Test-www.jarroba.com_.png 1501w" sizes="(max-width: 1024px) 100vw, 1024px"></a>
+</p>
+<p style="text-align: justify;">
+	Por lo que cada vez que llames a una fase, recuerda que siempre se van a hacer las anteriores en su ciclo de vida.
+</p>
+<p style="text-align: justify;">
+	Seguro que ya sabr&aacute;s que hacer para llamar a todas las fases &ndash;con ello al ciclo de vida al completo. Habr&iacute;a que ejecutar:
+</p>
+<pre class="prettyprint">
+mvn deploy</pre>
+<p style="text-align: justify;">
+	Entendido lo anterior, presento el <strong>ciclo de vida de</strong> <strong>limpieza (Clean Lifecycle)</strong>, es:
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/Maven-Clean-Lifecicle-ciclo-de-vida-de-limpieza-www.jarroba.com_.png"><img alt="Maven Clean Lifecicle - ciclo de vida de limpieza - www.jarroba.com" class="aligncenter size-medium wp-image-42295 img-responsive lazy" height="114" src="http://jarroba.com/wp-content/uploads/2015/01/Maven-Clean-Lifecicle-ciclo-de-vida-de-limpieza-www.jarroba.com_-300x114.png" width="300" srcset="http://jarroba.com/wp-content/uploads/2015/01/Maven-Clean-Lifecicle-ciclo-de-vida-de-limpieza-www.jarroba.com_-300x114.png 300w, http://jarroba.com/wp-content/uploads/2015/01/Maven-Clean-Lifecicle-ciclo-de-vida-de-limpieza-www.jarroba.com_.png 413w" sizes="(max-width: 300px) 100vw, 300px"></a>
+</p>
+<p style="text-align: justify;">
+	Y el <strong>ciclo de vida de documentaci&oacute;n (Site Lifecycle)</strong>, es:
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/Maven-Site-Lifecicle-ciclo-de-vida-de-documentacion-www.jarroba.com_.png"><img alt="Maven Site Lifecicle - ciclo de vida de documentacion - www.jarroba.com" class="aligncenter size-medium wp-image-42296 img-responsive lazy" height="114" src="http://jarroba.com/wp-content/uploads/2015/01/Maven-Site-Lifecicle-ciclo-de-vida-de-documentacion-www.jarroba.com_-300x114.png" width="300" srcset="http://jarroba.com/wp-content/uploads/2015/01/Maven-Site-Lifecicle-ciclo-de-vida-de-documentacion-www.jarroba.com_-300x114.png 300w, http://jarroba.com/wp-content/uploads/2015/01/Maven-Site-Lifecicle-ciclo-de-vida-de-documentacion-www.jarroba.com_.png 413w" sizes="(max-width: 300px) 100vw, 300px"></a>
+</p>
+<p style="text-align: justify;">
+	Muchos m&aacute;s cortos y sencillos que el primer ciclo de vida.
+</p>
+<p style="text-align: justify;">
+	Y un regalo, todos los ciclos de vida de Maven en un PDF: <a href="https://drive.google.com/file/d/0BwVU1KZh_7htZHJOdEFrRXV6QXM/view?usp=sharing" target="_blank">Click aqu&iacute; para descargar el PDF de los ciclos de vida de Maven</a>
+</p>
+<p style="text-align: justify;">
+	Realmente los que m&aacute;s se utilizan durante el desarrollo son el ciclo de vida por defecto y el de limpieza (el de documentaci&oacute;n se suele utilizar al terminar el proyecto). Ambos se pueden combinar como sigue:
+</p>
+<pre class="prettyprint">
+mvn clean test</pre>
+<p style="text-align: justify;">
+	Funciona en orden de izquierda a derecha, ejecutando primero el primer ciclo de vida (el de limpieza) y luego el segundo (el por defecto).
+</p>
+<p style="text-align: justify;">
+	Para ahorrar trabajo, para limpiar y hacer algo a la vez, se utiliza mucho la combinaci&oacute;n:
+</p>
+<pre class="prettyprint">
+mvn clean [fase del ciclo de vida por defecto]</pre>
+<p style="text-align: justify;">
+	<strong>Ejemplo funcional:</strong>
+</p>
+<p style="text-align: justify;">
+	Haz la prueba. Entra en la consola de comandos a la carpeta del proyecto (dentro del proyecto que est&aacute; dentro del espacio de trabajo que creamos antes). Prueba el ciclo de vida, con cualquier fase, no pasa nada, estamos probando. La fase m&aacute;s simple es la de validate (como ya vimos, digo que es la m&aacute;s simple porque no se ejecutan m&aacute;s fases despu&eacute;s, ya que es la primera), como el siguiente ejemplo que nos validar&aacute; el proyecto:
+</p>
+<pre class="prettyprint">
+mvn validate</pre>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/Maven-validate-www.jarroba.com_.png"><img alt="Maven validate - www.jarroba.com" class="aligncenter wp-image-42297 size-full img-responsive lazy" height="295" src="http://jarroba.com/wp-content/uploads/2015/01/Maven-validate-www.jarroba.com_.png" width="677" srcset="http://jarroba.com/wp-content/uploads/2015/01/Maven-validate-www.jarroba.com_.png 677w, http://jarroba.com/wp-content/uploads/2015/01/Maven-validate-www.jarroba.com_-300x131.png 300w" sizes="(max-width: 677px) 100vw, 677px"></a>
+</p>
+<h2 style="text-align: justify;">
+	<strong>Plugin de objetivos (Plugin Goals)</strong><br></h2>
+<p style="text-align: justify;">
+	Es una tarea espec&iacute;fica (m&aacute;s peque&ntilde;a que una fase de construcci&oacute;n), que contribuye a la construcci&oacute;n y gesti&oacute;n del proyecto. Uno de estos objetivos (goals) se puede unir a alguna de las fases. Poniendo de ejemplo de comparaci&oacute;n a la programaci&oacute;n tradicional; podr&iacute;amos decir que la fase es una funci&oacute;n vac&iacute;a que hay que llenar de algo de c&oacute;digo, y ese algo c&oacute;digo son los objetivos. Y estos objetivos vienen en plugins.
+</p>
+<p style="text-align: justify;">
+	Podr&iacute;a darse el caso de que un objetivo no estuviera unido a ninguna fase y se ejecutara fuera del ciclo de vida; por ejemplo, mediante una llamada directa.
+</p>
+<p style="text-align: justify;">
+	Un objetivo (goal) lo encontraremos definido como:
+</p>
+<pre class="prettyprint">
+[nombre del plugin]:[funci&oacute;n del plugin a ejecutar]</pre>
+<p style="text-align: justify;">
+	Un ejemplo de llamar a un objetivo directamente despu&eacute;s de realizar la limpieza (y a su ciclo de vida de limpieza) y antes de hacer el empaquetado (y a su ciclo de vida por defecto):
+</p>
+<pre class="prettyprint">
+mvn clean dependency:copy-dependencies package</pre>
+<p style="text-align: justify;">
+	Tranquilo que de principio no creo que los utilices directamente. Pero s&iacute; indirectamente.
+</p>
+<p style="text-align: justify;">
+	Imaginemos ahora que tenemos un proyecto que queremos crear una biblioteca &ldquo;jar&rdquo; (o un proyecto para desplegar &ldquo;war&rdquo;, en este caso el ejemplo nos vale igual, salvo que donde en la imagen pone &ldquo;jar:jar&rdquo; habr&iacute;a que sustituir por el objetivo &ldquo;war:war&rdquo;). Ahora que remos desplegar el proyecto, por lo que se ejecutar&iacute;amos:
+</p>
+<pre class="prettyprint">
+mvn deploy</pre>
+<p style="text-align: justify;">
+	Y nos realizar&iacute;a el siguiente ciclo de vida, donde algunas fases tienen ligados algunos objetivos (destacados en naranja):
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/Maven-Plugin-Goals-in-Lifecicle-www.jarroba.com_.png"><img alt="Maven Plugin Goals in Lifecicle - www.jarroba.com" class="aligncenter wp-image-42303 size-large img-responsive lazy" height="490" src="http://jarroba.com/wp-content/uploads/2015/01/Maven-Plugin-Goals-in-Lifecicle-www.jarroba.com_-1024x490.png" width="1024" srcset="http://jarroba.com/wp-content/uploads/2015/01/Maven-Plugin-Goals-in-Lifecicle-www.jarroba.com_-1024x490.png 1024w, http://jarroba.com/wp-content/uploads/2015/01/Maven-Plugin-Goals-in-Lifecicle-www.jarroba.com_-300x144.png 300w, http://jarroba.com/wp-content/uploads/2015/01/Maven-Plugin-Goals-in-Lifecicle-www.jarroba.com_.png 1501w" sizes="(max-width: 1024px) 100vw, 1024px"></a>
+</p>
+<p style="text-align: justify;">
+	Los objetivos son el contenido de las fases. Realmente las fases vac&iacute;as no ejecutan nada, pues no tienen nada que ejecutar. Por lo que realmente ejecutar&iacute;a lo siguiente:
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/Maven-Plugin-Objetivos-en-el-ciclo-de-vida-resumido-www.jarroba.com_.png"><img alt="Maven Plugin Objetivos en el ciclo de vida resumido - www.jarroba.com" class="aligncenter size-medium wp-image-42304 img-responsive lazy" height="215" src="http://jarroba.com/wp-content/uploads/2015/01/Maven-Plugin-Objetivos-en-el-ciclo-de-vida-resumido-www.jarroba.com_-300x215.png" width="300" srcset="http://jarroba.com/wp-content/uploads/2015/01/Maven-Plugin-Objetivos-en-el-ciclo-de-vida-resumido-www.jarroba.com_-300x215.png 300w, http://jarroba.com/wp-content/uploads/2015/01/Maven-Plugin-Objetivos-en-el-ciclo-de-vida-resumido-www.jarroba.com_.png 637w" sizes="(max-width: 300px) 100vw, 300px"></a>
+</p>
+<p style="text-align: justify;">
+	Esto lo hace Maven s&oacute;lo. Con lo que no nos tendr&iacute;amos que preocupar de estos; aunque no est&aacute; de m&aacute;s que lo entendamos por si alg&uacute;n d&iacute;a tuvi&eacute;ramos que a&ntilde;adir alg&uacute;n objetivo nuevo. Si tienes m&aacute;s curiosidad de cu&aacute;les son los objetivos ligados te invito a visitar <a href="http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Built-in_Lifecycle_Bindings">http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Built-in_Lifecycle_Bindings</a>
+</p>
+<p style="text-align: justify;">
+	<strong><span style="text-decoration: underline;">El fichero POM (pom.xml) </span></strong>
+</p>
+<p style="text-align: justify;">
+	&ldquo;POM&rdquo; viene de &ldquo;Project Object Model&rdquo;, o como dir&iacute;amos en espa&ntilde;ol: &ldquo;Un modelo de objeto para un proyecto&rdquo;.
+</p>
+<p style="text-align: justify;">
+	Como describe la documentaci&oacute;n de Maven, que libremente traduzco:
+</p>
+<blockquote>
+<p>
+		<em>El fichero &ldquo;pom.xml&rdquo; es el n&uacute;cleo una configuraci&oacute;n de un proyecto en Maven. Simplemente es un fichero de configuraci&oacute;n, que contiene la mayor&iacute;a de la informaci&oacute;n necesaria para construir (build) un proyecto de la manera en la que t&uacute; quieras. El POM es enorme e intimida su complejidad, no siendo necesario comprender todos sus entresijos para utilizarlo de manera eficaz.</em>
+	</p>
+</blockquote>
+<p style="text-align: justify;">
+	Dicho de una manera para entendernos: Maven har&aacute; lo que escribas en el &ldquo;pom.xml&rdquo;. Y lo de enorme es verdad aunque tiene un &ldquo;pero&rdquo;, vamos a trabajar con una fracci&oacute;n muy peque&ntilde;a, tan peque&ntilde;a que quiero que abras el &ldquo;pom.xml&rdquo; del arqueotipo que antes descargamos.
+</p>
+<pre class="prettyprint">
+&lt;project xmlns=<em>"<span style="text-decoration: underline;">http://maven.apache.org/POM/4.0.0</span>" </em>xmlns:xsi=<em>"http://www.w3.org/2001/XMLSchema-instance"</em>
+xsi:schemaLocation=<em>"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</em>&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+	&lt;groupId&gt;com.jarroba.ejemplo&lt;/groupId&gt;
+	&lt;artifactId&gt;nombreDeMiProyecto&lt;/artifactId&gt;
+	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+	&lt;packaging&gt;jar&lt;/packaging&gt;
+
+	&lt;name&gt;nombreDeMiProyecto&lt;/name&gt;
+	&lt;url&gt;http://jarroba.com/&lt;/url&gt;
+
+	&lt;properties&gt;
+	&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+	&lt;/properties&gt;
+
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;<span style="text-decoration: underline;">junit</span>&lt;/groupId&gt;
+			&lt;artifactId&gt;<span style="text-decoration: underline;">junit</span>&lt;/artifactId&gt;
+			&lt;version&gt;3.8.1&lt;/version&gt;
+			&lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+
+&lt;/project&gt;
+</pre>
+<p style="text-align: justify;">
+	&iquest;A qu&eacute; no es tan grande? Puede que no entiendas todav&iacute;a que hace cada l&iacute;nea, pero son solo 25 miserables l&iacute;neas de XML (Realmente lo que dice la teor&iacute;a de la p&aacute;gina oficial como grande se llama &ldquo;effective POM&rdquo;, aunque de momento es algo que no requerimos para trabajar).
+</p>
+<p style="text-align: justify;">
+	Desgranemos qu&eacute;&nbsp;es cada parte.
+</p>
+<p style="text-align: justify;">
+	Primero tenemos la etiqueta <strong>&lt;project&gt;</strong> que engloban a todo el POM (es la que empieza y termina el archivo). Aqu&iacute; simplemente -como en todo XML- tendremos los espacios de nombres reservados para el fichero XML. Esta etiqueta no tiene m&aacute;s misterio.
+</p>
+<pre class="prettyprint">
+&lt;project xmlns=<em>"<span style="text-decoration: underline;">http://maven.apache.org/POM/4.0.0</span>" </em>xmlns:xsi=<em>"http://www.w3.org/2001/XMLSchema-instance"</em>
+xsi:schemaLocation=<em>"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</em>&gt;
+
+	&lt;/!-- Contenido del proyecto del POM --&gt;
+
+&lt;/project&gt;
+</pre>
+<p style="text-align: justify;">
+	Despu&eacute;s tenemos una serie de datos que definen el artefacto.
+</p>
+<p style="text-align: justify;">
+	La primera etiqueta es <strong>&lt;modelVersion&gt;</strong>. Es la versi&oacute;n del POM, para que funcione en Maven 2 y 3 requiere ser la versi&oacute;n &ldquo;4.0.0&rdquo;, ni m&aacute;s ni menos; por lo que mejor no cambiarlo y olvidar esta etiqueta, pues es obligatorio que est&eacute; ah&iacute;.
+</p>
+<pre class="prettyprint">
+&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</pre>
+<p style="text-align: justify;">
+	Las etiquetas que seguramente ya nos suenen (los introdujimos nosotros mismos al crear el proyecto), son los llamados <strong>b&aacute;sicos</strong> que requiere un proyecto Maven. Como pueden ser:
+</p>
+<ul style="text-align: justify;"><li>
+		<strong>&lt;groupId&gt;</strong>: como ya pusimos es un nombre &uacute;nico que suele ser el nombre o la web de la organizaci&oacute;n. Aunque no es necesario que tenga puntos de separaci&oacute;n en Maven, se recomienda para act&uacute;e como paquete de Java.
+	</li>
+<li>
+		<strong>&lt;artifactId&gt;</strong>: El nombre del proyecto
+	</li>
+<li>
+		<strong>&lt;version&gt;</strong>: La versi&oacute;n de nuestro proyecto, para sep&aacute;ralas en el repositorio. Por defecto se suele poner &ldquo;0.0.1-SNAPSHOT&rdquo;, aunque no pasa nada si ponemos de versi&oacute;n &ldquo;1.0&rdquo; o &ldquo;3.0.1&rdquo;, como queramos hacer nuestro sistema de versiones.
+	</li>
+<li>
+		<strong>&lt;packaging&gt;</strong>: cuando Maven construya nuestro proyecto, como queremos que sea empaquetado. Si por ejemplo ponemos &ldquo;jar&rdquo; (que es lo que pone por defecto Maven) se nos crear&aacute; una biblioteca t&iacute;pica de Java. Otro ejemplo ser&iacute;a si ponemos &ldquo;war&rdquo;, que ser&iacute;a un empaquetado web para desplegar en un servidor. O tambi&eacute;n podremos empaquetar el proyecto como &ldquo;pom&rdquo;, lo que querr&aacute; indicar que es un m&oacute;dulo Maven para proyectos multi-m&oacute;dulo (lo veremos en otro tutorial). Lo que necesitemos.
+	</li>
+</ul><pre class="prettyprint">
+&lt;groupId&gt;com.jarroba.ejemplo&lt;/groupId&gt;
+&lt;artifactId&gt;nombreDeMiProyecto&lt;/artifactId&gt;
+&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+&lt;packaging&gt;jar&lt;/packaging&gt;
+</pre>
+<p style="text-align: justify;">
+	Luego tenemos etiquetas de <strong>informaci&oacute;n del proyecto</strong> como &lt;name&gt; y &lt;url&gt;. Son todas opcionales, as&iacute; que si no quieres poner ninguna pues no pongas ninguna; aunque s&eacute; que las querr&aacute;s poner, son muy &uacute;tiles para describir nuestro proyecto. Algunas etiquetas son:
+</p>
+<ul style="text-align: justify;"><li>
+		<strong>&lt;name&gt;</strong>: nombre del proyecto. Se puede poner con espacios, solo es informativa
+	</li>
+<li>
+		<strong>&lt;url&gt;</strong>: pues un v&iacute;nculo a tu web por ejemplo.
+	</li>
+<li>
+		<strong>&lt;description&gt;</strong>: una descripci&oacute;n sobre el proyecto, o de lo que queramos.
+	</li>
+<li>
+		<strong>&lt;organization&gt;</strong>: el nombre de la empresa.
+	</li>
+<li>
+		<strong>&lt;developers&gt;</strong>: los desarrolladores implicados.
+	</li>
+<li>
+		<strong>&lt;contributors&gt;</strong>: los contribuidores que nos ayudaron.
+	</li>
+<li>
+		<strong>&lt;inceptionYear&gt;</strong>: el a&ntilde;o en que empezamos con el proyecto.
+	</li>
+<li>
+		<strong>&lt;licenses&gt;</strong>: las licencias.
+	</li>
+</ul><pre class="prettyprint">
+&lt;name&gt;nombreDeMiProyecto&lt;/name&gt;
+&lt;url&gt;http://jarroba.com/&lt;/url&gt;
+</pre>
+<p style="text-align: justify;">
+	Luego tenemos una etiqueta <strong>&lt;properties&gt;</strong> que engloba un conjunto de etiquetas (en este caso &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;). Lo que est&eacute; dentro de la etiqueta &lt;properties&gt; se puede decir que son variables globales que se podr&aacute;n poner en otras partes del fichero POM (del tipo &lt;nombre.de.mi.variable&gt;valor de la variable&lt;/nombre.de.mi.variable&gt;). El arqueotipo que descargamos nos regala una variable global que se llama &ldquo;project.build.sourceEncoding&rdquo; con el valor &ldquo;UTF-8&rdquo;. Que &iquest;Por qu&eacute; nos dan una variable que no se usa? Pues porque son majos, y porque algunos plugins la utilizan para saber en que formato de texto se ha de codificar el fichero (en este caso "UTF-8"), por lo que recomiendo mantenerla para que todos nuestros ficheros del proyecto tengan esta codificaci&oacute;n de caracteres (adem&aacute;s, esta variable previene&nbsp;que cada plataforma ponga el tipo de codificaci&oacute;n que le da la gana obligando a que siempre sea "UTF-8"; por ejemplo, si trabajamos con el IDE Eclipse sobre Windows por defecto guarda la codificaci&oacute;n de caracteres "Cp1252", que nos har&iacute;a&nbsp;un destrozo en los acentos y "&Ntilde;" al aparecer s&iacute;mbolos extra&ntilde;os,&nbsp;si previamente el fichero se ha creado con otra&nbsp;codificaci&oacute;n como pudiera ser el mismo "UTF-8"). &iquest;Para qu&eacute; se suelen utilizar? Pues igual que se suelen utilizar las variables globales, para poner un valor en varios sitios a la vez sin tener que buscar cada uno de esos sitios; vamos para optimizar y no olvidar.
+</p>
+<pre class="prettyprint">
+&lt;properties&gt;
+	&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+&lt;/properties&gt;
+</pre>
+<p style="text-align: justify;">
+	Si quisiera utilizar el valor anterior es tan simple como utilizar la sintaxis: ${nombre.de.mi.variable}. Un ejemplo ser&iacute;a:
+</p>
+<pre class="prettyprint">
+&lt;un_tag&gt;${project.build.sourceEncoding}&lt;/un_tag&gt;
+</pre>
+<p style="text-align: justify;">
+	Nos queda la mejor etiqueta de Maven, donde Maven tiene todo su poder: las relaciones.
+</p>
+<p style="text-align: justify;">
+	Las relaciones pueden venir de varios tipos: por dependencias, por herencia, o por agregaci&oacute;n de m&oacute;dulos (proyectos multi-m&oacute;dulo Maven). En este tutorial veremos la relaci&oacute;n por dependencias, el resto de relaciones lo iremos viendo en art&iacute;culos posteriores.
+</p>
+<p style="text-align: justify;">
+	<strong>Relaci&oacute;n por dependencias &lt;dependencies&gt;</strong>: Es la que tenemos en el ejemplo. Engloba todas las dependencias, por ello tendremos cada dependencia separada por <strong>&lt;dependency&gt;</strong> (notar que es singular). Una dependencia es una biblioteca de Java. Aqu&iacute; ser&aacute; donde nos ahorremos buscar en Google una biblioteca, descargarla, importarla, etc. Maven nos lo facilita m&aacute;s vamos a hacer un ejemplo r&aacute;pido. Descarguemos la biblioteca &ldquo;JUnit&rdquo; para realizar las pruebas con Java (ya s&eacute; que es la que est&aacute; ya, la dependencia que viene de regalo; pero para que veas de d&oacute;nde salen las cosas).
+</p>
+<pre class="prettyprint">
+&lt;dependencies&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;<span style="text-decoration: underline;">junit</span>&lt;/groupId&gt;
+		&lt;artifactId&gt;<span style="text-decoration: underline;">junit</span>&lt;/artifactId&gt;
+		&lt;version&gt;3.8.1&lt;/version&gt;
+		&lt;scope&gt;test&lt;/scope&gt;
+	&lt;/dependency&gt;
+&lt;/dependencies&gt;
+</pre>
+<p style="text-align: justify;">
+	Vamos a la web del repositorio oficial de Maven en <a href="http://mvnrepository.com/">http://mvnrepository.com/</a>. Buscamos la biblioteca que queramos importar que es &ldquo;JUnit&rdquo;.
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/1-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_.png"><img alt="1 mvnrepository.com repositorio de dependencias de Maven descargar JUnit - www.jarroba.com" class="aligncenter wp-image-42309 size-full img-responsive lazy" height="212" src="http://jarroba.com/wp-content/uploads/2015/01/1-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_.png" width="950" srcset="http://jarroba.com/wp-content/uploads/2015/01/1-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_.png 950w, http://jarroba.com/wp-content/uploads/2015/01/1-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_-300x67.png 300w" sizes="(max-width: 950px) 100vw, 950px"></a>
+</p>
+<p style="text-align: justify;">
+	Elegimos la versi&oacute;n de &ldquo;JUint&rdquo; que queramos, preferiblemente si no es &ldquo;beta&rdquo; (&iexcl;Mira que guay tenemos una versi&oacute;n superior a la que nos regalaba el arqueotipo, que para m&iacute; era la &ldquo;3.8.1&rdquo; y ahora voy a tener la &ldquo;4.12&rdquo;! &#128512; )
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/2-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_.png"><img alt="2 mvnrepository.com repositorio de dependencias de Maven descargar JUnit - www.jarroba.com" class="aligncenter wp-image-42310 size-full img-responsive lazy" height="595" src="http://jarroba.com/wp-content/uploads/2015/01/2-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_.png" width="936" srcset="http://jarroba.com/wp-content/uploads/2015/01/2-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_.png 936w, http://jarroba.com/wp-content/uploads/2015/01/2-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_-300x191.png 300w" sizes="(max-width: 936px) 100vw, 936px"></a>
+</p>
+<p style="text-align: justify;">
+	Tan solo nos queda ir a la pesta&ntilde;a &ldquo;Maven&rdquo; y copiar el c&oacute;digo -que feliz mente nos proporciona la web ya formateado a como Maven le gusta en el POM.
+</p>
+<p style="text-align: center;">
+	<a href="http://jarroba.com/wp-content/uploads/2015/01/3-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_.png"><img alt="3 mvnrepository.com repositorio de dependencias de Maven descargar JUnit - www.jarroba.com" class="aligncenter wp-image-42311 size-full img-responsive lazy" height="481" src="http://jarroba.com/wp-content/uploads/2015/01/3-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_.png" width="939" srcset="http://jarroba.com/wp-content/uploads/2015/01/3-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_.png 939w, http://jarroba.com/wp-content/uploads/2015/01/3-mvnrepository.com-repositorio-de-dependencias-de-Maven-descargar-JUnit-www.jarroba.com_-300x154.png 300w" sizes="(max-width: 939px) 100vw, 939px"></a>
+</p>
+<p style="text-align: justify;">
+	Y pegarlo en el POM, dentro de la etiqueta &lt;dependencies&gt;. De modo que mi POM quede:
+</p>
+<pre class="prettyprint">
+&lt;project xmlns=<em>"http://maven.apache.org/POM/4.0.0" </em>xmlns:xsi=<em>"http://www.w3.org/2001/XMLSchema-instance"</em>
+xsi:schemaLocation=<em>"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</em>&gt;
+
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+	&lt;groupId&gt;com.jarroba.ejemplo&lt;/groupId&gt;
+	&lt;artifactId&gt;nombreDeMiProyecto&lt;/artifactId&gt;
+	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+	&lt;packaging&gt;jar&lt;/packaging&gt;
+
+	&lt;name&gt;nombreDeMiProyecto&lt;/name&gt;
+	&lt;url&gt;http://jarroba.com/&lt;/url&gt;
+
+	&lt;properties&gt;
+		&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+	&lt;/properties&gt;
+
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;<span style="text-decoration: underline;">junit</span>&lt;/groupId&gt;
+			&lt;artifactId&gt;<span style="text-decoration: underline;">junit</span>&lt;/artifactId&gt;
+			&lt;version&gt;4.12&lt;/version&gt;
+			&lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+&lt;/project&gt;
+</pre>
+<p style="text-align: justify;">
+	Si te fijas dentro de la dependencia aparte de las etiquetas &lt;gropuId&gt;, &lt;artifactId&gt; y &lt;version&gt; necesarias para identificar la biblioteca y la versi&oacute;n; le he a&ntilde;adido una etiqueta m&aacute;s que se llama <strong>&lt;scope&gt;</strong> (el alcance), esta sirve para indicar a Maven cuando queremos que utilice una biblioteca u otra. Por ejemplo, si pongo "test" le decimos a Maven que esta bilbioteca solo sirve para cuando se hagan pruebas; es decir, en desarrollo, en producci&oacute;n no nos interesa que esta biblioteca ocupe sitio, por lo que Maven no la incorporar&aacute; all&iacute; (otro puntazo de Maven). Obviamente nos interesar&aacute; que las bibliotecas est&eacute;n tambi&eacute;n en producci&oacute;n si son necesarias (pues si no est&aacute;n dar&aacute; error el programa cuando se ejecute, al faltar bibliotecas necesaria); como Junit solo nos sirve para hacer pruebas en desarrollo, en producci&oacute;n no nos interesan.
+</p>
+<p style="text-align: justify;">
+	Los posibles <strong>valores de &lt;scope&gt;</strong> son (no te entretengas mucho ley&eacute;ndolos, a medida que los necesites los vas a ir usando, los pongo aqu&iacute; por comodidad):
+</p>
+<ul style="text-align: justify;"><li>
+		<strong>compile</strong>: es la que est&aacute; por defecto si no ponemos la etiqueta &lt;scope&gt;. Compila dependencias para que est&eacute;n disponibles en todas las rutas de las clases (classpaths). Por otra parte, esas dependencias se propagan a los proyectos dependientes.
+	</li>
+<li>
+		<strong>provided</strong>: similar a &ldquo;compile&rdquo;, salvo que necesita un JDK o un contenedor para proveer de tiempo de ejecuci&oacute;n. Solo disponible en los classpath de compilaci&oacute;n y de pruebas, no es transitivo.
+	</li>
+<li>
+		<strong>runtime</strong>: indica que la dependencia no se requiere para compilar, sino que se necesita en tiempo de ejecuci&oacute;n. Estar&aacute; en los classpaths de tiempo de ejecuci&oacute;n y pruebas, pero no en el de compilaci&oacute;n.
+	</li>
+<li>
+		<strong>test</strong>: indica que la dependencia no se requiere para un uso normal de la aplicaci&oacute;n, y solo estar&aacute; disponible para la compilaci&oacute;n de las pruebas y las fases de ejecuci&oacute;n.
+	</li>
+<li>
+		<strong>system</strong>: similar a &ldquo;provided&rdquo;, excepto que requiere que le importes el JAR manualmente. El artefacto estar&aacute; siempre disponible y no se buscar&aacute; en el repositorio
+	</li>
+</ul><p style="text-align: justify;">
+	Ya solo nos queda ejecutar la parte del ciclo de vida por defecto que necesitemos. Por ejemplo podemos hacer &ldquo;install&rdquo;, para que adem&aacute;s de compilar, probar, etc, nos descargue tambi&eacute;n la biblioteca.
+</p>
+<pre class="prettyprint">
+mvn install</pre>
+<p style="text-align: justify;">
+	Si quieres saber m&aacute;s sobre el POM puedes mirar en <a href="http://maven.apache.org/pom.html">http://maven.apache.org/pom.html</a>
+</p>
+<p style="text-align: justify;">
+	Has aprendido un mont&oacute;n de cosas sobre Maven. Es muy recomendable que utilices alg&uacute;n IDE que nos ayude a desarrollar con Maven. Ahorra mucho trabajo. <a href="http://jarroba.com/maven-en-eclipse/">Por ejemplo Eclipse, que puedes leer en este art&iacute;culo dedicado a Maven en Eclipse</a>.
+</p>
+<h2 style="text-align: justify;">
+	Bibliograf&iacute;a<br></h2>
+<ul><li style="text-align: justify;">
+		<a href="http://jarroba.com/foro/">Experiencia propia (cualquier duda, preg&uacute;ntame en el Foro)</a>
+	</li>
+<li style="text-align: justify;">
+		<a href="http://maven.apache.org/">http://maven.apache.org/</a>
+	</li>
+<li style="text-align: justify;">
+		<a href="http://es.wikipedia.org/wiki/Maven">http://es.wikipedia.org/wiki/Maven</a>
+	</li>
+</ul><div class="zem_rp_wrap zem_rp_th_pinterest" id="zem_rp_first"><div class="zem_rp_content"><h3 class="related_post_title">Recomendados</h3><ul class="related_post zem_rp"><li data-position="0" data-poid="in-42374" data-post-type="none"><a href="http://jarroba.com/maven-en-eclipse/" class="zem_rp_thumbnail"><img src="http://jarroba.com/wp-content/uploads/2015/03/Maven-Icono-www.Jarroba.com_-150x150.png" alt="Maven en Eclipse" width="150" class=" img-responsive lazy"></a><a href="http://jarroba.com/maven-en-eclipse/" class="zem_rp_title">Maven en Eclipse</a></li><li data-position="1" data-poid="in-18523" data-post-type="none"><a href="http://jarroba.com/graficas-en-paginas-web-con-google-charts/" class="zem_rp_thumbnail"><img src="http://jarroba.com/wp-content/uploads/2015/03/Template_GoogleChart-150x150.png" alt="Graficas en p&aacute;ginas web con &ldquo;Google Charts&rdquo;" width="150" class=" img-responsive lazy"></a><a href="http://jarroba.com/graficas-en-paginas-web-con-google-charts/" class="zem_rp_title">Graficas en p&aacute;ginas web con &ldquo;Google Charts&rdquo;</a></li><li data-position="2" data-poid="in-3935" data-post-type="none"><a href="http://jarroba.com/como-crear-entornos-de-desarrollo-con-vagrant-y-puppet/" class="zem_rp_thumbnail"><img src="http://jarroba.com/wp-content/uploads/2015/03/Template_vagrant-150x150.png" alt="Como crear entornos de desarrollo con Vagrant y Puppet (Video)" width="150" class=" img-responsive lazy"></a><a href="http://jarroba.com/como-crear-entornos-de-desarrollo-con-vagrant-y-puppet/" class="zem_rp_title">Como crear entornos de desarrollo con Vagrant y Puppet (Video)</a></li><li data-position="3" data-poid="in-13357" data-post-type="none"><a href="http://jarroba.com/mean-mongo-express-angular-node-ejemplo-de-aplicacion-web-parte-ii/" class="zem_rp_thumbnail"><img src="http://jarroba.com/wp-content/uploads/2015/03/Template_Mean-150x150.png" alt="MEAN (Mongo-Express-Angular-Node) Ejemplo de Aplicaci&oacute;n Web (Parte II)" width="150" class=" img-responsive lazy"></a><a href="http://jarroba.com/mean-mongo-express-angular-node-ejemplo-de-aplicacion-web-parte-ii/" class="zem_rp_title">MEAN (Mongo-Express-Angular-Node) Ejemplo de Aplicaci&oacute;n Web (Parte II)</a></li></ul></div></div></body></html>
+            </article>
+            <!-- /Contenido del artículo -->
+
+
+            <div class="col-md-offset-2 col-md-10 text-center">
+
+                <!-- Redes Sociales -->
+                <div class="groupShareButtons">
+                    <span>Comparte esta entrada en:</span>
+                    </br>
+		
+				<span class="fa-stack fa-lg">
+					<a href="https://plus.google.com/share?url=http%3A%2F%2Fjarroba.com%2Fmaven%2F" target="_blank"
+                       title="Compartir en Google+">
+                        <i class="fa fa-circle fa-stack-2x" style="color: #DD4B38;"></i>
+                        <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                    </a>
+				</span>
+				
+				<span class="fa-stack fa-lg">
+					<a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fjarroba.com%2Fmaven%2F&title=Maven&source=jarroba.com"
+                       target="_blank" title="Compartir en Linkedin">
+                        <i class="fa fa-circle fa-stack-2x" style="color: #0077B5;"></i>
+                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                    </a>
+				</span>
+				
+				<span class="fa-stack fa-lg">
+					<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fjarroba.com%2Fmaven%2F&t=Maven "
+                       target="_blank" title="Compartir en Facebook">
+                        <i class="fa fa-circle fa-stack-2x" style="color: #3C5A98;"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </a>
+				</span>
+				
+				<span class="fa-stack fa-lg">
+					<a href="http://twitter.com/home?status=Maven - http%3A%2F%2Fjarroba.com%2Fmaven%2F"
+                       target="_blank" title="Compartir en Twitter">
+                        <i class="fa fa-circle fa-stack-2x" style="color: #00ABF0;"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </a>
+				</span>
+
+                </div>
+                <!-- /Redes Sociales -->
+
+            </div>
+
+            <!-- Derechos de autor -->
+            <div class="col-md-offset-2 col-md-10 text-center background-color-soft-gray" style="display: inline-block">
+                <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank"><img
+                        src="http://www.jarroba.com/wp-content/uploads/2012/02/cc.png" align="middle"
+                        style="margin-top:3px;"></a>
+                <a href="http://www.safecreative.org/userfeed/1401310112503"
+                   target="08443056-e78e-3ae8-aa46-e946c099cd2c"><img
+                        src="http://resources.safecreative.org/userfeed/1401310112503/label/logo2-150" style="border:0;"
+                        alt="Safe Creative #1401310112503"/></a>
+                </br>
+                <a href="http://jarroba.com/maven/" rel="bookmark">Maven</a> por "www.jarroba.com" esta
+                bajo una licencia Creative Commons
+                </br>
+                Reconocimiento-NoComercial-CompartirIgual 3.0 Unported License.
+                </br>
+                Creado a partir de la obra en <a href="http://jarroba.com/maven/" rel="bookmark">www.jarroba.com</a>
+            </div>
+            <!-- /Derechos de autor -->
+
+            <!-- Comentarios -->
+            <div class="col-md-offset-2 col-md-10">
+
+                
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			12 comentarios sobre &ldquo;Maven&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-34163" class="comment even thread-even depth-1">
+			<article id="div-comment-34163" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/5cb9e0da6d18f9c97b4a72688f469c21?s=56&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/5cb9e0da6d18f9c97b4a72688f469c21?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">Erick</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-34163">
+							<time datetime="2016-03-08T13:34:17+00:00">
+								08/03/2016 a las 13:34							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>	Gracias por este gran tutorial. Muy sencillo de seguir y bien explicado! Te felicito.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=34163#respond' onclick='return addComment.moveForm( "div-comment-34163", "34163", "respond", "42250" )' aria-label='Responder a Erick'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-33392" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-33392" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/3aeb77fbe731bc5b38f798d96e799252?s=56&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/3aeb77fbe731bc5b38f798d96e799252?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">Miguel Ignacio</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-33392">
+							<time datetime="2016-02-16T21:27:29+00:00">
+								16/02/2016 a las 21:27							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>	Excelente articulo&nbsp;claro y preciso, me sirvio de mucho.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=33392#respond' onclick='return addComment.moveForm( "div-comment-33392", "33392", "respond", "42250" )' aria-label='Responder a Miguel Ignacio'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-28486" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-28486" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/8b122cd19bcbf1162fb0414ec4262146?s=56&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/8b122cd19bcbf1162fb0414ec4262146?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">Cesar Luis</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-28486">
+							<time datetime="2015-12-03T22:02:17+00:00">
+								03/12/2015 a las 22:02							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>	&quot;&quot;En este tutorial veremos la relaci&oacute;n paor dependencias, el resto de relaciones lo iremos viendo en art&iacute;culos posteriores.&quot;&quot;&quot;</p>
+<p>	Para no morir por lo bueno&nbsp;que esta el tutorial, por el punto mencionado anteriormente y sobre todo para darle mas &quot;profundidad Obscura&quot; como dices, necesito la continuaci&oacute;n!!!, es tal vez lo de ya entrando a Eclipse para conocer mas a maven??</p>
+<p>	&nbsp;</p>
+<p>	Es que inicie practicas con html-servlets-dao-dto-bd(en principio un xml manejado con DOM luego Mysql)-hibenate-un poco de IOC con spring-jsp con jstl.&nbsp;<br />
+	Luego practique conocer struts 2, parar ver el framewrk pero, todo siempre a mano, me ha tenido mal Maven, creo con eso puedo incluso apuntar &nbsp;o arrancar con Spring mvc-hibernate-BD &#8211; algo de IOC, y AOP, gesti&oacute;n&nbsp;de versi&oacute;n con git y algo de Front que no es mi fuerte, pero todo con MAVEN&#8230;.<br />
+	Acepto y ruego recomendaciones de cualquier tipo, &iacute;ndole, punto nombrado o no&#8230; de lo que busco o incluso de lo que deber&iacute;a buscar en cuanto a una practica eficaz y tirando hacia lo profesional.</p>
+<p>	Excelente, gracias.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=28486#respond' onclick='return addComment.moveForm( "div-comment-28486", "28486", "respond", "42250" )' aria-label='Responder a Cesar Luis'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-28533" class="comment byuser comment-author-ramoninvarato bypostauthor odd alt depth-2">
+			<article id="div-comment-28533" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/e2b307d7640cf7fbbaf2bf6ea565b22a?s=56&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e2b307d7640cf7fbbaf2bf6ea565b22a?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">Ramón [Admin Jarroba]</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-28533">
+							<time datetime="2015-12-04T16:50:01+00:00">
+								04/12/2015 a las 16:50							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>
+	Hola César. Muchas gracias por los ánimos 🙂
+</p>
+<p>
+	Sí, el tutorial de Eclipse es el siguiente <a href="http://jarroba.com/maven-en-eclipse/" rel="nofollow">http://jarroba.com/maven-en-eclipse/</a>, donde explico más sobre Maven. De cualquier manera estamos trabajando en más artículos sobre Maven para un futuro.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=28533#respond' onclick='return addComment.moveForm( "div-comment-28533", "28533", "respond", "42250" )' aria-label='Responder a Ramón [Admin Jarroba]'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-26275" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-26275" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/316867b5868ac58357ed309af4a77ff0?s=56&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/316867b5868ac58357ed309af4a77ff0?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">Gabrie Guzmán</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-26275">
+							<time datetime="2015-11-04T13:34:07+00:00">
+								04/11/2015 a las 13:34							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>	Excelente aporte!!!</p>
+<p>	Algo para aportar, tuve que configurar el setting.xml para la parte del proxy (ver <a href="http://stackoverflow.com/questions/30861293/maven-not-working-when-mvn-package-command-is-run" rel="nofollow">http://stackoverflow.com/questions/30861293/maven-not-working-when-mvn-package-command-is-run</a>).</p>
+<p>	Muchas gracias!!!</p>
+<p>	Un saludo.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=26275#respond' onclick='return addComment.moveForm( "div-comment-26275", "26275", "respond", "42250" )' aria-label='Responder a Gabrie Guzmán'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-26357" class="comment byuser comment-author-ramoninvarato bypostauthor odd alt depth-2">
+			<article id="div-comment-26357" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/e2b307d7640cf7fbbaf2bf6ea565b22a?s=56&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e2b307d7640cf7fbbaf2bf6ea565b22a?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">Ramón [Admin Jarroba]</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-26357">
+							<time datetime="2015-11-05T21:03:44+00:00">
+								05/11/2015 a las 21:03							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>
+	Gracias Gabriel por el aporte, seguro le servirá a muchos desarrolladores 🙂
+</p>
+<p>
+	¡Muchos ánimos!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=26357#respond' onclick='return addComment.moveForm( "div-comment-26357", "26357", "respond", "42250" )' aria-label='Responder a Ramón [Admin Jarroba]'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-25454" class="comment even thread-even depth-1">
+			<article id="div-comment-25454" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/01f2e2fd8467a851c8494e324f07f560?s=56&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/01f2e2fd8467a851c8494e324f07f560?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">jaib</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-25454">
+							<time datetime="2015-10-19T11:31:47+00:00">
+								19/10/2015 a las 11:31							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>	Gracias por el trabajo , me ha sido de gran ayuda. Saludos ,&nbsp;seguire y compartire&nbsp;tu web .&nbsp;</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=25454#respond' onclick='return addComment.moveForm( "div-comment-25454", "25454", "respond", "42250" )' aria-label='Responder a jaib'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-24527" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-24527" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/e3ff83ead1c64d63755c1cf9a9e372a2?s=56&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e3ff83ead1c64d63755c1cf9a9e372a2?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">Irving</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-24527">
+							<time datetime="2015-10-04T09:39:16+00:00">
+								04/10/2015 a las 09:39							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>	Muy buen trabajo, felicidades !!! y Gracias me ha ayudado mucho.</p>
+<p>	&nbsp;</p>
+<p>	Saludos</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=24527#respond' onclick='return addComment.moveForm( "div-comment-24527", "24527", "respond", "42250" )' aria-label='Responder a Irving'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-24190" class="comment even thread-even depth-1">
+			<article id="div-comment-24190" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/55eec44096a80f8f4cca1bcff875381e?s=56&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/55eec44096a80f8f4cca1bcff875381e?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">iova</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-24190">
+							<time datetime="2015-09-25T23:14:42+00:00">
+								25/09/2015 a las 23:14							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>	gracias por tu aporte a la sociedad, es de gran ayuda &#8230;..</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=24190#respond' onclick='return addComment.moveForm( "div-comment-24190", "24190", "respond", "42250" )' aria-label='Responder a iova'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-22044" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-22044" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/5545088a2a19da687a54fb53707ac405?s=56&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/5545088a2a19da687a54fb53707ac405?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">RL</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-22044">
+							<time datetime="2015-08-13T07:34:29+00:00">
+								13/08/2015 a las 07:34							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>	Buen trabajo. Gracias.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=22044#respond' onclick='return addComment.moveForm( "div-comment-22044", "22044", "respond", "42250" )' aria-label='Responder a RL'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-19197" class="comment even thread-even depth-1">
+			<article id="div-comment-19197" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/9c36f3f29ae2b4a3f7136f70d56b1e72?s=56&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/9c36f3f29ae2b4a3f7136f70d56b1e72?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">sebastian</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-19197">
+							<time datetime="2015-06-20T22:21:52+00:00">
+								20/06/2015 a las 22:21							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>	Excelente tutorial. Felicitaciones y muchas gracias!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=19197#respond' onclick='return addComment.moveForm( "div-comment-19197", "19197", "respond", "42250" )' aria-label='Responder a sebastian'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-17670" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-17670" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/0d79fc2252d8cedb19ec1ce9e8db7d38?s=56&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/0d79fc2252d8cedb19ec1ce9e8db7d38?s=112&amp;d=mm&amp;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' />						<b class="fn">Oscar Avila</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://jarroba.com/maven/#comment-17670">
+							<time datetime="2015-06-01T19:32:57+00:00">
+								01/06/2015 a las 19:32							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>	Amigo, muchas gracias por estas intrucciones tan bien explicadas. Me sirvio mucho y fue realmente facil de entender</p>
+<p>	Te deseo muchos exitos</p>
+<p>	Saludos!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://jarroba.com/maven/?replytocom=17670#respond' onclick='return addComment.moveForm( "div-comment-17670", "17670", "respond", "42250" )' aria-label='Responder a Oscar Avila'><i class="fa fa-comment"></i> Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+					<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Deja un comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="/maven/#respond" style="display:none;">Cancelar respuesta</a></small></h3>				<form action="http://jarroba.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+					<p class="comment-notes"><span id="email-notes">Tu dirección de correo electrónico no será publicada.</span> Los campos obligatorios están marcados con <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comentario</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Nombre <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Correo electrónico <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publicar comentario" /> <input type='hidden' name='comment_post_ID' value='42250' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="96ba5a2e31" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="104"/></p>				</form>
+					</div><!-- #respond -->
+		
+</div><!-- .comments-area -->
+
+                <!--
+			<div class='wpoa-login-form wpoa-layout-buttons-column wpoa-layout-align-middle ' style='' data-logging-in-title='Iniciando sesión...' data-logging-out-title='Cerrando sesión...'><nav><p id='wpoa-title'>Puedes iniciar sesión con:</p><a id='wpoa-login-google' class='wpoa-login-button' href='http://jarroba.com?connect=google'><img src='http://jarroba.com/wp-content/plugins/wp-oauth/icons/hex/google.png' alt='Google' class='icon'></img> Google</a><a id='wpoa-login-facebook' class='wpoa-login-button' href='http://jarroba.com?connect=facebook'><img src='http://jarroba.com/wp-content/plugins/wp-oauth/icons/hex/facebook.png' alt='Facebook' class='icon'></img> Facebook</a><a id='wpoa-login-linkedin' class='wpoa-login-button' href='http://jarroba.com?connect=linkedin'><img src='http://jarroba.com/wp-content/plugins/wp-oauth/icons/hex/linkedin.png' alt='LinkedIn' class='icon'></img> LinkedIn</a><a id='wpoa-login-github' class='wpoa-login-button' href='http://jarroba.com?connect=github'><img src='http://jarroba.com/wp-content/plugins/wp-oauth/icons/hex/github.png' alt='GitHub' class='icon'></img> GitHub</a><a id='wpoa-login-windowslive' class='wpoa-login-button' href='http://jarroba.com?connect=windowslive'><img src='http://jarroba.com/wp-content/plugins/wp-oauth/icons/hex/windowslive.png' alt='Windows Live' class='icon'></img> Windows Live</a></nav></div>		 -->
+            </div>
+            <!-- /Comentarios -->
+
+
+            <!-- No existe el artículo -->
+                <!-- /No existe el artículo -->
+
+    </div>
+</div>
+
+<script>
+
+    function initialize() {
+
+        $('body').on('click', '#idButtonShowEntryData', function (event) {
+
+            if ($(".hide-on-smallscreen").is(":visible")) {
+                $(".hide-on-smallscreen").hide();
+                $("#idButtonShowEntryData_Expand").show();
+                $("#idButtonShowEntryData_Compress").hide();
+            } else {
+                $(".hide-on-smallscreen").show();
+                $("#idButtonShowEntryData_Compress").show();
+                $("#idButtonShowEntryData_Expand").hide();
+                window.location = '#jumpToEntryData';
+            }
+
+        });
+
+
+        $(window).resize(function () {
+
+            windowsize = $(window).width();
+
+            if (windowsize > 768 && $('.hide-on-smallscreen').css('display') != null) {
+                $(".hide-on-smallscreen").css("display", "");
+            }
+
+        });
+
+    }
+    ;
+
+    window.onload = initialize();
+
+
+</script>
+
+	</div>
+	<!-- / class container -->
+
+	<footer class="footer-page">
+		<div class="container">
+			<div class="row footer-extra">
+
+				<div class="col-md-offset-2 col-md-4 col-xs-12">
+					<a href="/" class="puntero">
+						<img src="http://jarroba.com/wp-content/themes/jarrobav6/static/img/logojarroba.png" width="200px">
+					</a>
+
+					<p class="pSiguenosEn">Siguenos en:</p>
+					<!-- Redes sociales -->
+					<a href="http://www.youtube.com/user/Jarrobaweb" target="_black" class="redesSocialesFooter">
+						<img src="http://jarroba.com/wp-content/uploads/2014/01/youTube.png" width="45" height="45">
+					</a>
+
+					<a href="https://twitter.com/JarrobaWeb" target="_black" class="redesSocialesFooter">
+						<img src="http://jarroba.com/wp-content/uploads/2014/01/twitter.png" width="45" height="45">
+					</a>
+
+					<a href="https://www.facebook.com/jarrobaWeb" target="_black" class="redesSocialesFooter">
+						<img src="http://jarroba.com/wp-content/uploads/2014/01/facebook.png" width="45" height="45">
+					</a>
+
+					<a href="https://github.com/jarroba?tab=repositories" target="_black" class="redesSocialesFooter">
+						<img src="http://jarroba.com/wp-content/uploads/2014/01/gitHub.png" width="45" height="45">
+					</a>
+
+					<a href="https://plus.google.com/103352032205227460108/" target="_black" class="redesSocialesFooter">
+						<img src="http://jarroba.com/wp-content/uploads/2014/01/google+.png" width="45" height="45">
+					</a>
+					<!-- /Redes sociales -->
+
+					<p class="pSiguenosEn">Contacto: <a href="mailto:jarrobaweb@gmail.com" target="_black">jarrobaweb@gmail.com</a></p>
+
+				</div>
+
+				<div class="col-md-offset-1 col-md-3 col-xs-12">
+					<ul class="submenuFooter text-uppercase text-center">
+
+						<li>
+							<a href="http://jarroba.com/faq/">
+								FAQ
+							</a>
+						</li>
+						<li>
+							<a href="http://jarroba.com/visitas/">
+								Visitas
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Gastos
+							</a>
+						</li>
+						<li>
+							<a href="http://jarroba.com/sitemap_index.xml">
+								Site-Map
+							</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+		</div>
+
+		<div class="footer-info">
+			<div class="row text-center">
+				<div class="col-xs-12 col-md-12">
+					<p>Copyright &copy; 2016 <a href="http://www.jarroba.com">Jarroba.com</a> - Todos los derechos reservados</p>
+					<p style="font-size: 32px; font-family: 'Parisienne', cursive;">By Reimon & Richard</p>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+</div>
+<!-- .site -->
+
+<!-- HTML del pié de página -->
+<div class="cdp-cookies-alerta  cdp-cookies-layout-ventana cdp-cookies-pos-inferior cdp-cookies-tema-gris">
+	<div class="cdp-cookies-texto">
+		<h4 style="font-size:11px !important;line-height:11px !important">Uso de cookies</h4><p style="font-size:8px !important;line-height:8px !important">Este sitio web utiliza cookies para que usted tenga la mejor experiencia de usuario. Si continúa navegando está dando su consentimiento para la aceptación de las mencionadas cookies y la aceptación de nuestra <a href="http://jarroba.com/faq/" style="font-size:8px !important;line-height:8px !important">política de cookies</p>
+		<a href="javascript:;" class="cdp-cookies-boton-cerrar">ACEPTAR</a>
+	</div>
+</div>
+<div id='wpoa-result'></div><script type='text/javascript'>
+/* <![CDATA[ */
+window.CKEDITOR_BASEPATH = "http://jarroba.com/wp-content/plugins/ckeditor-for-wordpress/ckeditor/";
+var ckeditorSettings = { "textarea_id": "comment", "pluginPath": "http:\/\/jarroba.com\/wp-content\/plugins\/ckeditor-for-wordpress\/", "autostart": true, "excerpt_state": false, "qtransEnabled": false, "outputFormat": { "indent": true, "breakBeforeOpen": true, "breakAfterOpen": true, "breakBeforeClose": true, "breakAfterClose": true }, "configuration": { "height": "160px", "skin": "moono", "scayt_autoStartup": false, "entities": true, "entities_greek": true, "entities_latin": true, "toolbar": "WordpressBasic", "templates_files": [ "http:\/\/jarroba.com\/wp-content\/plugins\/ckeditor-for-wordpress\/ckeditor.templates.js" ], "stylesCombo_stylesSet": "wordpress:http:\/\/jarroba.com\/wp-content\/plugins\/ckeditor-for-wordpress\/ckeditor.styles.js", "allowedContent": true, "customConfig": "http:\/\/jarroba.com\/wp-content\/plugins\/ckeditor-for-wordpress\/ckeditor.config.js" }, "externalPlugins": [  ], "additionalButtons": [  ] }
+/* ]]> */
+</script><style type="text/css">
+			#content table.cke_editor { margin:0; }
+			#content table.cke_editor tr td { padding:0;border:0; }
+		</style><script type='text/javascript' src='http://jarroba.com/wp-content/plugins/akismet/_inc/form.js?ver=3.1.11'></script>
+<script type='text/javascript' src='http://jarroba.com/wp-content/themes/jarrobav6/js/skip-link-focus-fix.js?ver=20141010'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expande el men\u00fa inferior<\/span>","collapse":"<span class=\"screen-reader-text\">plegar men\u00fa inferior<\/span>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://jarroba.com/wp-content/themes/jarrobav6/js/functions.js?ver=20141212'></script>
+<script type='text/javascript' src='http://jarroba.com/wp-includes/js/wp-embed.min.js?ver=4.5.3'></script>
+<script type='text/javascript' src='http://jarroba.com/wp-content/plugins/related-posts-by-zemanta/static/js/pinterest.js?ver=1.13'></script>
+
+</body>
+</html>
+
+    <!-- Graficas de google -->
+    <script async type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!-- /Graficas de google -->
+
+    <!-- Carga de Bootstrap y JQuery-->
+    <!-- <script async src="http://jarroba.com/wp-content/themes/jarrobav6/static/jQuery/js/jquery.min.js"></script> -->
+    <!-- <script async src="http://jarroba.com/wp-content/themes/jarrobav6/funciones.js"></script> -->
+    <!-- <link rel="stylesheet" href="http://jarroba.com/wp-content/themes/jarrobav6/static/bootstrap/css/bootstrap.min.css"> -->
+    <!-- <script async src="http://jarroba.com/wp-content/themes/jarrobav6/static/bootstrap/js/bootstrap.min.js"></script> -->
+    <!-- <script async src="http://jarroba.com/wp-content/themes/jarrobav6/static/bootstrap/js/jquery.lazyload.js" type="text/javascript"></script> -->
+    <!-- /Carga de Bootstrap y JQuery-->
+    
+
+    <!-- Carga de Bootstrap y JQuery-->
+    <!-- <link rel="stylesheet" href="http://jarroba.com/wp-content/themes/jarrobav6/static/bootstrap/css/bootstrap.min.css"> -->
+    <!-- /Carga de Bootstrap y JQuery-->
+
+    <!-- Carga del formateo del codigo fuente que ponemos en la web  -->
+    <!-- <script async src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> -->
+    <!-- <script async src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script> -->
+    <!-- <script async src="https://www.google.com/jsapi"></script> -->
+    <!-- / Carga del formateo del codigo fuente que ponemos en la web  -->
+
+
+    <!-- Carga Google Analitics -->
+    <!-- <script async type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-29307293-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script> -->
+    <!-- /Carga Google Analitics -->
+
+
+    <!-- Carga de las fuentes de google y las nuestras -->
+    <!-- <link lazyload href='http://fonts.googleapis.com/css?family=Macondo' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'> -->
+    <!-- <link rel="stylesheet" href="http://jarroba.com/wp-content/themes/jarrobav6/static/font-awesome/css/font-awesome.min.css"> -->
+    <!-- /Carga de las fuentes de google y las nuestras -->
+
+
+	<!-- para el popover del buscador -->
+	<script type="text/javascript">
+		$(window).bind('ChangeView', function(e, data){
+			$('.change-project').popover({
+				placement : 'bottom',
+				trigger : 'click',
+				html : true,
+				content : function(){
+					var content = '';
+					content = $('#select-div').html();
+					return content;
+				}
+			}).on('shown.bs.popover', function(){
+			});
+
+			$(document).delegate('.btn-go','click', function(e){
+				e.preventDefault();
+				alert('Go Click');
+			});
+
+			$(document).delegate('.btn-cancel-option', 'click', function(e){
+				e.preventDefault();
+				var element = $(this).parents('.popover');
+				if(element.size()){
+					$(element).removeClass('in').addClass('out');
+				}
+			});
+		});
+		$(document).ready(function(){
+			$(window).trigger('ChangeView', {});
+		});
+	</script>
+	<!-- /para el popover del buscador -->

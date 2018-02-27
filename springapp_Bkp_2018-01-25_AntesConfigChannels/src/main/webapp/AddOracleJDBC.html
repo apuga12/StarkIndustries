@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <!-- head.html -->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv='Pragma' content='no-cache'>
+  <meta http-equiv='Cache-Control' content='no-cache'>  
+  <meta name="author" content="Jaxio team" />
+  <title>Install Oracle Jdbc driver in your Maven local repository</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+    
+    <style type="text/css">
+	h1 {
+		font-size: 34px;
+		font-weight: 300;
+		color: #333;
+		margin: 10px 0;
+	}
+
+	h2 {
+		font-size: 30px;
+		font-weight: 300;
+		color: #333;
+		margin: 1em 0 0.5em;
+	}
+
+    h3 {		
+		color: #325d72;
+		font-weight: bold;
+		font-size: 24px;
+		margin: 1em 0 0.5em;
+		border-bottom: 1px solid #ddd;
+    }
+
+	h4 {
+		color: #333;
+		font-weight: bold;
+		font-size: 1.2em;
+		margin: 1em 0;
+	}
+
+    body {
+		font-family: Arial, sans-serif;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+	table tbody tr td.checked {
+		background-image: url(/images/green-check.gif);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.hero-unit {
+		/* http://westciv.com/tools/gradients/index.html
+  		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#90D6F0), to(#4D9CEB), color-stop(.8,#FAFAFA));  */
+  	}
+  	
+  	.brand {
+  		background: url(/images/logo/springfuse-small.png) no-repeat left center;
+  		height: 20px;
+  		width: 200px;
+	}
+	
+
+	.carousel-caption {
+		background: black;
+		position: relative;
+	}
+
+	.carousel-caption h4, .carousel-caption p {
+		font-family: "Courier New", Courier, monospace;
+		color: #00FF00;
+	}
+	
+	.carousel-control {
+		position: absolute;
+		top: 90%;
+		left: 15px;
+		width: 40px;
+		height: 40px;
+		margin-top: -20px;
+		font-size: 60px;
+		font-weight: 100;
+		line-height: 30px;
+	}	
+
+	blockquote {
+		background:#f9f9f9;
+	}
+	
+	blockquote p {
+		font-size: 15px;
+  	}
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-166864-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </head>
+<!-- head.html -->
+  <body>
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+     		<a class="brand" href="/"></a>
+			<ul class="nav nav-pills">
+			  <li class="dropdown">
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="">Celerio</a>
+			    <ul class="dropdown-menu">
+					<li><a href="http://www.jaxio.com/en/celerio.html">Overview</a></li>
+					<li><a href="http://www.jaxio.com/documentation/celerio/index.html">Documentation</a></li>
+			    </ul>
+			  </li>
+
+			  <li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="">Blog</a>
+				<ul class="dropdown-menu">
+
+					<li><a href="/2015/11/09/celerio-4.html">09 Nov 2015 - Switching to Celerio 4</a></li>
+
+					<li><a href="/2013/03/05/jsf2-conversation.html">05 Mar 2013 - Conversation using JPA 2, JSF 2, PrimeFaces and the Spring Framework</a></li>
+
+					<li><a href="/2012/09/27/jsf2-jpa2-unique-validator.html">27 Sep 2012 - Unique Validator with JSF2 and JPA2 but without Bean Validation</a></li>
+
+					<li><a href="/2012/09/05/jpa-query-by-example.html">05 Sep 2012 - JPA 2 Query By Example API</a></li>
+
+					<li><a href="/2012/01/31/query-by-example-spring-data-jpa.html">31 Jan 2012 - Query by example with Spring Data JPA</a></li>
+
+					<li><a href="/blog.html">All posts</a></li>
+				</ul>
+			  </li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- after nav but before content... -->
+	<script type="text/javascript" src="/js/jquery-1.8.1.min.js"></script>
+
+<div class="container">
+<h4 id="celerio-and-oracle">Celerio and Oracle</h4>
+
+<p>Before <a href="http://www.jaxio.com/en/">using Celerio to reverse your Oracle database and generate a projet</a> you must first follow these 3 steps.</p>
+
+<h3 id="install-oracle-jdbc-driver-in-your-maven-local-repository">Install Oracle Jdbc driver in your Maven local repository</h3>
+
+<p>If you are using Oracle, you must first install your Oracle JDBC driver in your local Maven repository.</p>
+
+<p>Here is how to proceed:</p>
+
+<h4 id="step-1---download-the-oracle-jdbc-driver">Step 1 - Download the Oracle JDBC driver</h4>
+
+<p>Please download manually the Oracle JDBC driver <a href="http://www.oracle.com/technetwork/database/features/jdbc/index-091264.html">from Oracle web site</a>.</p>
+
+<h4 id="step-2---install-your-oracle-jdbc-driver-in-your-local-maven-repository">Step 2 - install your Oracle JDBC driver in your local Maven repository</h4>
+
+<p>We follow the instructions from this Maven FAQ <a href="http://maven.apache.org/general.html#importing-jars" target="_new">I have a jar that I want to put into my local repository. How can I copy it in?</a></p>
+
+<p>In this example, we assume that your Oracle JDBC driver is in a file called <strong>classes12_g.jar</strong></p>
+
+<p>Open a console and go to the folder containing the classes12_g.jar file.</p>
+
+<pre class="screen">
+c:\oracle\jdbc&gt;dir
+23/06/2008  13:02		 2 044 594 classes12_g.jar
+</pre>
+
+<p>Let’s assume you want to register your driver under the group id ‘com.oracle’, use ‘oracle’ as the name of the artifact id and that you want the version to be ‘10.2.0.2.0’.</p>
+
+<p>You can now run the following command:</p>
+
+<pre class="screen">
+c:\oracle\jdbc&gt;mvn install:install-file -Dfile=classes12_g.jar -DgroupId=com.oracle \
+-DartifactId=oracle -Dversion=10.2.0.2.0 -Dpackaging=jar -DgeneratePom=true
+
+[INFO] Scanning for projects...
+[INFO] Searching repository for plugin with prefix: 'install'.
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Default Project
+[INFO]	task-segment: [install:install-file] (aggregator-style)
+[INFO] ------------------------------------------------------------------------
+[INFO] [install:install-file]
+[INFO] Installing c:\oracle\jdbc\classes12_g.jar to C:\Users\Nicolas\.m2\repository\com\oracle\oracle
+\10.2.0.2.0\oracle-10.2.0.2.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1 second
+[INFO] Finished at: Tue Feb 03 12:58:23 CET 2009
+[INFO] Final Memory: 3M/5M
+[INFO] ------------------------------------------------------------------------
+</pre>
+
+<h4 id="step-3---ready">Step 3 - Ready!</h4>
+
+<p>You can now add the driver dependency in your pom.xml</p>
+<pre class="screen">
+&lt;dependency&gt;
+	&lt;groupId&gt;com.oracle&lt;/groupId&gt;
+	&lt;artifactId&gt;oracle&lt;/artifactId&gt;
+	&lt;version&gt;10.2.0.2.0&lt;/version&gt;
+&lt;/dependency&gt;
+</pre>
+
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br /></p>
+
+
+      <hr>
+
+
+
+      <footer class="offset2">
+		All rights reserved &copy; 2015 <a href="http://www.jaxio.com/en/">Jaxio</a> | <a href="http://twitter.com/#!/jaxiosoft">@jaxiosoft</a>
+      </footer>
+    </div> <!-- /container -->
+
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>	
+  </body>
+</html>

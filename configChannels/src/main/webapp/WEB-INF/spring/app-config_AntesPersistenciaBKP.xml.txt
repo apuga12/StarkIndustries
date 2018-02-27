@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+		
+<!--   **** Este archivo contendrá las definiciones de beans (POJO's) usados por el DispatcherServlet.  -->
+<!-- 		Es decir, este archivo es el WebApplicationContext donde situaremos todos los componentes. -->
+
+
+	   <bean id="productManager" class="com.starkindustries.springapp.service.SimpleProductManager">
+         <property name="products">
+            <list>
+                <ref bean="product1"/>
+                <ref bean="product2"/>
+                <ref bean="product3"/>
+            </list>
+         </property>
+       </bean>
+
+       <bean id="product1" class="com.starkindustries.springapp.domain.Product">
+         <property name="descripcion" value="Lamp"/>
+         <property name="precio" value="5.75"/>
+       </bean>
+        
+       <bean id="product2" class="com.starkindustries.springapp.domain.Product">
+         <property name="descripcion" value="Table"/>
+         <property name="precio" value="75.25"/>
+       </bean>
+
+       <bean id="product3" class="com.starkindustries.springapp.domain.Product">
+         <property name="descripcion" value="Chair"/>
+         <property name="precio" value="22.79"/>
+       </bean>
+
+       <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+         <property name="basename" value="messages"/>
+       </bean>
+
+
+
+		
+	   <!-- Scans the classpath of this application for @Components to deploy as beans -->
+       <!-- Activamos la detección automática de componentes a través del uso de anotaciones -->	
+       <!-- Se indica el paquete donde estará el controlador y componentes que harán uso de annotations -->
+       <context:component-scan base-package="com.starkindustries.springapp.web" />
+
+       <!-- Configures the @Controller programming model -->
+       <mvc:annotation-driven/>
+
+       
+<!--        Para eliminar la dependencia innecesaria entre el controlador y la vista.  -->
+<!--        Pues queremos referirnos a la vista usando un nombre lógico, permitiéndonos intercambiar la vista sin  -->
+<!--        tener que cambiar el controlador.  -->
+<!--        Para el mapeo básico entre una vista y una localización, se configura un prefijo y sufijo en InternalResourceViewResolver.  -->
+<!--        Se modifica 'app-config.xml' y declaramos una entrada 'viewResolver'.  -->
+<!--        Eligiendo JstlView tendremos la oportunidad de usar JSTL en combinación con paquetes de mensajes de idioma,  -->
+<!--        los cuales nos ofreceran soporte para la internacionalización de la aplicación. -->
+		<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+         <property name="prefix" value="/views/"></property>
+         <property name="suffix" value=".jsp"></property>        
+       </bean>
+
+
+</beans>
+
