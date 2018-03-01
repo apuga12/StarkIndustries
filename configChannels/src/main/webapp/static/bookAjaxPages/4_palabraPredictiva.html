@@ -7,7 +7,7 @@
      <!-- Para que las páginas se muestren correctamente y el zoom funcione bien en los dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>:: 3. Ajax en J2EE FormPost::</title>
+    <title>:: 4. Ajax en J2EE, Consulta predictiva autosugerencia ::</title>
  
     <!-- CSS de Bootstrap -->    
 	<!--     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
@@ -25,54 +25,47 @@
     <![endif]-->  
     <script type="text/javascript">
     	var xhr;
-    	function validar(){
-    		// 1. Creación del Objeto XMLHttpRequest
-    		if(window.ActiveXObject){
-    			//navegador IE
-    			xhr = new ActiveXObject("Microsoft.XMLHttp")
-    		} else if((window.XMLHttpRequest) || (typeof XMLHttpRequest) != undefined){
-    			//navegadores Firefox, Opera, Safari...
-    			xhr = new XMLHttpRequest();
-    		} else{
-    			//navegadores sin soporte Ajax
-    			alert("Su navegador no tiene soporte para Ajax");
-    			return;
+    	    	
+    	function busqueda(ev){
+    		// Comprobar si es caracter alfanumerico
+    		if((ev.keyCode >= 48 && ev.keyCode <= 57) || (ev.keyCode >= 65 && ev.keyCode <= 90)){
+	    		// 1. Creación del Objeto XMLHttpRequest
+	    		if(window.ActiveXObject){
+	    			//navegador IE
+	    			xhr = new ActiveXObject("Microsoft.XMLHttp")
+	    		} else if((window.XMLHttpRequest) || (typeof XMLHttpRequest) != undefined){
+	    			//navegadores Firefox, Opera, Safari...
+	    			xhr = new XMLHttpRequest();
+	    		} else{
+	    			//navegadores sin soporte Ajax
+	    			alert("Su navegador no tiene soporte para Ajax");
+	    			return;
+	    		}
+	    		localizaPalabra();
     		}
-    		enviaPeticion();
     	}
-    	function enviaPeticion(){
+    	function localizaPalabra(){
     		//2. Configuración de los parámetros del request y envío al server
-    		xhr.open("POST", document.forms[0].action, true );
+			var texto = document.getElementById("texto").value;
+    		xhr.open("GET", "http://localhost:8080/configChannels/bookAjax/4_getPalabraPred/"+texto, true );
     		//3. Cuando esté lista la respuesta debe ser cachada y enviada a otra función que despache la respuesta (procesaResultado)
     		xhr.onreadystatechange = procesaResultado;
-    		// Definición del tipo del contenido del body para formularios HTML
-    		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-    		var datos = obtenerDatos();
     		// Enviar los datos params en el cuerpo de la petición
-    		xhr.send(datos);
-    	}
-    	function obtenerDatos(){
-    		// Obtener la colección de controles del form
-    		// encodeURIComponent() => Codificación adecuada para que la cadena de parámetros pueda ser pasada al server
-    		// Sustituir espacios y caracteres especiales por su equivalente codificación URL.
-    		var controles = document.forms[0].elements;
-    		var datos = new Array();
-    		var cad = "";
-    		for(var i=0; i < controles.length; i++){
-    			cad = encodeURIComponent(controles[i].name)+"=";
-    			cad += encodeURIComponent(controles[i].value);
-    			datos.push(cad);
-    		}
-    		// Se forma la cadena con el metodo join() del array, minimizar concatenaciones
-    		cad = datos.join("&");
-    		alert('Params = '+cad);
-    		return cad;
-    	}
+    		xhr.send(null);
+    	}    	
     	function procesaResultado(){
     		//4. Despachar Response y actualizar HTML dinámico
     		if(xhr.readyState == 4){
-    			// IF Status de procesamiento 4 = 
-    			document.getElementById("resultado").innerHTML = xhr.responseText;
+    			// IF Status de procesamiento 4 = Response exitoso
+    			var resp = xhr.responseText;
+    			var caja = document.getElementById("texto");
+    			// Si se ha recibido una palabra de respuesta, se introduce en el control y se seleccionan los chars aún no tecleados
+    			if(resp != ""){
+    				var inicioSel = caja.value.length;
+    				caja.value = resp;
+    				caja.selectionStart = inicioSel;
+    				caja.selectionEnd = caja.value.length;
+    			}
     		}
     	}
     </script>	    	
@@ -83,10 +76,10 @@
 	<section class="jumbotron jumbotron-chema">	
 		<div class="container">
 			<p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4" style="visibility: visible; animation-name: fadeInDown;">				
-				:: Ajax en J2EE 3, Info sobre libros, manejo en XML ::
+				:: 4. Ajax en J2EE, Consulta predictiva autosugerencia ::
 			</p>
 			<h2 class="text-center color-primary mb-2 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
-				Form request
+				Autosugerencia...
 			</h2>			
 		</div>
 	</section>
@@ -96,35 +89,11 @@
 		<div class="container-fluid show-top-margin separate-rows tall-rows">
 		  <div class="row ">
 				<div class="row"  align="center">
-				  <div class="col-md-6"><b>Formulario de solicitud de datos:</b></div>
+				  <div class="col-md-3"><b>Introduzca una palabra: </b></div>
+				  <div class="col-md-3"><input type="text" id="texto" onkeyup="busqueda(event)" /></div>
 				  <br>
 				</div>
-				 <div class="row">
-				  	<div align="center" class="col-md-8" id="bodyForm">  
-				  		<form action="http://localhost:8080/configChannels/bookAjax/3_validador">
-				  			<table>
-				  				<tr>
-				  					<td>Nombre: </td><td><input type="text" name="txtNombre" /></td>
-				  				</tr>
-				  				<tr>
-				  					<td>Apellido: </td><td><input type="text" name="txtApellido" /></td>
-				  				</tr>
-				  				<tr>
-				  					<td>Email: </td><td><input type="text" name="txtEmail" /></td>
-				  				</tr>
-				  				<tr>
-				  					<td>Ciudad: </td><td><input type="text" name="txtCiudad" /></td>
-				  				</tr>
-				  				<tr>
-				  					<td colspan="2" align="center"> <input type="button" name="botonValidar" onclick="validar();" value="Procesar" /> </td>
-				  				</tr>
-				  			</table>
-				  		</form>
-				  	</div>
-				  </div>
-				  <div class="row"  align="center">
-				  	<div class="col-md-6" id="resultado"></div>				  
-				  </div>
+				 
 <!-- 				<div class="row"> -->
 <!-- 				  <div class="col-md-4">.col-md-4</div> -->
 <!-- 				  <div class="col-md-4">.col-md-4</div> -->

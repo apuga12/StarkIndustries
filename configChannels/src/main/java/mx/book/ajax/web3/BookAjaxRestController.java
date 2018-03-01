@@ -2,6 +2,8 @@ package mx.book.ajax.web3;
 
 import javax.servlet.http.HttpServletRequest;
 
+import mx.book.ajax.repository3.BookAjaxRestDao;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +29,15 @@ public class BookAjaxRestController {
 	protected final Log logger = LogFactory.getLog(getClass());
 	
 	@Autowired
-	private UserInterface userInterface;
-	
+	private UserInterface userInterface;	
 	public void setUserInterface(UserInterface userInterface) {
 		this.userInterface = userInterface;
+	}
+	
+	@Autowired
+	private BookAjaxRestDao bookAjaxRestDao;
+	public void setBookAjaxRestDao(BookAjaxRestDao bookAjaxRestDao){
+		this.bookAjaxRestDao = bookAjaxRestDao;
 	}
 
 	/**
@@ -125,6 +132,23 @@ public class BookAjaxRestController {
 		} catch(Exception e){
 			e.printStackTrace();
 			return  new ResponseEntity<String>("ERROR AL PROCESAR EL FORM",HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	
+	/**
+	 * Handle /bookAjax/4_getPalabraPred
+	 * 
+	 * @param model
+	 * @return String de salida es la palabra predictiva
+	 * */
+	@RequestMapping(method = RequestMethod.GET, value = {"/bookAjax/4_getPalabraPred/{dato}"})
+	public ResponseEntity<String> getPalabra4(@PathVariable(value = "dato")  String dato){
+		logger.info(" ===> *** ACTION  : /bookAjax/4_getPalabraPred/dato");
+		try{ 			
+			return new ResponseEntity<String>((String)bookAjaxRestDao.selectNextPalabraPredictiva(dato),HttpStatus.OK);
+		} catch(Exception e){
+			e.printStackTrace();
+			return  new ResponseEntity<String>("ERROR EN LA BD",HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 					

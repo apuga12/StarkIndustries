@@ -6,3 +6,4 @@ Servers
 Servers/*
 RemoteSystemsTempFiles
 RemoteSystemsTempFiles/*
+*.class

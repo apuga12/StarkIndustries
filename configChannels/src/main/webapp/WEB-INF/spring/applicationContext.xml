@@ -47,7 +47,8 @@
     <context:component-scan base-package="com.starkindustries.springapp.service" />
     <context:component-scan base-package="com.starkindustries.springapp.repository2" />
     <context:component-scan base-package="com.starkindustries.springapp.service2" />
-    <context:component-scan base-package="com.starkindustries.springapp.repository3" />
+    <context:component-scan base-package="com.starkindustries.springapp.repository3" />  
+    <context:component-scan base-package="mx.book.ajax.repository3" />
     
     
 </beans>
