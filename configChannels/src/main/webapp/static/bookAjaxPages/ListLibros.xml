@@ -1,0 +1,24 @@
+
+<!-- ?xml version='1.0'?>  -->
+<listado>
+	<libro>
+		<id>0</id>
+		<titulo>Programación con C#</titulo>
+		<precio>23.5</precio>
+	</libro>
+	<libro>
+		<id>1</id>
+		<titulo>ASP.NET</titulo>
+		<precio>31.4</precio>
+	</libro>
+	<libro>
+		<id>2</id>
+		<titulo>AJAX en un día</titulo>
+		<precio>32.0</precio>
+	</libro>
+	<libro>
+		<id>3</id>
+		<titulo>JAVA EE 8</titulo>
+		<precio>27.5</precio>
+	</libro>
+</listado>

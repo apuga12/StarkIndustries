@@ -151,5 +151,38 @@ public class BookAjaxRestController {
 			return  new ResponseEntity<String>("ERROR EN LA BD",HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+	
+	/**
+	 * Handle /bookAjax/5_listaLigadaCat_1
+	 * 
+	 * @param model
+	 * @return String de salida con un documento XML bien formado
+	 * */
+	@RequestMapping(method = RequestMethod.GET, value = {"/bookAjax/5_listaLigadaCat_1"})
+	public ResponseEntity<String> listaLigadaCat_1(){
+		logger.info(" ===> *** ACTION  : /bookAjax/5_listaLigadaCat_1");		
+		try{
+			String[] titulos = {"Programación con C#", "ASP.NET", "AJAX en un día", "JAVA EE 8"} ;
+			String[] precios = {"23.5","31.4","32.0","27.5"};
+						
+			// Formación del documento XML de respuesta
+			String textoXML = "<?xml version='1.0'?>";
+			textoXML += "<listado>";
+			for(int i=0; i<titulos.length; i++){
+				textoXML += "<libro>";
+					textoXML += "<id>"+i+"</id>";
+					textoXML += "<titulo>"+titulos[i]+"</titulo>";
+					textoXML += "<precio>"+precios[i]+"</precio>";
+				textoXML += "</libro>";
+			}
+			textoXML += "</listado>";
+			
+			
+			return new ResponseEntity<String>(textoXML,HttpStatus.OK);
+		} catch(Exception e){
+			e.printStackTrace();
+			return  new ResponseEntity<String>("SELECCION INVÁLIDA",HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
 					
 }
