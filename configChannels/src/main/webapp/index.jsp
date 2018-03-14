@@ -32,7 +32,16 @@
      <br> <a href="https://github.com/joedayz/spring-boot-samples/blob/master/bootangular/">
      	https://github.com/joedayz/spring-boot-samples/blob/master/bootangular/src/main/webapp/WEB-INF/jsp/UserManagement.jsp
      </a>
-           
+     
+     <p> Java REST Client Example With Retrofit 2 
+     <br> <a href="https://howtoprogram.xyz/2016/10/17/java-rest-client-example-retrofit-2/">
+     https://howtoprogram.xyz/2016/10/17/java-rest-client-example-retrofit-2/</a>
+     </p>       
+     
+     <p> Obtener y registrar datos usando Retrofit y GSON 
+     <br> <a href="https://www.youtube.com/watch?v=BboM1MubiYU&t=300s">
+     https://www.youtube.com/watch?v=BboM1MubiYU&t=300s</a>
+     </p>     
      
       <p> Building Java Web Services with JAX-WS:
      <br> Exponer micro servicios / consumirlos (servidores tomcat independientes)... 
