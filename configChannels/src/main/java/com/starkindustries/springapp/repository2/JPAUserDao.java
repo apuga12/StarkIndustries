@@ -1,9 +1,13 @@
 package com.starkindustries.springapp.repository2;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
+import mx.book.ajax.vo3.Categoria;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -68,6 +72,56 @@ public class JPAUserDao implements UserDao {
         //em.merge(user);
     	em.persist(user);
         return 0;
+    }
+    
+    @Transactional(readOnly = false)
+    public boolean isRegistered(String log, String pwd){
+    	try{
+	    	logger.info(" ===> *** Ingreso a ==> isRegistered(log,pwd) ");
+	    	int logVal = Integer.parseInt(em.createNativeQuery(
+	  			  "SELECT COUNT(*) FROM MYUSER WHERE LOGIN = '"+log+"' AND PASSWORD = '"+pwd+"' ").getSingleResult().toString());   
+	    	if(logVal > 0)
+	    		return true;
+	    	else
+	    		return false;
+    	} catch(Exception e){
+    		e.printStackTrace();
+    		return false;
+    	}
+    }
+    
+    @Transactional(readOnly = false)
+    public List<Categoria> selectAllCategories(){
+    	try{
+	    	StringBuffer query = new StringBuffer();
+	    	query.append("SELECT ID, DESCRIPCION FROM CATEGORIAS ");
+	    	//query.append("   where CNP_IDPACK =(select pac_id from CV_PACKS where PAC_NAME =:paqNombre) ");
+			//query.append("   and ID_RPT = (select RPT_CODE from TT_RPT where RPT_NAME =:ciudad))   ");
+			query.append(" ORDER BY DESCRIPCION ");
+			//javax.persistence.Query jpaQuery = em.createNativeQuery(query.toString(), Categoria.class);   <=== Por si mapeamos con clase Entity
+			javax.persistence.Query jpaQuery = em.createNativeQuery(query.toString());
+			//jpaQuery.setParameter("paqNombre", paqNombre);
+			//jpaQuery.setParameter("ciudad", ciudad);
+			List<Categoria> lista = new ArrayList<Categoria>();
+			List<Object[]> listaObj = (List<Object[]>) jpaQuery.getResultList();		
+			Categoria categoria = null;
+			for (Object[] rptObj : listaObj) {			
+				BigDecimal gponObj = (BigDecimal) rptObj[0];
+				Long gpon = null;
+				if (gponObj != null) {
+					gpon = gponObj.longValue();
+				}
+				categoria = new Categoria();
+				categoria.setId(gpon);
+				categoria.setDescripcion((String)rptObj[1]);
+				lista.add(categoria);
+				logger.info(categoria.toString()); 
+			}		
+			return lista;
+    	} catch(Exception e){
+    		e.printStackTrace();
+    		return null;
+    	}
     }
 
 }

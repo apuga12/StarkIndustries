@@ -1,8 +1,12 @@
 package mx.book.ajax.web3;
 
+import java.util.Iterator;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import mx.book.ajax.repository3.BookAjaxRestDao;
+import mx.book.ajax.vo3.Categoria;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -14,7 +18,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 //import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.starkindustries.springapp.repository2.UserDao;
 import com.starkindustries.springapp.service2.UserInterface;
 //import org.springframework.web.servlet.ModelAndView;
 
@@ -39,6 +45,8 @@ public class BookAjaxRestController {
 	public void setBookAjaxRestDao(BookAjaxRestDao bookAjaxRestDao){
 		this.bookAjaxRestDao = bookAjaxRestDao;
 	}
+	@Autowired
+	private UserDao userDao;
 
 	/**
 	 * Handle /bookAjax/1_titulos
@@ -182,6 +190,34 @@ public class BookAjaxRestController {
 		} catch(Exception e){
 			e.printStackTrace();
 			return  new ResponseEntity<String>("SELECCION INVÁLIDA",HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	
+	/**
+	 * Handle /bookAjax/8_login
+	 * @param model
+	 * @return String con JSON categorias de libros
+	 * */
+	@RequestMapping(method = RequestMethod.POST, value = {"/bookAjax/8_login"})
+	//public ResponseEntity<String> login8(HttpServletRequest request){
+	public ResponseEntity<String> login8(@RequestParam(value="user", required=true) String user, @RequestParam(value="pwd", required=true) String pwd){
+		logger.info(" ===> *** ACTION  : /bookAjax/8_login v2 PRO");
+		
+		try{
+//			String user = request.getParameter("user");
+//			String pwd = request.getParameter("pwd");
+			logger.info(" ===> *** user / pwd = " +user+" / "+pwd);
+			String resultado = ""+userDao.isRegistered(user, pwd);
+			List<Categoria> categorias = userDao.selectAllCategories();
+			for (Iterator iterator = categorias.iterator(); iterator.hasNext();) {
+				Categoria categoria = (Categoria) iterator.next();
+				logger.info(categoria.toString());
+			}
+			
+			return new ResponseEntity<String>(resultado,HttpStatus.OK);
+		} catch(Exception e){
+			e.printStackTrace();
+			return  new ResponseEntity<String>("ERROR AL PROCESAR EL FORM",HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 					
