@@ -4,7 +4,9 @@ import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.Produces;
 
+import mx.book.ajax.domain3.TestCat;
 import mx.book.ajax.repository3.BookAjaxRestDao;
 import mx.book.ajax.vo3.Categoria;
 
@@ -218,6 +220,54 @@ public class BookAjaxRestController {
 		} catch(Exception e){
 			e.printStackTrace();
 			return  new ResponseEntity<String>("ERROR AL PROCESAR EL FORM",HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	
+	/**
+	 * Handle /bookAjax/8_titulosConJSON
+	 * 
+	 * @param model
+	 * @return String de salida con un JSON con los datos asociados al libro
+	 * */
+	@RequestMapping(method = RequestMethod.GET, value = {"/bookAjax/8_titulosConJSON/{tit}"})
+	public ResponseEntity<String> getTitulos8_JSON(@PathVariable(value = "tit")  String tit){
+		logger.info(" ===> *** ACTION  : /bookAjax/8_titulosConJSON/JSON_Output");		
+		try{
+			String[] comentarios = {"Requiere conocimientos básicos de POO",
+					"Puede construir fácilmente aplicaciones para la Web",
+					"Aprenderá rápidamente los principales trucos de Ajax",
+					"Introduce las principales tecnologías de la plataforma",
+					} ;
+			String[] precios = {"10.5","20.4","30.0","40.5"};
+			int sel = Integer.parseInt(tit);
+			
+			// Formación del documento JSON
+			String textoJSON = "{comentario:'"+comentarios[sel]+"', precio:'"+precios[sel]+"'}";
+			
+			
+			return new ResponseEntity<String>(textoJSON,HttpStatus.OK);
+		} catch(Exception e){
+			e.printStackTrace();
+			return  new ResponseEntity<String>("SELECCION INVÁLIDA",HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	
+	/**
+	 * Handle /bookAjax/9_CatLibrosConJSON
+	 * 
+	 * @param model
+	 * @return String de salida con un JSON con los Temas del catálogo de libros
+	 * */
+	@Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON + "; charset=iso-8859-1")
+	@RequestMapping(method = RequestMethod.GET, value = {"/bookAjax/9_CatLibrosConJSON"})
+	public ResponseEntity<List<TestCat>> getCatLibros9_ConJSON(){
+		logger.info(" ===> *** ACTION  : /bookAjax/9_CatLibrosConJSON/JSON_Output");		
+		try{
+			return new ResponseEntity<List<TestCat>>(bookAjaxRestDao.selectAll(),HttpStatus.OK);
+		} catch(Exception e){
+			e.printStackTrace();
+			//return new ResponseEntity<List<TestCat>>(HttpStatus.NOT_FOUND);  // 404
+			return  new ResponseEntity<List<TestCat>>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 					

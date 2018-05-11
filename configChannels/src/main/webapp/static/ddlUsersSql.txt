@@ -85,6 +85,34 @@ commit;
 SELECT seq_series.nextval FROM dual;
 
 
+--------------------------------------------------------
+-- BOOK: AJAX EN JAVA EE  - miércoles-mayo-09-2018   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table TEST_CAT
+--------------------------------------------------------
+
+CREATE TABLE TEST_CAT 
+(
+  ID_TEMA NUMBER NOT NULL 
+, TEMA VARCHAR2(128 BYTE) NOT NULL 
+, COMENTARIOS VARCHAR2(256 BYTE) 
+, CONSTRAINT TEST_CAT_PK PRIMARY KEY 
+  (
+    ID_TEMA 
+  );
+
+Insert into TEST_CAT (ID_TEMA,TEMA,COMENTARIOS) values (1,'PROGRAMACION','SECCION DE LIBROS TECNICOS');
+Insert into TEST_CAT (ID_TEMA,TEMA,COMENTARIOS) values (2,'MANAGEMENT','SSECCION  DE GESTIÓN');
+Insert into TEST_CAT (ID_TEMA,TEMA,COMENTARIOS) values (3,'DEPORTES','SECCIÓN DEPORTES');
+Insert into TEST_CAT (ID_TEMA,TEMA,COMENTARIOS) values (4,'SYFY','SECCIÓN CIENCIA FICCIÓN');
+Insert into TEST_CAT (ID_TEMA,TEMA,COMENTARIOS) values (5,'LITERATURA','SECCIÓN CULTURA GENERAL');
+COMMIT;
+
+
+
+
+
 
 
 

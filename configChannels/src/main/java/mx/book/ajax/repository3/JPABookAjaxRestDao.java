@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import mx.book.ajax.domain3.TestCat;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Repository;
@@ -34,5 +36,11 @@ public class JPABookAjaxRestDao implements BookAjaxRestDao {
 
 
 	}
+
+	@Transactional(readOnly = true)
+    @SuppressWarnings("unchecked")
+	public List<TestCat> selectAll() {
+        return em.createQuery("select p from TestCat p order by p.idTema").getResultList();
+    }
 
 }
