@@ -51,6 +51,11 @@
      <br> <a href="https://www.youtube.com/watch?v=XFWoHayjMnE" >https://www.youtube.com/watch?v=XFWoHayjMnE</a>
      </p>
      
+      <p> jQuery y AJAX:
+     	<br> Ejemplo $.getJSON  (manejo de errores)
+     	<br> http://localhost:8080/configChannels/static/bookAjaxPages/10_LoginCatLibros_jQuery.html
+      </p>
+     
      <p> Form Builder and Generator for Bootstrap !!!
      <br> https://bootsnipp.com/forms
      

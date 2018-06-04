@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import mx.book.ajax.domain3.TestCat;
+import mx.book.ajax.domain3.TestLibs;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -42,5 +43,12 @@ public class JPABookAjaxRestDao implements BookAjaxRestDao {
 	public List<TestCat> selectAll() {
         return em.createQuery("select p from TestCat p order by p.idTema").getResultList();
     }
+
+
+	@Override
+	public List<TestLibs> selectByTheme(int idTema) {
+		return em.createQuery("select p from TestLibs p WHERE p.idTema = :idTema")
+    		    .setParameter("idTema", idTema).getResultList();
+	}
 
 }

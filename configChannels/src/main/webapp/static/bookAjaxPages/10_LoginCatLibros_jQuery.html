@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+     <!-- Para que las páginas se muestren correctamente y el zoom funcione bien en los dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>:: Ajax en J2EE 10 = Info sobre libros, jQuery & JSON ::</title>
+ 
+    <!-- CSS de Bootstrap -->    
+	<!--     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+	<!--     <link href="./css/main.css" rel="stylesheet"> -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- CSS Chema custom -->
+	<link rel="stylesheet" href="./../css/style.css" />
+	
+ 
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->  
+    <script src="./../js/utilidades.js"></script> 
+    <script type="text/javascript">
+    	// Primera sección, login y carga de catálogo de libros
+    	function login(){      		
+    		$.getJSON("http://localhost:8080/configChannels/bookAjax/10_login_jquery",
+    				{user:$("#txtusuario").val(), pwd:$("#txtpassword").val()}, procesa)
+    				.fail( function( jqXHR, textStatus, errorThrown ) {
+					  if (jqXHR.status === 0) {					
+					    alert('Not connect: Verify Network.');					
+					  } else if (jqXHR.status == 404) {					
+					    alert('No autorizado !  Requested page not found [404] ');	
+					 	// Si usuario no autorizado => Muestra capa de Msg Error
+		    			$("#noLogin").css("display", "block");
+					  } else if (jqXHR.status == 500) {					
+					    alert('Internal Server Error [500].');					
+					  } else if (textStatus === 'parsererror') {					
+					    alert('Requested JSON parse failed.');					
+					  } else if (textStatus === 'timeout') {					
+					    alert('Time out error.');					
+					  } else if (textStatus === 'abort') {					
+					    alert('Ajax request aborted.');					
+					  } else {					
+					    alert('Uncaught Error: ' + jqXHR.responseText);					
+					  }
+					
+					});;
+    	}
+    	function procesa(data){
+    		if(data != null && data.length > 0){
+    			//alert(data);
+    			// Si usuario autorizado => Muestra menú selección de temas
+    			$("#libros").css("display", "block");
+    			$("#noLogin").css("display", "none");   
+    			// Eliminar OPTIONS Anteriores
+    			$('#temas').children("option").remove();
+    			// Lee JSON con los temas y construye Select options    			    			
+    			$.each(data, function(i,item){
+    				var op = document.createElement("option");
+    				op.setAttribute("value", item.idTema);
+    				var texto = document.createTextNode(item.tema);
+    				op.appendChild(texto);
+    				$("#temas").append(op);
+    			});    			
+    		} else{
+    			// Si usuario no autorizado => Muestra capa de Msg Error
+    			$("#noLogin").css("display", "block");
+    			alert("No autorizado !");
+    		}
+    	}    	
+    	// Segunda seccion: carga de libros
+    	function cargaLibros(){
+    		var idTema = $("#temas").val();
+    		$.getJSON("http://localhost:8080/configChannels/bookAjax/9_CatLibrosConJSON_Tema/"+idTema,{},muestra );
+    	}
+    	function muestra(data){
+    		$("#listado").css("display", "block");
+    		var textoHTML = "<table border='1'>";
+			textoHTML += "<tr>";
+			textoHTML += "<th>Título</th>";
+			textoHTML += "<th>Autor</th>";
+			textoHTML += "<th>Precio</th>";
+			textoHTML += "</tr>";
+			// Generar contenido tabla a partir de la consulta a la BD
+			$.each(data, function(i,item){
+				textoHTML += "<tr>";
+				textoHTML += "<td>"+item.titulo+"</td>";
+				textoHTML += "<td>"+item.autor+"</td>";
+				textoHTML += "<td>"+item.precio+"</td>";
+				textoHTML += "</tr>";
+				if(i == data.length-1){
+					textoHTML += "</table>";
+					$("#listado").html(textoHTML);
+				}
+			});
+			
+    	}
+    </script>	    	
+
+  </head>
+  <body >
+	<!-- Aquí va el JUMBOTRON -->
+	<section class="jumbotron jumbotron-chema">	
+		<div class="container">
+			<p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4" style="visibility: visible; animation-name: fadeInDown;">				
+				:: Ajax en J2EE 10 = Info sobre libros, jQuery & JSON ::
+			</p>
+			<h2 class="text-center color-primary mb-2 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+				Página de autenticación <br/>
+				Catálogo de Libros
+			</h2>			
+		</div>
+	</section>
+
+    <br>
+ 
+		<div class="container-fluid show-top-margin separate-rows tall-rows">
+		  <div class="row ">				
+				 <div class="row">
+				  	<div align="center" class="col-md-8" id="bodyForm">  
+<!-- 				  	<form action="http://localhost:8080/configChannels/bookAjax/3_validador" method="post"> -->
+				  		<form>
+				  			Usuario: <input type="text" id="txtusuario" name="txtusuario">        
+				  			Password: <input type="password" id="txtpassword" name="txtpassword">  
+				  			<br/>
+				  			<input type="button" value="Login" onclick="login();">
+				  		</form>
+				  	</div>
+				  </div>
+				  <hr/>
+				  <div class="row"  align="center">
+				  	<div id="libros" style="text-align:center;display:none">
+				  		<div class="col-md-6"><b>Selección de Temas:</b></div>
+				  		<form>
+				  			<select id="temas" name="tema">
+				  			</select>
+				  			<br/>
+				  			<input type="button" value="Ver libros" onclick="cargaLibros();">
+				  		</form>
+				  	</div>
+				  <br>
+				</div>
+				  <br/><br/>
+				  <div class="row">
+				  	<div class="col-md-6" id="noLogin" style="display:none;text-align:center">
+				  		<h1><span> El usuario no está registrado !!!</span></h1>
+				  	</div>				  
+				  </div>
+				  <div class="row"  align="center">
+				  	<div class="col-md-6" id="listado" style="display:none;width:30%"></div>				  
+				  </div>
+				  
+<!-- 				<div class="row"> -->
+<!-- 				  <div class="col-md-4">.col-md-4</div> -->
+<!-- 				  <div class="col-md-4">.col-md-4</div> -->
+<!-- 				  <div class="col-md-4">.col-md-4</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="row"> -->
+<!-- 				  <div class="col-md-6">.col-md-6</div> -->
+<!-- 				  <div class="col-md-6">.col-md-6</div> -->
+<!-- 				</div> -->
+			</div>
+		</div>
+				  			
+ 
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+ 
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+         incluir archivos JavaScript individuales de los únicos
+         plugins que utilices) -->
+<!--     <script src="js/bootstrap.min.js"></script> -->
+<!-- 	 <script src="js/jquery-3.2.1.min.js"></script>  -->
+	 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

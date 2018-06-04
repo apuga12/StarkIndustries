@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Produces;
 
 import mx.book.ajax.domain3.TestCat;
+import mx.book.ajax.domain3.TestLibs;
 import mx.book.ajax.repository3.BookAjaxRestDao;
 import mx.book.ajax.vo3.Categoria;
 
@@ -264,6 +265,58 @@ public class BookAjaxRestController {
 		logger.info(" ===> *** ACTION  : /bookAjax/9_CatLibrosConJSON/JSON_Output");		
 		try{
 			return new ResponseEntity<List<TestCat>>(bookAjaxRestDao.selectAll(),HttpStatus.OK);
+		} catch(Exception e){
+			e.printStackTrace();
+			//return new ResponseEntity<List<TestCat>>(HttpStatus.NOT_FOUND);  // 404
+			return  new ResponseEntity<List<TestCat>>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	
+	/**
+	 * Handle /bookAjax/9_CatLibrosConJSON_Tema
+	 * 
+	 * @param model
+	 * @return String de salida con un JSON con los Temas del catálogo de libros
+	 * */	
+	@Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON + "; charset=iso-8859-1")
+	@RequestMapping(method = RequestMethod.GET, value = {"/bookAjax/9_CatLibrosConJSON_Tema/{tit}"})
+	public ResponseEntity<List<TestLibs>> getCatLibros9_ConJSON_Tema(@PathVariable(value = "tit")  String tit){
+		logger.info(" ===> *** ACTION  : /bookAjax/9_CatLibrosConJSON_Tema/"+tit);		
+		try{
+			int sel = Integer.parseInt(tit);
+			return new ResponseEntity<List<TestLibs>>(bookAjaxRestDao.selectByTheme(sel),HttpStatus.OK);
+		} catch(Exception e){
+			e.printStackTrace();
+			//return new ResponseEntity<List<TestCat>>(HttpStatus.NOT_FOUND);  // 404
+			return  new ResponseEntity<List<TestLibs>>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	
+	/**
+	 * Handle /bookAjax/10_login_jquery
+	 * 
+	 * @param model
+	 * @return String de salida con un JSON con los Temas del catálogo de libros
+	 * */	
+	@Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON + "; charset=iso-8859-1")
+	@RequestMapping(method = RequestMethod.GET, value = {"/bookAjax/10_login_jquery"})
+	public ResponseEntity<List<TestCat>> loginJQuery10(@RequestParam(value="user", required=true) String user, @RequestParam(value="pwd", required=true) String pwd){
+		logger.info(" ===> *** ACTION  : /bookAjax/10_login_jquery => Login : "+user);			
+		try{
+			boolean isValid = false;
+			String[] usersArray = {"chema","goyita","user"} ;
+			for (int i = 0; i < usersArray.length; i++) {
+				if(usersArray[i].equals(user)){
+					isValid = true;
+					logger.info(" ===> *** USER isValid = true *** ");
+				}
+			}
+			
+			if(isValid){
+				return new ResponseEntity<List<TestCat>>(bookAjaxRestDao.selectAll(),HttpStatus.OK);
+			} else{
+				return new ResponseEntity<List<TestCat>>(HttpStatus.NOT_FOUND);  // 404
+			}
 		} catch(Exception e){
 			e.printStackTrace();
 			//return new ResponseEntity<List<TestCat>>(HttpStatus.NOT_FOUND);  // 404

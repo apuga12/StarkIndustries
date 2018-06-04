@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+     <!-- Para que las páginas se muestren correctamente y el zoom funcione bien en los dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>:: Ajax en J2EE 9 = Info sobre libros, manejo info con JSON ::</title>
+ 
+    <!-- CSS de Bootstrap -->    
+	<!--     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+	<!--     <link href="./css/main.css" rel="stylesheet"> -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- CSS Chema custom -->
+	<link rel="stylesheet" href="./../css/style.css" />
+	
+ 
+    <!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->  
+    <script src="./../js/utilidades.js"></script> 
+    <script type="text/javascript">
+	    var obj;
+		function cargarTemas(){			
+			// Crea la instancia del Objeto XMLHttpRequest
+			obj = new ObjetoAJAX();
+			//var oForm = document.forms[0];     // POST con Form
+			//obj.enviar(oForm.action, "POST", "procesaResultado", oForm);   // POST con Form
+			var url = "http://localhost:8080/configChannels/bookAjax/9_CatLibrosConJSON";
+			obj.enviar(url, "GET", "procesaTemas", null);
+		}
+		function cargarLibros(){
+			//alert('Hey');
+			obj = new ObjetoAJAX();
+			//var oForm = document.forms[0];     // POST con Form
+			//obj.enviar(oForm.action, "POST", "procesaResultado", oForm);   // POST con Form
+			var lista = document.getElementById("temas");
+			var tit = lista.options[lista.selectedIndex].value;
+    		var url = "http://localhost:8080/configChannels/bookAjax/9_CatLibrosConJSON_Tema/"+tit;
+			obj.enviar(url, "GET", "procesaLibros", null);
+		}
+		// Importando en JS, solo debemos implementar funcion de retrollamada y listo:
+		function procesaTemas(){
+			var temas = eval("("+obj.respuestaTexto()+")");
+			// Crear la primera opcion de la lista y adjuntarla al control
+			var opcionInicio = document.createElement("option");
+			var textoOpcion = document.createTextNode("- Seleccione tema -");
+			opcionInicio.appendChild(textoOpcion);
+			var lista = document.getElementById("temas");
+			lista.appendChild(opcionInicio);
+			
+			// Generar el resto de elementos de la lista (dinamicamente)
+			for(var elem = 0; elem < temas.length; elem ++ ){
+				var item = document.createElement("option");
+				item.setAttribute("value", temas[elem].idTema);
+				var texto = document.createTextNode(temas[elem].tema);
+				item.appendChild(texto);
+				document.getElementById("temas").appendChild(item);
+			}
+	    }
+		
+		function procesaLibros(){   // Devolviendo JSON
+   			var libros = eval("("+obj.respuestaTexto()+")");
+			var textoHTML = "<table border='1'>";
+			textoHTML += "<tr>";
+			textoHTML += "<th>Título</th>";
+			textoHTML += "<th>Autor</th>";
+			textoHTML += "<th>Precio</th>";
+			textoHTML += "</tr>";
+			// Generar contenido tabla a partir de la consulta a la BD
+			for(var elem = 0; elem < libros.length; elem++){
+				textoHTML += "<tr>";
+				textoHTML += "<td>"+libros[elem].titulo+"</td>";
+				textoHTML += "<td>"+libros[elem].autor+"</td>";
+				textoHTML += "<td>"+libros[elem].precio+"</td>";
+				textoHTML += "</tr>";
+			}
+			textoHTML += "</table>";			
+			// Muestra la tabla en la página   
+			document.getElementById("listado").innerHTML = textoHTML;
+    	}
+    </script>	    	
+
+  </head>
+  <body onload="cargarTemas();">
+	<!-- Aquí va el JUMBOTRON -->
+	<section class="jumbotron jumbotron-chema">	
+		<div class="container">
+			<p class="lead text-center aco wow fadeInDown animation-delay-5 mw-800 center-block mb-4" style="visibility: visible; animation-name: fadeInDown;">				
+				:: Ajax en J2EE 9 = Info sobre libros, manejo info con JSON ::
+			</p>
+			<h2 class="text-center color-primary mb-2 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+				Catálogo de Libros
+			</h2>			
+		</div>
+	</section>
+
+    <br>
+ 
+		<div class="container-fluid show-top-margin separate-rows tall-rows">
+		  <div class="row ">
+				<div class="row"  align="center">
+				  <div class="col-md-6"><b>Selección de Temas:</b></div>
+				  <br>
+				</div>
+				 <div class="row">
+				  	<div align="center" class="col-md-8" id="bodyForm">  
+<!-- 				  		<form action="http://localhost:8080/configChannels/bookAjax/3_validador" method="post"> -->
+				  		<form action="">
+				  			<select id="temas" name="tema">
+				  			</select>
+				  			<br/><br/>
+				  			<input type="button" onclick="cargarLibros();" value="Ver libros">
+				  		</form>
+				  	</div>
+				  </div>
+				  <br/><br/>
+				  <div class="row"  align="center">
+				  	<div class="col-md-6" id="listado"></div>				  
+				  </div>
+				  <div class="row"  align="center">
+				  	<div class="col-md-6" id="encabezados"></div>				  
+				  </div>
+<!-- 				<div class="row"> -->
+<!-- 				  <div class="col-md-4">.col-md-4</div> -->
+<!-- 				  <div class="col-md-4">.col-md-4</div> -->
+<!-- 				  <div class="col-md-4">.col-md-4</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="row"> -->
+<!-- 				  <div class="col-md-6">.col-md-6</div> -->
+<!-- 				  <div class="col-md-6">.col-md-6</div> -->
+<!-- 				</div> -->
+			</div>
+		</div>
+
+ 
+    <!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+ 
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+         incluir archivos JavaScript individuales de los únicos
+         plugins que utilices) -->
+<!--     <script src="js/bootstrap.min.js"></script> -->
+<!-- 	 <script src="js/jquery-3.2.1.min.js"></script>  -->
+	 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
